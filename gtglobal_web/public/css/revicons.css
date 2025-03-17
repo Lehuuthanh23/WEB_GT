@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Revicons";
+    src: url("../fonts/revicons.woff") format("woff"),
+         url("../fonts/revicons.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="revicon-"], [class*=" revicon-"] {
+    font-family: "Revicons";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Định nghĩa các icon bằng mã Unicode */
+.revicon-home:before { content: "\e900"; }
+.revicon-user:before { content: "\e901"; }
+.revicon-settings:before { content: "\e902"; }
+.revicon-search:before { content: "\e903"; }
+.revicon-arrow-right:before { content: "\e904"; }
+.revicon-arrow-left:before { content: "\e905"; }
+.revicon-check:before { content: "\e906"; }
+.revicon-close:before { content: "\e907"; }
+.hermes.tparrows.tp-rightarrow:before {content: "\e825";}

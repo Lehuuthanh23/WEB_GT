@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "IcoMoon";
+    src: url("../fonts/icomoon.woff") format("woff"),
+         url("../fonts/icomoon.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: "IcoMoon";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Định nghĩa các icon bằng mã Unicode */
+.icon-home:before { content: "\e900"; }
+.icon-user:before { content: "\e901"; }
+.icon-settings:before { content: "\e902"; }
+.icon-search:before { content: "\e903"; }
+.icon-arrow-right:before { content: "\e904"; }
+.icon-arrow-left:before { content: "\e905"; }
+.icon-check:before { content: "\e906"; }
+.icon-close:before { content: "\e907"; }
+.icon-arrow-down:before { content: "\e908"; }
+.icon-arrow-up:before { content: "\e909"; }
+
+.hermes.tparrows.tp-rightarrow:before { content: "\e825"; }
