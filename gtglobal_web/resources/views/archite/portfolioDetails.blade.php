@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from thememarch.com/demo/html/archite/portfolioDetails.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:29:00 GMT -->
+<!-- Mirrored from thememarch.com/demo/html/archite/portfolioDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:29:00 GMT -->
 
 <head>
     <meta charset="UTF-8">
@@ -359,9 +359,9 @@
         <!-- start navigation -->
         <div
             class="navigation-buttons w-100 d-flex flex-column flex-sm-row justify-content-center align-items-center section-padding-top section-padding-bottom-xl">
-            <a href="portfolioDetails.html" class="btn light-btn text-uppercase mx-0 mx-sm-4 mb-4 mb-sm-0"><span
+            <a href="portfolioDetails" class="btn light-btn text-uppercase mx-0 mx-sm-4 mb-4 mb-sm-0"><span
                     class="z-1 position-relative">previous</span></a>
-            <a href="portfolioDetails.html" class="btn light-btn text-uppercase mx-0 mx-sm-4"><span
+            <a href="portfolioDetails" class="btn light-btn text-uppercase mx-0 mx-sm-4"><span
                     class="z-1 position-relative">next</span></a>
         </div>
         <!-- end navigation -->
@@ -377,7 +377,7 @@
                             </p>
                             <h2 class="h2 fw-700 line-height-3 text-white text-center">Let's Create Your Dream Space
                                 Together!</h2>
-                            <a href="contact.html" class="btn brand-btn text-uppercase mt-50 border-0"><span
+                            <a href="contact" class="btn brand-btn text-uppercase mt-50 border-0"><span
                                     class="z-1 position-relative">let's build</span></a>
                         </div>
                     </div>
@@ -484,6 +484,6 @@
 </body>
 
 
-<!-- Mirrored from thememarch.com/demo/html/archite/portfolioDetails.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:29:01 GMT -->
+<!-- Mirrored from thememarch.com/demo/html/archite/portfolioDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:29:01 GMT -->
 
 </html>

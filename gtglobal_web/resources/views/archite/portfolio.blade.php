@@ -221,158 +221,66 @@
                                 Our Expert Interior Design <br>Projects
                             </h2>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
         <!-- end inner page banner-->
         <!-- start projects -->
+        <div class="filter-menu">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            @foreach ($formattedResults as $item)
+                <button class="filter-btn" data-filter="{{ $item['name'] }}">{{ $item['name'] }}</button>
+            @endforeach
+        </div>
+
         <section class="projects-one section-padding-bottom-xl section-padding-top-xl">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="row align-items-start">
-                            <div class="col-12 col-lg-6 ">
-                                <div class="projects-one-item">
-                                    <a href="portfolioDetails">
-                                        <h2
-                                            class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block stroke-mobile-position">
-                                            structural design
-                                        </h2>
-                                    </a>
-                                    <div>
-                                        <div class="project-img-ontainer">
-                                            <img class="home-one-portfolio-first-img"
-                                                src="{{ asset('archite/img/projectsOne.jpg') }}" alt="project image">
-                                            <a href="portfolioDetails" class="btn text-uppercase project-btn">
-                                                <span class="position-relative z-1">View Project</span>
-                                                <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                        <div class="portfolio-container">
+                            <div class="portfolio-grid">
+                                @foreach ($formattedResults as $index => $item)
+                                    @foreach ($item['articles'] as $articleIndex => $article)
+                                        @php
+                                            $totalIndex = $index * count($item['articles']) + $articleIndex;
+                                            $isLeftColumn = $totalIndex % 2 == 0;
+                                            $itemIndex = floor($totalIndex / 2);
+                                            $isVertical = $itemIndex % 4 == 0 || $itemIndex % 4 == 3; // Vị trí dọc
+                                        @endphp
+                                        <div
+                                            class="portfolio-item {{ $isVertical ? 'vertical' : 'horizontal' }} show">
+                                            <a href="portfolioDetails" class="portfolio-link">
+                                                <h2
+                                                    class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke {{ $isVertical ? '' : 'project-text-stroke-utility' }}">
+                                                    {{ $item['name'] }}
+                                                </h2>
                                             </a>
-                                        </div>
-                                        <h6 class="h6 dark-text line-height-3 fw-700 mt-15">Project - Luxury Space
-                                            Design</h6>
-
-                                    </div>
-                                </div>
-                                <div class="projects-one-item mt-100">
-                                    <a href="portfolioDetails">
-                                        <h2
-                                            class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block">
-                                            structural design</h2>
-                                    </a>
-                                    <div class="projects-one-contents">
-                                        <div class="project-img-ontainer">
-                                            <img class="home-one-portfolio-fourth-img"
-                                                src="{{ asset('archite/img/projectsFour.jpg') }}"
-                                                alt="project image">
-                                            <a href="portfolioDetails" class="btn text-uppercase project-btn">
-                                                <span class="position-relative z-1">View Project</span>
-                                                <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                            </a>
-                                        </div>
-                                        <h6 class="h6 dark-text line-height-3 fw-700 mt-15">Project - Luxury Space
-                                            Design
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="projects-one-item mt-100">
-                                    <a href="portfolioDetails">
-                                        <h2
-                                            class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block">
-                                            landscape</h2>
-                                    </a>
-                                    <div class="projects-one-contents">
-                                        <div class="project-img-ontainer">
-                                            <img class="home-one-portfolio-fifth-img"
-                                                src="{{ asset('archite/img/homeThreeProjectOne.jpg') }}"
-                                                alt="project image">
-                                            <a href="portfolioDetails" class="btn text-uppercase project-btn">
-                                                <span class="position-relative z-1">View Project</span>
-                                                <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                            </a>
-                                        </div>
-                                        <h6 class="h6 dark-text line-height-3 fw-700 mt-15">Project - Modern
-                                            Architecture Design
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 ">
-                                <div class="mt-5 mt-lg-0">
-                                    <div class="ml-100 projects-one-item project-item-margin">
-                                        <a href="portfolioDetails">
-                                            <h2
-                                                class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block">
-                                                Architecture</h2>
-                                        </a>
-                                        <div class="projects-one-contents">
-                                            <div class="project-img-ontainer">
-                                                <img class="home-one-portfolio-second-img"
-                                                    src="{{ asset('archite/img/projectsTwo.jpg') }}"
-                                                    alt="project image">
-                                                <a href="portfolioDetails" class="btn text-uppercase project-btn">
-                                                    <span class="position-relative z-1">View Project</span>
-                                                    <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                                </a>
+                                            <div class="portfolio-content">
+                                                <div
+                                                    class="portfolio-image {{ $isVertical ? 'vertical-img' : 'horizontal-img' }}">
+                                                    <img src="{{ $article['image'] }}" alt="project image">
+                                                    <a href="portfolioDetails" class="portfolio-btn">
+                                                        <span>View Project</span>
+                                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                                    </a>
+                                                </div>
+                                                <h6 class="portfolio-subtitle">
+                                                    Dự án - {{ $article['title'] }}
+                                                </h6>
                                             </div>
-                                            <h6 class="h6 dark-text line-height-3 fw-700 mt-15">Project - Office
-                                                Interior Design
-                                            </h6>
                                         </div>
-                                    </div>
-                                    <div class="project-item-left-padding mt-100 projects-one-item">
-                                        <a href="portfolioDetails">
-                                            <h2
-                                                class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block project-text-stroke-utility">
-                                                landscape</h2>
-                                        </a>
-                                        <div class="projects-contents">
-                                            <div class="project-img-ontainer text-end">
-                                                <img class="home-one-portfolio-third-img"
-                                                    src="{{ asset('archite/img/projectsThree.jpg') }}"
-                                                    alt="project image">
-                                                <a href="portfolioDetails" class="btn text-uppercase project-btn">
-                                                    <span class="position-relative z-1">View Project</span>
-                                                    <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                                </a>
-                                            </div>
-                                            <h6 class="h6 dark-text line-height-3 fw-700 mt-15">Project - Modern
-                                                Architecture
-                                                Design
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <div class="ml-100 projects-one-item mt-100 project-item-margin">
-                                        <a href="portfolioDetails">
-                                            <h2
-                                                class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke d-inline-block">
-                                                Architecture</h2>
-                                        </a>
-                                        <div class="projects-one-contents">
-                                            <div class="project-img-ontainer">
-                                                <img class="home-one-portfolio-sixth-img"
-                                                    src="{{ asset('archite/img/projectsSix.jpg') }}"
-                                                    alt="project image">
-                                                <a href="portfolioDetails" class="btn text-uppercase project-btn">
-                                                    <span class="position-relative z-1">View Project</span>
-                                                    <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                                </a>
-                                            </div>
-                                            <h6 class="h6 dark-text line-height-3 fw-700 mt-15">Project - Office
-                                                Interior Design
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
+                                    @endforeach
+                                @endforeach
                             </div>
                         </div>
-                        <div class="portfolio-cta-btn text-center">
-                            <a data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500"
-                                data-aos-offset="100" href="portfolio" class="btn brand-btn text-uppercase">
-                                <span class="z-1 position-relative">View
-                                    Projects</span>
+                        {{-- <div class="portfolio-cta-btn text-center">
+                            <a href="portfolioDetails" class="btn text-uppercase project-btn">
+                                <span class="position-relative z-1">View Project</span>
+                                <i class="fa-solid fa-arrow-right-long ms-2"></i>
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -397,6 +305,301 @@
                 </div>
             </div>
         </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const buttons = document.querySelectorAll(".filter-btn");
+                const projects = document.querySelectorAll(".portfolio-item");
+
+                function applyFilter(filter) {
+                    projects.forEach(project => {
+                        const projectCategory = project.querySelector('.h2').textContent.trim().toLowerCase();
+                        const filterValue = filter.trim().toLowerCase();
+
+                        if (filterValue === "all" || projectCategory === filterValue) {
+                            console.log('projectCategory show: ', projectCategory);
+                            project.classList.add("show");
+                        } else {
+                            console.log('projectCategory no show: ', projectCategory);
+                            project.classList.remove("show");
+                        }
+                    });
+                }
+
+                // Thiết lập bộ lọc "All" mặc định khi trang tải
+                const defaultButton = document.querySelector('.filter-btn.active');
+                if (defaultButton) {
+                    applyFilter(defaultButton.getAttribute("data-filter"));
+                }
+
+                // Xử lý sự kiện nhấp chuột
+                buttons.forEach(button => {
+                    button.addEventListener("click", function() {
+                        const filter = this.getAttribute("data-filter");
+                        console.log('filter: ', filter);
+
+                        buttons.forEach(btn => btn.classList.remove("active"));
+                        this.classList.add("active");
+
+                        // Ẩn tất cả trước, sau đó áp dụng bộ lọc với hiệu ứng
+                        projects.forEach(project => {
+                            project.classList.remove("show");
+                        });
+
+                        // Dùng setTimeout để tạo hiệu ứng trượt lên dần dần
+                        setTimeout(() => {
+                            applyFilter(filter);
+                        }, 100); // Delay nhẹ để hiệu ứng ẩn hoàn tất trước khi hiện
+                    });
+                });
+            });
+        </script>
+
+        <style>
+            .row.align-items-start {
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .col-12.col-lg-6 {
+                width: 100%;
+            }
+
+            @media (min-width: 992px) {
+                .col-12.col-lg-6 {
+                    width: 50%;
+                }
+            }
+
+            .pe-5 {
+                padding-right: 3rem;
+            }
+
+            .projects-one-item {
+                margin-top: 100px;
+                /* mt-100 */
+            }
+
+            .project-item-left-padding {
+                padding-left: 20px;
+            }
+
+            .mt-100 {
+                margin-top: 100px;
+            }
+
+            .ml-100 {
+                margin-left: 100px;
+            }
+
+            .project-item-margin {
+                margin-left: 100px;
+            }
+
+            .h2.text-uppercase.fw-700.line-height-3.projects-text-stroke {
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 1.3;
+                display: inline-block;
+                color: transparent;
+                /* projects-text-stroke: Giả định là hiệu ứng stroke, cần CSS thực tế nếu có */
+            }
+
+            .project-text-stroke-utility {
+                /* Giả định từ mã cũ, cần CSS thực tế nếu có */
+            }
+
+            .projects-one-contents {
+                position: relative;
+            }
+
+            .project-img-ontainer {
+                position: relative;
+            }
+
+            .project-img-ontainer.text-end {
+                text-align: right;
+            }
+
+            .home-one-portfolio-fourth-img,
+            .home-one-portfolio-third-img,
+            .home-one-portfolio-second-img,
+            .home-one-portfolio-sixth-img {
+                width: 100%;
+                height: auto;
+            }
+
+            .h6.dark-text.line-height-3.fw-700.mt-15 {
+                font-size: 1rem;
+                color: #333;
+                line-height: 1.3;
+                font-weight: 700;
+                margin-top: 15px;
+            }
+
+            /* CSS mới cho bố cục tổng thể */
+            .portfolio-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 40px 20px;
+            }
+
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 90px;
+            }
+
+            .portfolio-item {
+                display: none;
+                opacity: 1;
+                transform: translateY(50px);
+                /* Bắt đầu từ dưới lên */
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
+
+            .show {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .portfolio-title {
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 1.3;
+                display: inline-block;
+            }
+
+            .shifted {
+                padding-left: 20px;
+            }
+
+            .portfolio-content {
+                position: relative;
+            }
+
+            .portfolio-image {
+                position: relative;
+                overflow: hidden;
+                /* Đảm bảo ảnh không tràn ra ngoài khi zoom */
+                border-radius: 8px;
+                /* Bo góc nhẹ */
+            }
+
+            .portfolio-image img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.3s ease;
+                /* Hiệu ứng zoom mượt mà */
+            }
+
+            /* Hiệu ứng zoom khi hover vào ảnh */
+            .portfolio-image:hover img {
+                transform: scale(1.05);
+                /* Zoom ra 5%, giống kiểu cũ */
+            }
+
+            .vertical-img img,
+            .horizontal-img img {
+                height: auto;
+            }
+
+            .portfolio-subtitle {
+                font-size: 1rem;
+                color: #333;
+                line-height: 1.3;
+                font-weight: 700;
+                margin-top: 15px;
+            }
+
+            /* CSS hiện đại cho nút "View Project" */
+            .portfolio-btn {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 20px;
+                background: linear-gradient(135deg, #007bff, #00c4ff);
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                font-weight: 600;
+                text-decoration: none;
+                border-radius: 50px;
+                box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+                transition: all 0.3s ease;
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            .portfolio-btn span {
+                position: relative;
+                z-index: 1;
+            }
+
+            .portfolio-btn .fa-arrow-right-long {
+                font-size: 1rem;
+                transition: transform 0.3s ease;
+            }
+
+            /* Hiệu ứng hover cho nút */
+            .portfolio-btn:hover {
+                background: linear-gradient(135deg, #0056b3, #009cff);
+                box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+                color: #fff;
+            }
+
+            .portfolio-btn:hover .fa-arrow-right-long {
+                transform: translateX(5px);
+            }
+
+            /* Hiển thị nút khi hover vào ảnh */
+            .portfolio-image:hover .portfolio-btn {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .filter-menu {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 30px;
+            }
+
+            .filter-menu button {
+                background: none;
+                border: 2px solid #333;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border-radius: 25px;
+            }
+
+            .filter-menu button:hover,
+            .filter-menu button.active {
+                background: #333;
+                color: white;
+            }
+
+            .projects-one-item {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.5s ease;
+            }
+
+            .projects-one-item.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+
         <!-- end work together -->
         <!-- start footer -->
         <footer class="footer-one">
