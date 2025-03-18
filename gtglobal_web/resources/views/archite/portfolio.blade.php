@@ -180,36 +180,40 @@
                             <div class="portfolio-grid">
                                 @foreach ($formattedResults as $index => $item)
                                     @foreach ($item['articles'] as $articleIndex => $article)
-                                        @php
-                                            $totalIndex = $index * count($item['articles']) + $articleIndex;
-                                            $isLeftColumn = $totalIndex % 2 == 0;
-                                            $itemIndex = floor($totalIndex / 2);
-                                            $isVertical = $itemIndex % 4 == 0 || $itemIndex % 4 == 3; // Vị trí dọc
-                                        @endphp
-                                        <div
-                                            class="portfolio-item {{ $isVertical ? 'vertical' : 'horizontal' }} show">
-                                            <a href="portfolioDetails" class="portfolio-link">
-                                                <h2
-                                                    class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke {{ $isVertical ? '' : 'project-text-stroke-utility' }}">
-                                                    {{ $item['name'] }}
-                                                </h2>
-                                            </a>
-                                            <div class="portfolio-content">
-                                                <div
-                                                    class="portfolio-image {{ $isVertical ? 'vertical-img' : 'horizontal-img' }}">
-                                                    <img src="{{ $article['image'] }}" alt="project image">
-                                                    <a href="portfolioDetails" class="portfolio-btn">
-                                                        <span>View Project</span>
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                    </a>
+                                        @if ($article['enabled'] == 1)
+                                            @php
+                                                $totalIndex = $index * count($item['articles']) + $articleIndex;
+                                                $isLeftColumn = $totalIndex % 2 == 0;
+                                                $itemIndex = floor($totalIndex / 2);
+                                                $isVertical = $itemIndex % 4 == 0 || $itemIndex % 4 == 3;
+                                            @endphp
+                                            <div
+                                                class="portfolio-item {{ $isVertical ? 'vertical' : 'horizontal' }} show">
+                                                <a href="portfolioDetails" class="portfolio-link">
+                                                    <h2
+                                                        class="h2 text-uppercase fw-700 line-height-3 projects-text-stroke {{ $isVertical ? '' : 'project-text-stroke-utility' }}">
+                                                        {{ $item['name'] }}
+                                                    </h2>
+                                                </a>
+                                                <div class="portfolio-content">
+                                                    <div
+                                                        class="portfolio-image {{ $isVertical ? 'vertical-img' : 'horizontal-img' }}">
+                                                        <img src="{{ $article['image'] }}" alt="project image">
+                                                        <a href="portfolioDetails-{{ $article['id'] }}"
+                                                            class="portfolio-btn">
+                                                            <span style="color: white">View Project</span>
+                                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                                        </a>
+                                                    </div>
+                                                    <h6 class="portfolio-subtitle">
+                                                        Dự án - {{ $article['title'] }}
+                                                    </h6>
                                                 </div>
-                                                <h6 class="portfolio-subtitle">
-                                                    Dự án - {{ $article['title'] }}
-                                                </h6>
                                             </div>
-                                        </div>
+                                        @endif
                                     @endforeach
                                 @endforeach
+
                             </div>
                         </div>
                         {{-- <div class="portfolio-cta-btn text-center">
@@ -308,9 +312,21 @@
                 padding-right: 3rem;
             }
 
+            /* -----------------------
+   TÁI SỬ DỤNG CÁC CLASS
+------------------------ */
             .projects-one-item {
                 margin-top: 100px;
                 /* mt-100 */
+                opacity: 0;
+                /* Ẩn ban đầu để làm hiệu ứng fade-in */
+                transform: translateY(20px);
+                transition: all 0.5s ease;
+            }
+
+            .projects-one-item.show {
+                opacity: 1;
+                transform: translateY(0);
             }
 
             .project-item-left-padding {
@@ -336,11 +352,14 @@
                 line-height: 1.3;
                 display: inline-block;
                 color: transparent;
-                /* projects-text-stroke: Giả định là hiệu ứng stroke, cần CSS thực tế nếu có */
+                /* Hiệu ứng stroke, giữ nguyên nếu bạn có css stroke riêng */
+                /* Thêm stroke thực tế nếu cần:
+        -webkit-text-stroke: 1px #000;
+    */
             }
 
             .project-text-stroke-utility {
-                /* Giả định từ mã cũ, cần CSS thực tế nếu có */
+                /* Giữ lại nếu có hiệu ứng stroke bổ sung */
             }
 
             .projects-one-contents {
@@ -371,7 +390,9 @@
                 margin-top: 15px;
             }
 
-            /* CSS mới cho bố cục tổng thể */
+            /* -----------------------------
+   BỐ CỤC HIỆN ĐẠI CHO PORTFOLIO
+------------------------------ */
             .portfolio-container {
                 max-width: 1200px;
                 margin: 0 auto;
@@ -384,17 +405,44 @@
                 gap: 90px;
             }
 
+            /*
+   Ở màn hình nhỏ (mobile - tablet),
+   chuyển về 1 cột cho dễ nhìn.
+*/
+            @media (max-width: 768px) {
+                .portfolio-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                /* Giảm margin-left ở mobile */
+                .ml-100,
+                .project-item-margin {
+                    margin-left: 0 !important;
+                }
+
+                .project-item-left-padding {
+                    padding-left: 10px;
+                }
+
+                .mt-100 {
+                    margin-top: 50px;
+                }
+            }
+
             .portfolio-item {
                 display: none;
+                /* Ban đầu ẩn, chờ JS hiển thị bằng class .show */
                 opacity: 1;
                 transform: translateY(50px);
-                /* Bắt đầu từ dưới lên */
+                /* Hiệu ứng ban đầu */
                 transition: opacity 0.5s ease, transform 0.5s ease;
             }
 
             .portfolio-item.show {
                 display: block;
-                /* opacity và transform sẽ được điều chỉnh qua JS */
+                /* Khi JS gán .show thì item hiển thị */
+                /* opacity và transform thay đổi qua transition */
             }
 
             .portfolio-title {
@@ -403,6 +451,7 @@
                 font-weight: 700;
                 line-height: 1.3;
                 display: inline-block;
+                margin-bottom: 0.5em;
             }
 
             .shifted {
@@ -413,10 +462,10 @@
                 position: relative;
             }
 
+            /* Vùng chứa ảnh */
             .portfolio-image {
                 position: relative;
                 overflow: hidden;
-                /* Đảm bảo ảnh không tràn ra ngoài khi zoom */
                 border-radius: 8px;
                 /* Bo góc nhẹ */
             }
@@ -426,20 +475,21 @@
                 height: auto;
                 display: block;
                 transition: transform 0.3s ease;
-                /* Hiệu ứng zoom mượt mà */
+                /* Zoom khi hover */
             }
 
-            /* Hiệu ứng zoom khi hover vào ảnh */
+            /* Zoom nhẹ khi hover */
             .portfolio-image:hover img {
                 transform: scale(1.05);
-                /* Zoom ra 5%, giống kiểu cũ */
             }
 
+            /* Hình dọc / ngang (nếu có) */
             .vertical-img img,
             .horizontal-img img {
                 height: auto;
             }
 
+            /* Tiêu đề nhỏ */
             .portfolio-subtitle {
                 font-size: 1rem;
                 color: #333;
@@ -448,7 +498,7 @@
                 margin-top: 15px;
             }
 
-            /* CSS hiện đại cho nút "View Project" */
+            /* Nút View Project */
             .portfolio-btn {
                 position: absolute;
                 bottom: 20px;
@@ -457,14 +507,14 @@
                 align-items: center;
                 gap: 10px;
                 padding: 10px 20px;
-                background: linear-gradient(135deg, #007bff, #00c4ff);
+                background: linear-gradient(135deg, #d28901, #FFA500);
                 color: #fff;
                 text-transform: uppercase;
                 font-size: 0.9rem;
                 font-weight: 600;
                 text-decoration: none;
                 border-radius: 50px;
-                box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+                box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
                 transition: all 0.3s ease;
                 opacity: 0;
                 transform: translateY(10px);
@@ -480,23 +530,36 @@
                 transition: transform 0.3s ease;
             }
 
-            /* Hiệu ứng hover cho nút */
+            /* Hover nút */
             .portfolio-btn:hover {
-                background: linear-gradient(135deg, #0056b3, #009cff);
-                box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+                background: linear-gradient(135deg, #d28901, #FFA500);
+                box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
                 color: #fff;
+            }
+
+            .fa-arrow-right-long {
+                color: #fff;
+
             }
 
             .portfolio-btn:hover .fa-arrow-right-long {
                 transform: translateX(5px);
+                color: #fff;
+
             }
 
-            /* Hiển thị nút khi hover vào ảnh */
+            /* Hiển thị nút khi hover ảnh */
             .portfolio-image:hover .portfolio-btn {
                 opacity: 1;
                 transform: translateY(0);
             }
 
+            /* -----------------------
+   MENU FILTER DỰ ÁN
+------------------------ */
+            /* -----------------------
+   MENU FILTER DỰ ÁN
+------------------------ */
             .filter-menu {
                 display: flex;
                 justify-content: center;
@@ -505,31 +568,57 @@
             }
 
             .filter-menu button {
+                /* Màu nền cam & chữ trắng */
                 background: none;
-                border: 2px solid #333;
+                /* Cam tươi */
+                border: 2px solid #FFA500;
+                color: #FFA500;
+
+                /* Kích thước & bo góc */
                 padding: 10px 20px;
                 font-size: 16px;
-                font-weight: bold;
+                font-weight: 600;
+                border-radius: 25px;
+
+                /* Hiệu ứng */
                 cursor: pointer;
                 transition: all 0.3s ease;
-                border-radius: 25px;
+                outline: none;
+                /* Bỏ viền mặc định trên di động, nếu có */
             }
 
+            /* Hover và trạng thái đang hoạt động (active) */
             .filter-menu button:hover,
             .filter-menu button.active {
-                background: #333;
-                color: white;
+                background: #FF8C00;
+                /* Cam đậm hơn */
+                border: 2px solid #FF8C00;
+                color: #fff;
+                box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+                transform: translateY(-2px);
             }
 
-            .projects-one-item {
-                opacity: 0;
-                transform: translateY(20px);
-                transition: all 0.5s ease;
-            }
+            @media (max-width: 576px) {
+                .filter-menu {
+                    gap: 10px;
+                    /* Giảm khoảng cách */
+                    margin-top: 20px;
+                    /* Giảm khoảng cách trên */
+                }
 
-            .projects-one-item.show {
-                opacity: 1;
-                transform: translateY(0);
+                .filter-menu button {
+                    padding: 8px 16px;
+                    /* Giảm padding để nhỏ gọn hơn */
+                    font-size: 14px;
+                    /* Giảm kích cỡ chữ */
+                    border-radius: 20px;
+                    /* Bo ít hơn cho gọn mắt */
+                }
+
+                .h2.text-uppercase.fw-700.line-height-3.projects-text-stroke {
+                    display: none;
+                    /* Cho nó hiển thị dạng block thay vì inline-block */
+                }
             }
         </style>
 
