@@ -20,8 +20,44 @@ Route::get('/about', function () {
 });
 
 Route::get('/blog', function () {
-    $articles = DB::select("SELECT * FROM articles");
+    $articles = DB::select('SELECT * FROM articles');
     return view('archite/blog', compact('articles'));
+});
+Route::get('/portfolio', function () {
+    // Lấy dữ liệu từ 3 bảng
+
+    $danhmuc = DB::table('tags')->leftJoin('articles_with_relationship_tag', 'tags.id', '=', 'articles_with_relationship_tag.tag_id')->leftJoin('articles_with_relationships', 'articles_with_relationships.id', '=', 'articles_with_relationship_tag.articles_with_relationship_id')->select('tags.id as tag_id', 'tags.name as tag_name', 'articles_with_relationships.id as article_id', 'articles_with_relationships.title as article_title', 'articles_with_relationships.perex as article_content', 'articles_with_relationships.published_at as article_published_at')->get();
+
+    // Gom nhóm lại theo tag_id
+    $formattedResults = collect($danhmuc) // Đảm bảo danh sách có thể nhóm lại
+        ->groupBy('tag_id') // Gom theo tag_id
+        ->map(function ($articles, $tagId) {
+            return [
+                'id' => $tagId,
+                'name' => $articles->first()->tag_name, // Lấy tên tag duy nhất
+                'articles' => $articles
+                    ->filter(fn($article) => !is_null($article->article_id)) // Loại bỏ bài viết null
+                    ->map(function ($article) {
+                        $imageUrl = null;
+                        if (preg_match('/<img[^>]+src="([^"]+)"/', $article->article_content, $matches)) {
+                            $imageUrl = $matches[1]; // URL ảnh đầu tiên tìm thấy
+                        }
+                        return [
+                            'id' => $article->article_id,
+                            'title' => $article->article_title,
+                            'image' => $imageUrl,
+                            'create_at' => $article->article_published_at,
+                        ];
+                    })
+                    ->values(), // Reset lại index
+            ];
+        })
+        ->values(); // Reset lại index của danh sách chính
+
+    // Kiểm tra dữ liệu đúng chưa
+    // return response()->json($formattedResults);
+
+    return view('archite/portfolio', compact('formattedResults'));
 });
 
 Route::get('/recruitment', function () {
@@ -47,10 +83,6 @@ Route::get('/index-2', function () {
 
 Route::get('/index-3', function () {
     return view('archite/index3');
-});
-
-Route::get('/portfolio', function () {
-    return view('archite/portfolio');
 });
 
 Route::get('/portfolioDetails', function () {
