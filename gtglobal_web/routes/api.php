@@ -21,14 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::post('/chat', [ChatController::class, 'chatAI']);
 Route::get('test', function () {
-    $articles = DB::select("SELECT * FROM articles");
+    $articles = DB::select("SELECT * FROM exports");
 
     // Giải mã JSON trong từng article
-    foreach ($articles as &$article) {
-        if (!empty($article->image_url)) {
-            $article->image_url = json_decode($article->image_url, true);
-        }
-    }
+    // foreach ($articles as &$article) {
+    //     if (!empty($article->image_url)) {
+    //         $article->image_url = json_decode($article->image_url, true);
+    //     }
+    // }
 
     return response()->json($articles);
 });

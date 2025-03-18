@@ -1178,7 +1178,7 @@
                                     <ul class="d-flex flex-column gap-4">
                                         <li><a class="fw-500 text-uppercase" href="index-2">home</a></li>
                                         <li><a class="fw-500 text-uppercase" href="about">Giới thiệu</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="services">Dịch vụ</a></li>
+
                                         <li><a class="fw-500 text-uppercase" href="portfolio">Dự án</a></li>
                                         <li><a class="fw-500 text-uppercase" href="blog">Tin tức</a></li>
                                         <li><a class="fw-500 text-uppercase" href="contact">Liên hệ</a></li>

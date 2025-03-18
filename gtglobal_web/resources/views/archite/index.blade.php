@@ -63,21 +63,11 @@
                                 <ul
                                     class="header-menu d-none d-lg-flex flex-row align-items-center z-1 position-relative mr-35 menu">
                                     <li>
-                                        <a class="menu-link text-uppercase fw-500" href="index-2">Trang chủ</a>
-                                        <ul class="submenu-container">
-                                            <li><a class="submenu-link text-uppercase fw-500" href="index-2">Trang chủ
-                                                    1</a></li>
-                                            <li><a class="submenu-link text-uppercase fw-500" href="index2">Trang chủ
-                                                    2</a></li>
-                                            <li><a class="submenu-link text-uppercase fw-500" href="index3">Trang chủ
-                                                    3</a></li>
-                                        </ul>
+                                        <a class="menu-link text-uppercase fw-500" href="index">Trang chủ</a>
+
                                     </li>
                                     <li>
                                         <a class="menu-link text-uppercase fw-500" href="about">Giới thiệu</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu-link text-uppercase fw-500" href="services">Dịch vụ</a>
                                     </li>
                                     <li>
                                         <a class="menu-link text-uppercase fw-500" href="portfolio">Dự án</a>
@@ -89,30 +79,7 @@
                                         <a class="menu-link text-uppercase fw-500" href="contact">Liên hệ</a>
                                     </li>
                                     <li>
-                                        <a class="menu-link text-uppercase fw-500" href="index-2">Pages</a>
-                                        <ul class="submenu-container">
-                                            <li>
-                                                <a class="submenu-link text-uppercase fw-500" href="blogDetails">Blog
-                                                    Details</a>
-                                            </li>
-
-                                            <li>
-                                                <a class="submenu-link text-uppercase fw-500"
-                                                    href="portfolioDetails">Portfolio Details</a>
-                                            </li>
-
-                                            <li>
-                                                <a class="submenu-link text-uppercase fw-500"
-                                                    href="servicesDetails">Services Details</a>
-                                            </li>
-                                            <li>
-                                                <a class="submenu-link text-uppercase fw-500" href="team">Team</a>
-                                            </li>
-                                            <li>
-                                                <a class="submenu-link text-uppercase fw-500" href="teamDetails">Team
-                                                    Details</a>
-                                            </li>
-                                        </ul>
+                                        <a class="menu-link text-uppercase fw-500" href="recruitment">Tuyển dụng</a>
                                     </li>
                                 </ul>
 
@@ -132,74 +99,45 @@
                                             <ul class="accordion-menu">
                                                 <li>
                                                     <div class="dropdownlink">
-                                                        <span class="text-uppercase">Trang chủ</span>
-                                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                                        <span class="text-uppercase">
+                                                            <a href="index">Trang chủ</a>
+                                                        </span>
+
                                                     </div>
-                                                    <ul class="submenuItems">
-                                                        <li><a class="submenu-link text-uppercase fw-500"
-                                                                href="index-2">Trang chủ
-                                                                1</a></li>
-                                                        <li><a class="submenu-link text-uppercase fw-500"
-                                                                href="index2">Trang chủ 2</a></li>
-                                                        <li><a class="submenu-link text-uppercase fw-500"
-                                                                href="index3">Trang chủ 3</a></li>
-                                                    </ul>
+
                                                 </li>
                                                 <li>
                                                     <div class="dropdownlink">
                                                         <span class="text-uppercase">
-                                                            <a href="about">About Us</a>
+                                                            <a href="about">Giới thiệu</a>
                                                         </span>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="dropdownlink">
                                                         <span class="text-uppercase">
-                                                            <a href="services">Services</a>
+                                                            <a href="portfolio">Dự án</a>
                                                         </span>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="dropdownlink">
                                                         <span class="text-uppercase">
-                                                            <a href="portfolio">Portfolio</a>
+                                                            <a href="blog">Tin tức</a>
                                                         </span>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="dropdownlink">
                                                         <span class="text-uppercase">
-                                                            <a href="blog">Blog</a>
+                                                            <a href="recruitment">Tuyển dụng</a>
                                                         </span>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="dropdownlink">
-                                                        <span class="text-uppercase">Pages</span>
-                                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul class="submenuItems">
-
-
-                                                        <li><a class="submenu-link text-uppercase fw-500"
-                                                                href="servicesDetails">Services Details</a></li>
-
-                                                        <li><a class="submenu-link text-uppercase fw-500"
-                                                                href="portfolioDetails">Portfolio Details</a></li>
-
-                                                        <li><a class="submenu-link text-uppercase fw-500"
-                                                                href="blogDetails">Blog Details</a></li>
-                                                        <li><a class="submenu-link text-uppercase fw-500"
-                                                                href="team">Taem</a></li>
-                                                        <li><a class="submenu-link text-uppercase fw-500"
-                                                                href="teamDetails">Team Details</a></li>
-
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="dropdownlink">
                                                         <span class="text-uppercase">
-                                                            <a href="contact">Contact Us</a>
+                                                            <a href="contact">Liên hệ</a>
                                                         </span>
                                                     </div>
                                                 </li>
@@ -1135,7 +1073,7 @@
                                     <ul class="d-flex flex-column gap-4">
                                         <li><a class="fw-500 text-uppercase" href="index-2">Trang chủ</a></li>
                                         <li><a class="fw-500 text-uppercase" href="about">Giới thiệu</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="services">Dịch vụ</a></li>
+
                                         <li><a class="fw-500 text-uppercase" href="portfolio">Dự án</a></li>
                                         <li><a class="fw-500 text-uppercase" href="blog">Tin tức</a></li>
                                         <li><a class="fw-500 text-uppercase" href="contact">Liên hệ</a></li>
