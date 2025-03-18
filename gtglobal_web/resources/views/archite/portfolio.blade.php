@@ -311,16 +311,21 @@
                 const projects = document.querySelectorAll(".portfolio-item");
 
                 function applyFilter(filter) {
-                    projects.forEach(project => {
+                    projects.forEach((project, index) => {
                         const projectCategory = project.querySelector('.h2').textContent.trim().toLowerCase();
                         const filterValue = filter.trim().toLowerCase();
 
                         if (filterValue === "all" || projectCategory === filterValue) {
-                            console.log('projectCategory show: ', projectCategory);
                             project.classList.add("show");
+                            // Thêm stagger effect bằng cách delay từng item
+                            setTimeout(() => {
+                                project.style.opacity = "1";
+                                project.style.transform = "translateY(0)";
+                            }, index * 100); // Mỗi item cách nhau 100ms
                         } else {
-                            console.log('projectCategory no show: ', projectCategory);
                             project.classList.remove("show");
+                            project.style.opacity = "0";
+                            project.style.transform = "translateY(50px)";
                         }
                     });
                 }
@@ -335,20 +340,12 @@
                 buttons.forEach(button => {
                     button.addEventListener("click", function() {
                         const filter = this.getAttribute("data-filter");
-                        console.log('filter: ', filter);
 
                         buttons.forEach(btn => btn.classList.remove("active"));
                         this.classList.add("active");
 
-                        // Ẩn tất cả trước, sau đó áp dụng bộ lọc với hiệu ứng
-                        projects.forEach(project => {
-                            project.classList.remove("show");
-                        });
-
-                        // Dùng setTimeout để tạo hiệu ứng trượt lên dần dần
-                        setTimeout(() => {
-                            applyFilter(filter);
-                        }, 100); // Delay nhẹ để hiệu ứng ẩn hoàn tất trước khi hiện
+                        // Áp dụng bộ lọc với hiệu ứng
+                        applyFilter(filter);
                     });
                 });
             });
@@ -458,10 +455,9 @@
                 transition: opacity 0.5s ease, transform 0.5s ease;
             }
 
-            .show {
+            .portfolio-item.show {
                 display: block;
-                opacity: 1;
-                transform: translateY(0);
+                /* opacity và transform sẽ được điều chỉnh qua JS */
             }
 
             .portfolio-title {
