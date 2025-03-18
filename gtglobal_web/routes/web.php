@@ -65,8 +65,21 @@ Route::get('/recruitment', function () {
     return view('archite/recruitment', compact('exports'));
 });
 
-Route::get('/blogDetails', function () {
-    return view('archite/blogDetails');
+Route::get('/blogDetails-{id}', function ($id) {
+    $currentArticle = DB::select("SELECT * FROM articles WHERE id = $id");
+    $articles = DB::select("SELECT * FROM articles");
+        foreach ($articles as &$article) {
+            if (!empty($article->image_url)) {
+                $article->image_url = json_decode($article->image_url, true);
+            }
+        }
+
+
+
+    $currentArticle[0]->image_url = json_decode($currentArticle[0]->image_url, true);
+    $currentArticle = $currentArticle[0];
+
+    return view('archite/blogDetails', compact('articles','currentArticle'));
 });
 
 Route::get('/contact', function () {

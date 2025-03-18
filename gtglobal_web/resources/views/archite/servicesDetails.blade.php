@@ -550,7 +550,7 @@
                         </div>
                         <div class="col-12 col-sm-3 mt-5 mt-sm-0">
                             <ul class="d-flex flex-column gap-4">
-                                <li><a class="fw-500 text-uppercase" href="index-2">home</a></li>
+                                <li><a class="fw-500 text-uppercase" href="index">Trang chủ</a></li>
                                 <li><a class="fw-500 text-uppercase" href="about">Giới thiệu</a></li>
 
                                 <li><a class="fw-500 text-uppercase" href="portfolio">Dự án</a></li>

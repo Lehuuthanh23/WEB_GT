@@ -1061,10 +1061,20 @@
                                         alt="logo">
                                 </div>
                                 <p class="p text-white fw-500 line-height-5 mt-15">
-                                    Welcome to our interior design agency! Our team of experienced designers and
-                                    decorators
-                                    is passionate about creating beautiful, functional spaces that enhance our clients'
-                                    lives. Welcome to our interior design agency!
+                                    Công ty TNHH TM & DV TOÀN CẦU GT là một trong những công ty có thế mạnh và tiềm năng
+                                    trong lĩnh vực thiết kế, thi công, sản xuất,… nội – ngoại thất với hơn 10 năm hoạt
+                                    động trong lĩnh vực và triển khai các dự án khối công trình văn phòng, showroom, nhà
+                                    hàng, biệt thự, chung cư…tới xây dựng hình ảnh cho các doanh nghiệp, tập đoàn đa
+                                    quốc gia.
+
+                                    Chúng tôi với phương châm mỗi khách hàng đều là những người thân, người bạn tri kỉ.
+                                    Lấy sự hài lòng của khách hàng làm tôn chỉ, để từ đó cung cấp cho khách hàng những
+                                    sản phẩm tối ưu nhất cả về chất lượng sản phẩm và dịch vụ.
+
+                                    Với đội ngủ trẻ và nhiệt huyết, chuyên môn cao cùng với sự đầu tư, học hỏi không
+                                    ngừng nghỉ về công nghệ, dây chuyền sản xuất, cơ sở hạ tầng cho cán bộ công nhân
+                                    viên. Chúng tôi sẽ mang đến cho khách hàng những sản phẩm và dịch vụ tiệm cận gần
+                                    nhất với nhu cầu và yêu cầu của khách hàng.
                                 </p>
                                 <h2 class="fw-700 text-white mt-30 footer-email">dongtrieuarc@gmail.com</h2>
                             </div>

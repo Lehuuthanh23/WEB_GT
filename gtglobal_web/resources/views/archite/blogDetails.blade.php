@@ -154,20 +154,15 @@
                     <div class="col-12">
                         <div class="blog-details-page-banner-wrapper">
                             <h2 class="h2 dark-text fw-700 line-height-3 text-start">
-                                From Concept to Reality, The Journey of a Successful Concept Interior Design.
+                                {{ $currentArticle->title }}
                             </h2>
                             <div class="mt-50 blog-details-banner-bottom">
                                 <div class="row w-100">
-                                    <div class="col-12 col-sm-5 col-lg-4 col-xl-3 mb-3 mb-sm-0">
-                                        <h6 class="h6 fw-400 body-text line-height-3 bottom-gradient-divider">Posted
-                                            By:
-                                            <span class="fw-700 dark-text">Olivia Moor</span>
-                                        </h6>
-                                    </div>
+
                                     <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mt-3 mt-sm-0">
                                         <h6 class="h6 fw-400 body-text line-height-3 bottom-gradient-divider">Publish
                                             Date:
-                                            <span class="fw-700 dark-text">20 Mar, 2023</span>
+                                            <span class="fw-700 dark-text"> {{ $currentArticle->published_at }}</span>
                                         </h6>
                                     </div>
                                 </div>
@@ -184,190 +179,13 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="blog-details-wrapper">
-                            <div class="hover-img-container">
-                                <img src="{{ asset('archite/img/blogDetailsFeatured.jpg') }}" class="img-fluid"
-                                    alt="featured image">
-                            </div>
-                            <p class="p body-text fw-500 line-height-5 mt-50 mb-80">
-                                Aechitecture are many variations of passages of Lorem Ipsum available, but the majority
-                                have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look
-                                even
-                                slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
-                                sure
-                                there
-                                isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
-                                on
-                                the
-                                Internet tend to repeat predefined chunks as necessary, making this the first true
-                                generator.
-                                <br>
-                                Interior on the Internet. It uses a dictionary of over 200 Latin words, combined with a
-                                handful
-                                of model sentence structures, to generate Lorem Ipsum which looks reasonable. The
-                                generated
-                                Lorem Ipsum is therefore always free from repetition, injected humour, or
-                                non-characteristic
-                                words etc.
-                            </p>
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-12 col-lg-8">
-                                    <div class="hover-img-container ">
-                                        <img src="{{ asset('archite/img/blogDetailsOne.jpg') }}" class="img-fluid"
-                                            alt="blog image">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-4  d-none d-lg-inline-block">
-                                    <div class="hover-img-container">
-                                        <img src="{{ asset('archite/img/blogDetailsTwo.jpg') }}" class="img-fluid"
-                                            alt="blog image">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blockquote-container">
-                                <blockquote class="h5 fw-400 dark-text line-height-5">
-                                    “Welcome to our digital agency! We specialize in helping businesses like yours
-                                    succeed
-                                    online. From website design and development to digital marketing and adver tising,
-                                    we
-                                    have
-                                    the to ols and expertise to elevate your online presence. Welcome to our digital
-                                    agency
-                                    Welcome to our digital agency”
-                                </blockquote>
-                            </div>
-                            <p class="p body-text fw-500 line-height-5 mb-25">
-                                Aechitecture are many variations of passages of Lorem Ipsum available, but the majority
-                                have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look
-                                even
-                                slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
-                                sure
-                                there
-                                isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
-                                on
-                                the
-                                Internet tend to repeat predefined chunks as necessary, making this the first true
-                                generator
-                            </p>
-                            <p class="p body-text fw-500 line-height-5">
-                                Interior on the Internet. It uses a dictionary of over 200 Latin words, combined with a
-                                handful
-                                of model sentence structures, to generate Lorem Ipsum which looks reasonable. The
-                                generated
-                                Lorem Ipsum is therefore always free from repetition, injected humour, or
-                                non-characteristic
-                                words etc.
-                            </p>
-                            <div class="row justify-content-between align-items-center mt-80">
-                                <div class="col-12 col-lg-4 d-none d-lg-inline-block">
-                                    <div class="hover-img-container">
-                                        <img src="{{ asset('archite/img/blogDetailsThree.jpg') }}" class="img-fluid"
-                                            alt="blog image">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-8">
-                                    <div class="hover-img-container">
-                                        <img src="{{ asset('archite/img/blogDetailsFour.jpg') }}" class="img-fluid"
-                                            alt="blog image">
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="p body-text fw-500 line-height-5 mt-75 mb-25">
-                                Aechitecture are many variations of passages of Lorem Ipsum available, but the majority
-                                have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look
-                                even
-                                slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
-                                sure
-                                there
-                                isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
-                                on
-                                the
-                                Internet tend to repeat predefined chunks as necessary, making this the first true
-                                generator
-                            </p>
-                            <p class="p body-text fw-500 line-height-5">
-                                Interior on the Internet. It uses a dictionary of over 200 Latin words, combined with a
-                                handful
-                                of model sentence structures, to generate Lorem Ipsum which looks reasonable. The
-                                generated
-                                Lorem Ipsum is therefore always free from repetition, injected humour, or
-                                non-characteristic
-                                words etc.
-                            </p>
-                            <div class="blog-thanks-text mt-50">
-                                <p class="fs-6 dark-text fw-400 line-height-5">Thanks</p>
-                            </div>
-                            <div class="mt-5 d-flex align-items-center">
-                                <p class="fs-6 fw-400 dark-text mb-20 mr-55">Share Post:</p>
-                                <div class="d-flex flex-wrap">
-                                    <a href="https://facebook.com/"
-                                        class="btn small-light-btn text-capitalize mr-20 mb-20"><span
-                                            class="z-1 position-relative">facebook</span></a>
-                                    <a href="https://linkedin.com/"
-                                        class="btn small-light-btn text-capitalize mr-20 mb-20"><span
-                                            class="z-1 position-relative">Linkedin</span></a>
-                                    <a href="https://instagram.com/"
-                                        class="btn small-light-btn text-capitalize mr-20 mb-20"><span
-                                            class="z-1 position-relative">Instagram</span></a>
-                                    <a href="https://twitter.com/"
-                                        class="btn small-light-btn text-capitalize mr-20 mb-20"><span
-                                            class="z-1 position-relative">Twitter</span></a>
-                                    <a href="https://dribble.com/"
-                                        class="btn small-light-btn text-capitalize mr-20 mb-20"><span
-                                            class="z-1 position-relative">Dribble</span></a>
-                                </div>
-                            </div>
+                            {!! $currentArticle->perex !!}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end blog details -->
-        <!-- start blog comment -->
-        <section class="blog-comment section-padding-bottom section-padding-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="blog-comment-wrapper">
-                            <h4 class="blog-comment-heading mb-30">
-                                Comment(0)
-                            </h4>
-                            <p class="p fw-500 line-height-5 body-text">
-                                No Comment Yet! Archite post comment box is empty!
-                            </p>
-                            <h4 class="blog-comment-heading mt-55">
-                                Post Your Comment
-                            </h4>
-                            <div class="row mt-70">
-                                <div class="col-12 col-lg-7">
-                                    <form class="contact-page-form">
-                                        <div class="row mb-50">
-                                            <div class="col">
-                                                <input type="text" class="form-control" placeholder="Name">
-                                            </div>
-                                            <div class="col">
-                                                <input type="email" class="form-control" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Comment" rows="3"></textarea>
-                                        <a class="btn brand-btn text-uppercase d-inline-block mt-60" href="contact">
-                                            <span class="position-relative z-1">Post Comment</span>
-                                        </a>
-                                    </form>
-                                </div>
-                                <div class="col-12 col-lg-5"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end blog comment -->
         <!-- start related news -->
         <section class="blogs-one section-padding-top section-padding-bottom-xl overflow-hidden">
             <div class="contact-container">
@@ -387,70 +205,40 @@
                                     <div>
                                         <div class="blogs-one-cards-container">
                                             <div class="owl-carousel owl-theme">
-                                                <div class="item blogs-one-card">
-                                                    <div class="hover-img-container">
-                                                        <img class="img-no-hover-effect"
-                                                            src="{{ asset('archite/img/blogOne.jpg') }}"
-                                                            alt="blog image">
+                                                @foreach ($articles as $item)
+                                                    <div
+                                                        class="item blogs-one-card {{ $loop->index % 2 == 0 ? 'mt-3' : '' }}">
+                                                        <div class="hover-img-container">
+                                                            <img class="img-no-hover-effect"
+                                                                src="{{ $item->image_url[0] }}" alt="blog image">
+                                                        </div>
+                                                        <h5 class="h5 dark-text fw-700 line-height-3 mt-20">
+                                                            <a class="h5 fw-700"
+                                                                href="blogDetails-{{ $item->id }}">
+                                                                {{ $item->title }}
+                                                            </a>
+                                                        </h5>
+                                                        <div class="collapse-content">
+                                                            {!! $item->description !!}
+                                                        </div>
+                                                        <style>
+                                                            .collapse-content {
+                                                                height: 100px;
+                                                                /* Chiều cao ban đầu */
+                                                                overflow: hidden;
+                                                                /* Ẩn phần vượt quá */
+                                                                padding: 15px;
+                                                                background-color: #f9f9f9;
+                                                                border-radius: 4px;
+                                                                font-size: 15px;
+                                                                color: #333;
+                                                                transition: height 0.3s ease;
+                                                                /* Hiệu ứng trượt mượt mà */
+                                                            }
+                                                        </style>
                                                     </div>
-                                                    <h5 class="h5 dark-text fw-700 line-height-3 mt-20">
-                                                        <a class="h5 fw-700" href="blogDetails">
-                                                            Why do I need an architect?
-                                                        </a>
-                                                    </h5>
-                                                    <p class="p body-text fw-500 line-height-5 pt-15">
-                                                        Welcome to our interior design agency! Our team of experienced
-                                                        designers
-                                                    </p>
-                                                </div>
-                                                <div class="item blogs-one-card mt-30">
-                                                    <div class="hover-img-container">
-                                                        <img class="img-no-hover-effect"
-                                                            src="{{ asset('archite/img/blogTwo.jpg') }}"
-                                                            alt="blog image">
-                                                    </div>
-                                                    <h5 class="h5 dark-text fw-700 line-height-3 mt-20">
-                                                        <a class="h5 fw-700" href="blogDetails">
-                                                            Do you know builders?
-                                                        </a>
-                                                    </h5>
-                                                    <p class="p body-text fw-500 line-height-5 pt-15">
-                                                        Welcome to our interior design agency! Our team of experienced
-                                                        designers
-                                                    </p>
-                                                </div>
-                                                <div class="item blogs-one-card">
-                                                    <div class="hover-img-container">
-                                                        <img class="img-no-hover-effect"
-                                                            src="{{ asset('archite/img/blogThree.jpg') }}"
-                                                            alt="blog image">
-                                                    </div>
-                                                    <h5 class="h5 dark-text fw-700 line-height-3 mt-20">
-                                                        <a class="h5 fw-700" href="blogDetails">
-                                                            Do you know interior?
-                                                        </a>
-                                                    </h5>
-                                                    <p class="p body-text fw-500 line-height-5 pt-15">
-                                                        Welcome to our interior design agency! Our team of experienced
-                                                        designers
-                                                    </p>
-                                                </div>
-                                                <div class="item blogs-one-card mt-30">
-                                                    <div class="hover-img-container">
-                                                        <img class="img-no-hover-effect"
-                                                            src="{{ asset('archite/img/blogTwo.jpg') }}"
-                                                            alt="blog image">
-                                                    </div>
-                                                    <h5 class="h5 dark-text fw-700 line-height-3 mt-20">
-                                                        <a class="h5 fw-700" href="blogDetails">
-                                                            Do you know builders?
-                                                        </a>
-                                                    </h5>
-                                                    <p class="p body-text fw-500 line-height-5 pt-15">
-                                                        Welcome to our interior design agency! Our team of experienced
-                                                        designers
-                                                    </p>
-                                                </div>
+                                                @endforeach
+
                                             </div>
                                         </div>
                                     </div>
@@ -473,18 +261,29 @@
                                     <img src="{{ asset('archite/img/Logo.png') }}" style="height: 30%; width: 30%;"
                                         alt="logo">
                                 </div>
-                                <p class="p text-white fw-500 line-height-5 mt-15">
-                                    Welcome to our interior design agency! Our team of experienced designers and
-                                    decorators
-                                    is passionate about creating beautiful, functional spaces that enhance our clients'
-                                    lives. Welcome to our interior design agency!
+                                <p class="p text-white fw-500 line-height-5 mt-15"
+                                    style="font-size: 15px !important;">
+                                    Công ty TNHH TM & DV TOÀN CẦU GT là một trong những công ty có thế mạnh và tiềm năng
+                                    trong lĩnh vực thiết kế, thi công, sản xuất,… nội – ngoại thất với hơn 10 năm hoạt
+                                    động trong lĩnh vực và triển khai các dự án khối công trình văn phòng, showroom, nhà
+                                    hàng, biệt thự, chung cư…tới xây dựng hình ảnh cho các doanh nghiệp, tập đoàn đa
+                                    quốc gia.
+
+                                    Chúng tôi với phương châm mỗi khách hàng đều là những người thân, người bạn tri kỉ.
+                                    Lấy sự hài lòng của khách hàng làm tôn chỉ, để từ đó cung cấp cho khách hàng những
+                                    sản phẩm tối ưu nhất cả về chất lượng sản phẩm và dịch vụ.
+
+                                    Với đội ngủ trẻ và nhiệt huyết, chuyên môn cao cùng với sự đầu tư, học hỏi không
+                                    ngừng nghỉ về công nghệ, dây chuyền sản xuất, cơ sở hạ tầng cho cán bộ công nhân
+                                    viên. Chúng tôi sẽ mang đến cho khách hàng những sản phẩm và dịch vụ tiệm cận gần
+                                    nhất với nhu cầu và yêu cầu của khách hàng.
                                 </p>
                                 <h2 class="fw-700 text-white mt-30 footer-email">dongtrieuarc@gmail.com</h2>
                             </div>
                             <div class="col-12 col-sm-3">
                                 <div class="mt-5 mt-sm-0">
                                     <ul class="d-flex flex-column gap-4">
-                                        <li><a class="fw-500 text-uppercase" href="index-2">home</a></li>
+                                        <li><a class="fw-500 text-uppercase" href="index">Trang chủ</a></li>
                                         <li><a class="fw-500 text-uppercase" href="about">Giới thiệu</a></li>
 
                                         <li><a class="fw-500 text-uppercase" href="portfolio">Dự án</a></li>
@@ -531,6 +330,25 @@
         </footer>
         <!-- end footer -->
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.blog-details-wrapper img');
+
+            images.forEach(img => {
+                const divWrapper = document.createElement('div');
+                divWrapper.classList.add('hover-img-container');
+                const imgClone = document.createElement('img');
+                imgClone.src = img.src;
+                if (img.alt) imgClone.alt = img.alt;
+                if (img.width) imgClone.width = img.width;
+                if (img.height) imgClone.height = img.height;
+
+                divWrapper.appendChild(imgClone);
+
+                img.parentNode.replaceChild(divWrapper, img);
+            });
+        });
+    </script>
 
     <!-- Jquery script -->
     <script src="{{ asset('archite/js/jquery-3.6.4.min.js') }}"></script>
