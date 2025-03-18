@@ -24,44 +24,41 @@ Route::get('/blog', function () {
     return view('archite/blog', compact('articles'));
 });
 Route::get('/portfolio', function () {
-    // Lấy dữ liệu từ 3 bảng
+    $danhmuc = DB::table('tags')->leftJoin('articles_with_relationship_tag', 'tags.id', '=', 'articles_with_relationship_tag.tag_id')->leftJoin('articles_with_relationships', 'articles_with_relationships.id', '=', 'articles_with_relationship_tag.articles_with_relationship_id')->select('tags.id as tag_id', 'tags.name as tag_name', 'articles_with_relationships.id as article_id', 'articles_with_relationships.title as article_title', 'articles_with_relationships.perex as article_content', 'articles_with_relationships.published_at as article_published_at', 'articles_with_relationships.enabled as article_enable')->get();
 
-    $danhmuc = DB::table('tags')->leftJoin('articles_with_relationship_tag', 'tags.id', '=', 'articles_with_relationship_tag.tag_id')->leftJoin('articles_with_relationships', 'articles_with_relationships.id', '=', 'articles_with_relationship_tag.articles_with_relationship_id')->select('tags.id as tag_id', 'tags.name as tag_name', 'articles_with_relationships.id as article_id', 'articles_with_relationships.title as article_title', 'articles_with_relationships.perex as article_content', 'articles_with_relationships.published_at as article_published_at')->get();
-
-    // Gom nhóm lại theo tag_id
-    $formattedResults = collect($danhmuc) // Đảm bảo danh sách có thể nhóm lại
-        ->groupBy('tag_id') // Gom theo tag_id
+    $formattedResults = $danhmuc
+        ->groupBy('tag_id')
         ->map(function ($articles, $tagId) {
             return [
                 'id' => $tagId,
-                'name' => $articles->first()->tag_name, // Lấy tên tag duy nhất
+                'name' => $articles->first()->tag_name,
                 'articles' => $articles
-                    ->filter(fn($article) => !is_null($article->article_id)) // Loại bỏ bài viết null
+                    // Chỉ lấy bài viết có enable = 1
+                    ->filter(fn($article) => $article->article_enable == 1)
                     ->map(function ($article) {
                         $imageUrl = null;
                         if (preg_match('/<img[^>]+src="([^"]+)"/', $article->article_content, $matches)) {
-                            $imageUrl = $matches[1]; // URL ảnh đầu tiên tìm thấy
+                            $imageUrl = $matches[1];
                         }
                         return [
                             'id' => $article->article_id,
                             'title' => $article->article_title,
                             'image' => $imageUrl,
                             'create_at' => $article->article_published_at,
+                            'enabled' => $article->article_enable,
                         ];
                     })
-                    ->values(), // Reset lại index
+                    ->values(),
             ];
         })
-        ->values(); // Reset lại index của danh sách chính
+        ->values();
 
-    // Kiểm tra dữ liệu đúng chưa
-    // return response()->json($formattedResults);
-
+    // Sau đó trả ra view
     return view('archite/portfolio', compact('formattedResults'));
 });
 
 Route::get('/recruitment', function () {
-    $exports = DB::select("SELECT * FROM exports");
+    $exports = DB::select('SELECT * FROM exports');
     return view('archite/recruitment', compact('exports'));
 });
 
@@ -85,10 +82,39 @@ Route::get('/index-3', function () {
     return view('archite/index3');
 });
 
-Route::get('/portfolioDetails', function () {
-    return view('archite/portfolioDetails');
-});
+Route::get('/portfolioDetails-{id}', function ($id) {
+    $result = DB::table('articles_with_relationships')->select('*')->where('id', $id)->first();
 
+    if (!$result) {
+        return redirect()->back()->with('error', 'Không tìm thấy bản ghi');
+    }
+
+    $data = $result; // Giữ nguyên object
+
+    // Xử lý perex để tách description và image_url
+    if (isset($data->perex)) {
+        $perex = $data->perex;
+        $data->description = '';
+        $data->image_url = [];
+
+        if (preg_match_all('/<img[^>]+src=["\'](.*?)["\']/i', $perex, $matches)) {
+            $data->image_url = $matches[1];
+            $data->description = trim(strip_tags($perex));
+        } else {
+            $data->description = trim($perex);
+        }
+        unset($data->perex);
+    }
+
+    // Lấy tag đầu tiên liên quan đến bài viết
+    $tag = DB::table('tags')->leftJoin('articles_with_relationship_tag', 'tags.id', '=', 'articles_with_relationship_tag.tag_id')->leftJoin('articles_with_relationships', 'articles_with_relationships.id', '=', 'articles_with_relationship_tag.articles_with_relationship_id')->select('tags.name as tag_name')->where('articles_with_relationships.id', $id)->first(); // Chỉ lấy bản ghi đầu tiên
+
+    // Gán tag_name, nếu không có tag thì để rỗng
+    $tag_name = $tag ? $tag->tag_name : '';
+
+    // Truyền $data và $tag_name vào view
+    return view('archite.portfolioDetails', compact('data', 'tag_name'));
+});
 Route::get('/projects', function () {
     return view('archite/projects');
 });

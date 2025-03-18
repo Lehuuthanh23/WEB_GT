@@ -38,6 +38,15 @@
     <link rel="stylesheet" href="{{ asset('archite/css/style.css') }}">
     <!-- Responsive stylesheet -->
     <link rel="stylesheet" href="{{ asset('archite/css/responsive.css') }}">
+    <style>
+        .portfolio-grid-image {
+            border-radius: 10px;
+            /* Bo góc hình ảnh */
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -168,7 +177,7 @@
                     <div class="col-12">
                         <div class="inner-page-banner-wrapper d-flex justify-content-center align-items-center">
                             <h2 class="h2 dark-text fw-700 line-height-3 text-center">
-                                Project - Modern Architechture <br>Design
+                                Dự án - {{ $tag_name }} <br>{{ $data->title }}
                             </h2>
                         </div>
                     </div>
@@ -183,28 +192,25 @@
                     <div class="col-12">
                         <div class="portfolio-details-contents-wrapper">
                             <div>
-                                <img src="{{ asset('archite/img/portfolioDetails.jpg') }}"
-                                    class="img-fluid mb-100 portfolio-details-featured-image"
+                                <img src="{{ !empty($data->image_url) ? $data->image_url[0] : asset('archite/img/portfolioDetails.jpg') }}"
+                                    class="img-fluid mb-100 portfolio-details-featured-image " style="width: 100%"
                                     alt="portfolio details image">
                             </div>
                             <div class="row gx-lg-5">
                                 <div class="col-12 col-lg-6 pb-4 pb-lg-0">
                                     <h3 class="h3 dark-text fw-700 line-height-3">
-                                        Modern Architecture Design Project Details
+                                        {{ $data->title }}
                                     </h3>
                                     <p class="p body-text fw-500 line-height-5 mt-50">
-                                        Aechitecture are many variations of passages of Lorem Ipsum available, but the
-                                        majority
-                                        have suffered alteration in some form, by injected humour, or randomised words
-                                        which
-                                        don't look even slightly believable. If you are going to use a passage of Lorem
-                                        Ipsum,
-                                        you need to be sure there isn't anything embarrassing hidden in the middle of
-                                        text. All
-                                        the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-                                        necessary, making this the first true generator
+                                        @if ($data->description)
+                                            {{ $data->description }}
+                                        @else
+                                            Chào mừng bạn đến với dự án của chúng tôi! Đây là một không gian được thiết
+                                            kế để mang lại sự thoải mái, tiện nghi và hiện đại, phù hợp với mọi nhu cầu
+                                            của bạn.
+                                        @endif
                                     </p>
-                                    <p class="p body-text fw-500 line-height-5 mt-35">
+                                    {{-- <p class="p body-text fw-500 line-height-5 mt-35">
                                         Interior on the Internet. It uses a dictionary of over 200 Latin words, combined
                                         with a
                                         handful of model sentence structures, to generate Lorem Ipsum which looks
@@ -212,25 +218,24 @@
                                         The generated Lorem Ipsum is therefore always free from repetition, injected
                                         humour, or
                                         non-characteristic words etc.
-                                    </p>
+                                    </p> --}}
                                 </div>
                                 <div class="col-12 col-lg-6 mt-5 mt-lg-0">
                                     <div class="portfolio-details-contnts-right">
                                         <h2
                                             class="h2 text-uppercase fw-700 line-height-3 portfolio-text-stroke d-inline-block">
-                                            landscape</h2>
+                                            {{ $tag_name }}</h2>
                                         <div class="mt-70">
                                             <div class="mb-4">
                                                 <div class="row align-items-center">
                                                     <div class="col-6 col-sm-8">
                                                         <h6 class="h6 fw-400 body-text line-height-3">
-                                                            Project Type:
+                                                            Loại dự án:
                                                         </h6>
                                                     </div>
                                                     <div class="col-6 col-sm-4">
                                                         <h6 class="h6 fw-700 dark-text line-height-3">
-                                                            Landscape Design
-                                                        </h6>
+                                                            {{ $tag_name }} </h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -239,81 +244,44 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-6 col-sm-8">
                                                         <h6 class="h6 fw-400 body-text line-height-3">
-                                                            Customer Support:
+                                                            Ngày đăng:
                                                         </h6>
                                                     </div>
                                                     <div class="col-6 col-sm-4">
                                                         <h6 class="h6 fw-700 dark-text line-height-3">
-                                                            20 Mar, 2023
+                                                            {{ \Carbon\Carbon::parse($data->published_at)->format('d/m/Y') }}
                                                         </h6>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="mt-80">
-                                            <div class="mb-4">
-                                                <div class="row align-items-center">
-                                                    <div class="col-6 col-sm-8">
-                                                        <h6 class="h6 fw-400 body-text line-height-3">
-                                                            Clients:
-                                                        </h6>
-                                                    </div>
-                                                    <div class="col-6 col-sm-4">
-                                                        <h6 class="h6 fw-700 dark-text line-height-3">
-                                                            Olivia Moor
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="service-details-divider"></div>
-                                            <div class="mt-4">
-                                                <div class="row align-items-center">
-                                                    <div class="col-6 col-sm-8">
-                                                        <h6 class="h6 fw-400 body-text line-height-3">
-                                                            Location:
-                                                        </h6>
-                                                    </div>
-                                                    <div class="col-6 col-sm-4">
-                                                        <h6 class="h6 fw-700 dark-text line-height-3">
-                                                            Toronto, Canada
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
-                            </div>
-                            <div class="mt-100">
-                                <div class="row gy-4 gy-sm-0">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="hover-img-container">
-                                            <img src="{{ asset('archite/img/detailsImgThree.jpg') }}"
-                                                class="img-fluid" alt="details image three">
+                                @if (!empty($data->image_url))
+                                    <div class="mt-100 mb-5">
+                                        <!-- Thêm mb-5 để tạo khoảng cách dưới -->
+                                        <div class="row gy-4 gy-sm-0">
+                                            @foreach ($data->image_url as $image)
+                                                <div class="col-12 col-sm-6 mb-3">
+                                                    <div class="hover-img-container">
+                                                        <img src="{{ $image }}"
+                                                            class="img-fluid portfolio-grid-image"
+                                                            alt="portfolio image">
+                                                    </div>
+                                                </div>
+                                            @endforeach
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="hover-img-container">
-                                            <img src="{{ asset('archite/img/detailsImgFour.jpg') }}"
-                                                class="img-fluid" alt="details image four">
-                                        </div>
-                                    </div>
-                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- end portfolio details -->
         <!-- start navigation -->
-        <div
-            class="navigation-buttons w-100 d-flex flex-column flex-sm-row justify-content-center align-items-center section-padding-top section-padding-bottom-xl">
-            <a href="portfolioDetails" class="btn light-btn text-uppercase mx-0 mx-sm-4 mb-4 mb-sm-0"><span
-                    class="z-1 position-relative">previous</span></a>
-            <a href="portfolioDetails" class="btn light-btn text-uppercase mx-0 mx-sm-4"><span
-                    class="z-1 position-relative">next</span></a>
-        </div>
+
         <!-- end navigation -->
         <!-- start work together -->
         <section class="work-together ">
@@ -323,12 +291,12 @@
                         <div
                             class="d-flex align-items-center justify-content-center flex-column work-together-content-wrapper">
                             <p class="p text-white fw-500 line-height-3 mb-10">
-                                Let’s Work Together
+                                Hợp tác ngay
                             </p>
-                            <h2 class="h2 fw-700 line-height-3 text-white text-center">Let's Create Your Dream Space
-                                Together!</h2>
+                            <h2 class="h2 fw-700 line-height-3 text-white text-center">Hơp tác phát triển và xây dựng
+                                cùng chúng tôi</h2>
                             <a href="contact" class="btn brand-btn text-uppercase mt-50 border-0"><span
-                                    class="z-1 position-relative">let's build</span></a>
+                                    class="z-1 position-relative">Liên hệ</span></a>
                         </div>
                     </div>
                 </div>
