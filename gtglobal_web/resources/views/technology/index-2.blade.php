@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Helax - Tech Startup Landing Page Html Template</title>
+    <title>GT GLOBAL - CÔNG NGHỆ</title>
 
     <link rel="shortcut icon" href="{{ asset('technology/img/favicon.png') }}" type="images/x-icon" />
 
@@ -1008,6 +1008,7 @@
     </div>
 
     <!-- jquery include -->
+    <script src="{{ asset('technology/js/index.js') }}"></script>
     <script src="{{ asset('technology/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('technology/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('technology/js/swiper.min.js') }}"></script>

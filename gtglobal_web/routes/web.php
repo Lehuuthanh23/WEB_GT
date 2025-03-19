@@ -64,7 +64,7 @@ Route::get('/recruitment', function () {
 
 Route::get('/blogDetails-{id}', function ($id) {
     $currentArticle = DB::select("SELECT * FROM articles WHERE id = $id");
-    $articles = DB::select("SELECT * FROM articles");
+    $articles = DB::select("SELECT * FROM articles where articles.enabled = 1");
         foreach ($articles as &$article) {
             if (!empty($article->image_url)) {
                 $article->image_url = json_decode($article->image_url, true);
@@ -151,12 +151,35 @@ Route::get('/technology/a-params', function () {
     return view('technology/a-params');
 });
 
-Route::get('/technology/blog-single', function () {
-    return view('technology/blog-single');
+Route::get('/technology/blog-single-{id}', function ($id) {
+    $currentArticle = DB::select("SELECT * FROM articles_tech WHERE id = $id");
+    $articles = DB::select("SELECT * FROM articles_tech where articles_tech.enabled = 1");
+        foreach ($articles as &$article) {
+            if (!empty($article->image_url)) {
+                $article->image_url = json_decode($article->image_url, true);
+            }
+        }
+    $articles = collect($articles);
+
+    $currentArticle[0]->image_url = json_decode($currentArticle[0]->image_url, true);
+    $currentArticle = $currentArticle[0];
+    return view('technology/blog-single',  compact('articles','currentArticle'));
+});
+
+Route::get('/technology/blog-singlee', function () {
+    return view('technology/blog-single-2');
 });
 
 Route::get('/technology/blog', function () {
-    return view('technology/blog');
+    $articles = DB::select('SELECT * FROM articles_tech');
+    return view('technology/blog', compact('articles'));
+});
+Route::get('/technology/blog-2', function () {
+    return view('technology/blog-2');
+});
+
+Route::get('/technology/contact-2', function () {
+    return view('technology/contact-2');
 });
 
 Route::get('/technology/contact', function () {

@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Helax - Tech Startup Landing Page Html Template</title>
+    <title>GT GLOBAL - CÔNG NGHỆ</title>
 
     <link rel="shortcut icon" href="{{ asset('technology/img/favicon.png') }}" type="images/x-icon" />
 
@@ -52,29 +52,24 @@
                 <div class="container">
                     <div class="header__main ul_li_between">
                         <div class="header__logo">
-                            <a href="index-2"><img src="{{ asset('technology/img/logo/logo-2.svg') }}"
+                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}" style="width: auto; height: 40px;"
                                     alt=""></a>
                         </div>
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
                                 <ul>
-                                    <li class="menu-item-has-children active"><a href="index-2">Home</a>
+                                    {{-- <li class="menu-item-has-children active"><a href="index-2">Home</a>
                                         <ul class="submenu">
                                             <li><a href="index-2">Home Chatbot</a></li>
                                             <li class="active"><a href="home-2">Home CRM</a></li>
                                             <li><a href="home-3">Home Copy Writing</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a class="scrollspy-btn" href="#feature">Feature</a></li>
-                                    <li><a class="scrollspy-btn" href="#process">How it works</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#!">Blog</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog">Blog</a></li>
-                                            <li><a href="blog-single">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact">Get in touch</a></li>
+                                    </li> --}}
+                                    <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
+                                    <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
+                                    <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
+                                    <li><a class="scrollspy-btn" href="blog">Tin tức</a></li>
+                                    <li><a href="contact">Liên hệ</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -87,9 +82,9 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="header__button d-none d-lg-block">
+                        {{-- <div class="header__button d-none d-lg-block">
                             <a class="thm-btn thm-btn--gradient style-2" href="#!">Login\Signup</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -126,11 +121,10 @@
                         <div class="ct-content-wrap col">
                             <div class="ct-item-wrap row">
                                 <div class="ct-item col-auto ">
-                                    <span class="item-content"><a href="tel:02456787535" class="tel">024 5678
-                                            7535</a></span>
+                                    <span class="item-content"><a href="tel:0907859668" class="tel">0907 859 668</a></span>
                                 </div>
                                 <div class="ct-item col-auto "> <span class="item-content"><a
-                                            href="mailto:support@gmail.com">support@gmail.com</a></span>
+                                            href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -154,23 +148,11 @@
                     </form>
                 </div>
                 <ul id="mobile-menu-active">
-                    <li class="dropdown"><a href="index-2">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index-2">Home Chatbot</a></li>
-                            <li class="active"><a href="home-2">Home CRM</a></li>
-                            <li><a href="home-3">Home Copy Writing</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="scrollspy-btn" href="#feature">Feature</a></li>
-                    <li><a class="scrollspy-btn" href="#process">How it works</a></li>
-                    <li class="dropdown">
-                        <a href="#!">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog">Blog</a></li>
-                            <li><a href="blog-single">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact">Get in touch</a></li>
+                    <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
+                    <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
+                    <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
+                    <li><a href="blog">Tin tức</a></li>
+                    <li><a href="contact">Liên hệ</a></li>
                 </ul>
 
             </nav>
@@ -188,12 +170,12 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-10">
                             <div class="hero__content style-3 text-center">
-                                <h1 class="title wow fadeInUp" data-wow-delay="0ms" data-wow-duration=".5s">A CRM
-                                    Dashboard for every
+                                <h1 class="title wow fadeInUp" data-wow-delay="0ms" data-wow-duration=".5s">Giải pháp
+                                    Công nghệ cho mọi
                                     <span class="xb-title--typewriter">
-                                        <span class="xb-item--text is-active">tech Startup</span>
-                                        <span class="xb-item--text">tech Business</span>
-                                        <span class="xb-item--text">tech Agency</span>
+                                        <span class="xb-item--text is-active">Khởi nghiệp Công nghệ</span>
+                                        <span class="xb-item--text">Doanh nghiệp Công nghệ</span>
+                                        <span class="xb-item--text">Đơn vị Công nghệ</span>
                                     </span>
                                 </h1>
                                 <div class="shape mb-30 wow fadeInUp" data-wow-delay="100ms" data-wow-duration=".5s">
@@ -555,7 +537,7 @@
                     </div>
                 </div>
                 <div class="row mt-none-30 pb-90">
-                    <div class="col-lg-4 col-md-6 mt-30">
+                    {{-- <div class="col-lg-4 col-md-6 mt-30">
                         <div class="footer__cta">
                             <span class="title">NEWSLETTER</span>
                             <h4>Get now free 20% discount for all <br> products on your first order!</h4>
@@ -564,13 +546,13 @@
                                 <button class="thm-btn thm-btn--gradient style-2 br-5">SIGN UP</button>
                             </form>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-lg-4 col-md-6 mt-30">
                         <div class="footer__cta pl-45">
                             <span class="title">QUICK CONTACT</span>
-                            <h4>If you have questions, please use our 24- <br>hour helpline</h4>
+                            <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24 giờ của chúng tôi</h4>
                             <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}"
-                                        alt=""></span>760 398-3535</span>
+                                        alt=""></span>0907 859 668</span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-30">
@@ -590,7 +572,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer__copyright">
+            {{-- <div class="footer__copyright">
                 <div class="container">
                     <div class="ul_li_between mt-none-10">
                         <div class="footer__copyright-text mt-10">
@@ -604,7 +586,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="crm-footer__shape">
                 <div class="shape shape--1" data-parallax='{"y" : 70}'>
                     <img src="{{ asset('technology/img/shape/fot_shape1.png') }}" alt="">
@@ -618,6 +600,7 @@
     </div>
 
     <!-- jquery include -->
+    <script src="{{ asset('technology/js/index.js') }}"></script>
     <script src="{{ asset('technology/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('technology/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('technology/js/swiper.min.js') }}"></script>

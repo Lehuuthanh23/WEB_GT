@@ -70,6 +70,16 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
 
 /* Auto-generated admin routes */
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(function () {
+    Route::get('/admin/tin-tuc-tech',                               'Admin\ArticlesTechController@index');
+    Route::get('/admin/tin-tuc-tech/create',                        'Admin\ArticlesTechController@create');
+    Route::post('/admin/tin-tuc-tech',                              'Admin\ArticlesTechController@store');
+    Route::get('/admin/tin-tuc-tech/{article}/edit',                'Admin\ArticlesTechController@edit')->name('admin/tin-tuc-tech/edit');
+    Route::post('/admin/tin-tuc-tech/{article}',                    'Admin\ArticlesTechController@update')->name('admin/tin-tuc-tech/update');
+    Route::delete('/admin/tin-tuc-tech/{article}',                  'Admin\ArticlesTechController@destroy')->name('admin/tin-tuc-tech/destroy');
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(function () {
     Route::get('/admin/tuyen-dung',                                'Admin\ExportsController@index');
     Route::get('/admin/tuyen-dung/create',                         'Admin\ExportsController@create');
     Route::post('/admin/tuyen-dung',                               'Admin\ExportsController@store');
@@ -109,6 +119,17 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
     Route::post('/admin/tin-tuc/bulk-destroy',                 'Admin\ArticlesController@bulkDestroy')->name('admin/tin-tuc/bulk-destroy');
     Route::post('/admin/tin-tuc/{article}',                    'Admin\ArticlesController@update')->name('admin/tin-tuc/update');
     Route::delete('/admin/tin-tuc/{article}',                  'Admin\ArticlesController@destroy')->name('admin/tin-tuc/destroy');
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(function () {
+    Route::get('/admin/tin-tuc-tech',                               'Admin\ArticlesTechController@index');
+    Route::get('/admin/tin-tuc-tech/create',                        'Admin\ArticlesTechController@create');
+    Route::post('/admin/tin-tuc-tech',                              'Admin\ArticlesTechController@store');
+    Route::get('/admin/tin-tuc-tech/{article}/edit',                'Admin\ArticlesTechController@edit')->name('admin/tin-tuc/edit');
+    Route::post('/admin/tin-tuc-tech/bulk-destroy',                 'Admin\ArticlesTechController@bulkDestroy')->name('admin/tin-tuc/bulk-destroy');
+    Route::post('/admin/tin-tuc-tech/{article}',                    'Admin\ArticlesTechController@update')->name('admin/tin-tuc/update');
+    Route::delete('/admin/tin-tuc-tech/{article}',                  'Admin\ArticlesTechController@destroy')->name('admin/tin-tuc/destroy');
 });
 
 /* Auto-generated admin routes */

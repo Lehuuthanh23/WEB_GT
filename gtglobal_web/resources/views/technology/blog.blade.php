@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from html.xpressbuddy.com/helax/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:22:01 GMT -->
+<!-- Mirrored from html.xpressbuddy.com/helax/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:21:40 GMT -->
 
 <head>
 
@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Helax - Tech Startup Landing Page Html Template</title>
+    <title>Tin tức</title>
 
     <link rel="shortcut icon" href="{{ asset('technology/img/favicon.png') }}" type="images/x-icon" />
 
@@ -26,19 +26,19 @@
     <link rel="stylesheet" href="{{ asset('technology/css/main.css') }}">
 </head>
 
-<body>
+<body class="home-dark">
 
-    <div id="xb-loadding" class="xb-loader">
+    <div id="xb-loadding" class="xb-loader style-2">
         <div class="xb-dual-ring"></div>
     </div>
 
-    <div class="xb-cursor tx-js-cursor">
+    <div class="xb-cursor tx-js-cursor style-2">
         <div class="xb-cursor-wrapper">
             <div class="xb-cursor--follower xb-js-follower"></div>
         </div>
     </div>
 
-    <div class="progress-wrap">
+    <div class="progress-wrap style-2">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
@@ -47,106 +47,45 @@
     <div class="body_wrap">
 
         <!-- header start -->
-        <header class="site-header header-style-three">
-            <div class="header__top">
-                <div class="container mxw_1580">
-                    <div class="ul_li_between">
-                        <ul class="header__top-info ul_li">
-                            <li><img src="{{ asset('technology/img/icon/envelope.svg') }}"
-                                    alt="">needhelp@company.com</li>
-                            <li><img src="{{ asset('technology/img/icon/call.svg') }}" alt="">+ 1 (880)-776-0608
-                            </li>
-                        </ul>
-                        <div class="header__right ul_li">
-                            <ul class="header__links ul_li">
-                                <li><a href="#!">Quick support</a></li>
-                                <li><a href="#!">No Crédit card required</a></li>
-                                <li><a href="#!">Career</a></li>
-                            </ul>
-                            <ul class="header__social ul_li">
-                                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-dribbble"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-behance"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <header class="site-header header-style-two">
             <div class="header__main-wrap stricky">
-                <div class="container mxw_1580">
+                <div class="container">
                     <div class="header__main ul_li_between">
-                        <div class="header__left ul_li">
-                            <div class="d-none d-lg-block">
-                                <a class="header__bar hamburger_menu" href="javascript:void(0);">
-                                    <div class="header__bar-icon">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="header__logo">
-                                <a href="index-2"><img src="{{ asset('technology/img/logo/logo.svg') }}"
-                                        alt=""></a>
-                            </div>
+                        <div class="header__logo">
+                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}"
+                                    style="width: auto; height: 40px;" alt=""></a>
                         </div>
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
                                 <ul>
-                                    <li class="menu-item-has-children active"><a href="index-2">Home</a>
+                                    {{-- <li class="menu-item-has-children active"><a href="index-2">Home</a>
                                         <ul class="submenu">
                                             <li><a href="index-2">Home Chatbot</a></li>
-                                            <li><a href="home-2">Home CRM</a></li>
-                                            <li class="active"><a href="home-3">Home Copy Writing</a></li>
+                                            <li class="active"><a href="home-2">Home CRM</a></li>
+                                            <li><a href="home-3">Home Copy Writing</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a class="scrollspy-btn" href="home-3.html#whatwedo">What we do</a></li>
-                                    <li><a class="scrollspy-btn" href="home-3.html#process">Process</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#!">Blog</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog">Blog</a></li>
-                                            <li><a href="blog-single">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="scrollspy-btn" href="contact">Get in touch</a></li>
+                                    </li> --}}
+                                    <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
+                                    <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
+                                    <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
+                                    <li><a class="scrollspy-btn" href="blog">Tin tức</a></li>
+                                    <li><a href="contact">Liên hệ</a></li>
                                 </ul>
                             </nav>
                         </div>
-                        <div class="header__right-info ul_li">
-                            <div class="d-lg-none">
-                                <a class="header__bar hamburger_menu" href="javascript:void(0);">
-                                    <div class="header__bar-icon">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <a class="header__search header-search-btn" href="javascript:void(0);">
-                                <img src="{{ asset('technology/img/icon/search.svg') }}" alt="">
+                        <div class="d-lg-none">
+                            <a class="header__bar hamburger_menu" href="javascript:void(0);">
+                                <div class="header__bar-icon">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </a>
-                            <div class="header__language header__account">
-                                <ul>
-                                    <li><a href="#!">
-                                            <img src="{{ asset('technology/img/icon/user.svg') }}" alt="">
-                                            My Account
-                                            <i class="far fa-angle-down"></i>
-                                        </a>
-                                        <ul class="lang_sub_list">
-                                            <li><a href="#">Login</a></li>
-                                            <li><a href="#">Sign up</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="header__button">
-                                <a class="thm-btn thm-btn--dark" href="#!">Learn More</a>
-                            </div>
                         </div>
+                        {{-- <div class="header__button d-none d-lg-block">
+                            <a class="thm-btn thm-btn--gradient style-2" href="#!">Login\Signup</a>
+                        </div> --}}
                     </div>
-
                 </div>
             </div>
         </header>
@@ -182,11 +121,11 @@
                         <div class="ct-content-wrap col">
                             <div class="ct-item-wrap row">
                                 <div class="ct-item col-auto ">
-                                    <span class="item-content"><a href="tel:02456787535" class="tel">024 5678
-                                            7535</a></span>
+                                    <span class="item-content"><a href="tel:0907859668" class="tel">0907 859
+                                            668</a></span>
                                 </div>
                                 <div class="ct-item col-auto "> <span class="item-content"><a
-                                            href="mailto:support@gmail.com">support@gmail.com</a></span>
+                                            href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -195,9 +134,8 @@
 
                 <div class="sidebar-socials-wrap mt-30"> <a class="social-item" href="https://facebook.com/"
                         target="_blank">Facebook</a><a class="social-item" href="https://www.behance.net/"
-                        target="_blank">Behance</a><a class="social-item" href="#"
-                        target="_blank">Telegram</a><a class="social-item" href="https://dribbble.com/"
-                        target="_blank">Dribbble</a></div>
+                        target="_blank">Behance</a><a class="social-item" href="#" target="_blank">Telegram</a><a
+                        class="social-item" href="https://dribbble.com/" target="_blank">Dribbble</a></div>
             </div>
             <!-- sidebar-info end -->
 
@@ -210,151 +148,83 @@
                     </form>
                 </div>
                 <ul id="mobile-menu-active">
-                    <li class="dropdown"><a href="index-2">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index-2">Home Chatbot</a></li>
-                            <li><a href="home-2">Home CRM</a></li>
-                            <li class="active"><a href="home-3">Home Copy Writing</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="scrollspy-btn" href="home-3.html#whatwedo">What we do</a></li>
-                    <li><a class="scrollspy-btn" href="home-3.html#process">Process</a></li>
-                    <li class="dropdown">
-                        <a href="#!">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog">Blog</a></li>
-                            <li><a href="blog-single">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="scrollspy-btn" href="contact">Get in touch</a></li>
+                    <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
+                    <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
+                    <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
+                    <li><a href="blog">Tin tức</a></li>
+                    <li><a href="contact">Liên hệ</a></li>
                 </ul>
+
             </nav>
             <!-- side-mobile-menu end -->
         </aside>
-
-        <!-- header search start -->
-        <div class="header-search-form-wrapper">
-            <div class="tx-search-close tx-close"></div>
-            <div class="header-search-container">
-                <form role="search" class="search-form" action="#">
-                    <input type="search" class="search-field" placeholder="Search …" value=""
-                        name="s">
-                    <button type="submit" class="search-submit"><i class="flaticon-magnifying-glass"></i></button>
-                </form>
-            </div>
-        </div>
-        <!-- header search end -->
         <div class="body-overlay"></div>
         <!-- slide bar end -->
 
         <main>
-
-            <!-- breadcrumb start -->
-            <section class="breadcrumb pos-rel bg_img" data-background="assets/img/bg/breadcrumb_bg.jpg">
-                <div class="container">
-                    <h2 class="breadcrumb__title">Blog & Article</h2>
-                </div>
-                <div class="breadcrumb__shape">
-                    <div class="shape shape--1">
-                        <img src="{{ asset('technology/img/shape/brc_shape1.png') }}" alt="">
-                    </div>
-                    <div class="shape shape--2">
-                        <img src="{{ asset('technology/img/shape/brc_shape2.png') }}" alt="">
-                    </div>
-                </div>
-            </section>
-            <!-- breadcrumb end -->
-
-            <!-- blog start -->
             <section class="blog pt-130 pb-120">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 mt-none-55">
-                            <article class="blog__item mt-55">
-                                <a class="blog__thumb" href="blog-single">
-                                    <img src="{{ asset('technology/img/blog/img_01.jpg') }}" alt="">
-                                </a>
-                                <ul class="blog__meta ul_li_center mt-25 mb-30">
-                                    <li><a href="#!"><i class="far fa-user-circle"></i>Alextina</a></li>
-                                    <li><i class="far fa-clock"></i>Dec 28, 2022</li>
-                                    <li><a href="#!"><i class="far fa-comment-alt-lines"></i>(04) Coments</a>
-                                    </li>
-                                </ul>
-                                <h2 class="blog__title border_effect"><a href="blog-single">Demystifying Artificial
-                                        Intelligence: A Beginner's Guide to AI</a></h2>
-                                <p>This blog post will delve into the various benefits and features of the XYZ
-                                    supplement. It will highlight how the supplement can enhance physical and mental
-                                    performance, boost energy levels</p>
-                                <div class="blog__link-warp">
-                                    <div class="blog__link">
-                                        <a href="blog-single">Read More<i class="far fa-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="blog__item mt-55">
-                                <a class="blog__thumb" href="blog-single">
-                                    <img src="{{ asset('technology/img/blog/img_02.jpg') }}" alt="">
-                                </a>
-                                <ul class="blog__meta ul_li_center mt-25 mb-30">
-                                    <li><a href="#!"><i class="far fa-user-circle"></i>Alextina</a></li>
-                                    <li><i class="far fa-clock"></i>Dec 28, 2022</li>
-                                    <li><a href="#!"><i class="far fa-comment-alt-lines"></i>(04) Coments</a>
-                                    </li>
-                                </ul>
-                                <h2 class="blog__title border_effect"><a href="blog-single">Exploring the Ethical
-                                        Implications of Artificial Intelligence 2023</a></h2>
-                                <p>This blog post will delve into the various benefits and features of the XYZ
-                                    supplement. It will highlight how the supplement can enhance physical and mental
-                                    performance, boost energy levels</p>
-                                <div class="blog__link-warp">
-                                    <div class="blog__link">
-                                        <a href="blog-single">Read More<i class="far fa-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="blog__item mt-55">
-                                <a class="blog__thumb" href="blog-single">
-                                    <img src="{{ asset('technology/img/blog/img_03.jpg') }}" alt="">
-                                </a>
-                                <ul class="blog__meta ul_li_center mt-25 mb-30">
-                                    <li><a href="#!"><i class="far fa-user-circle"></i>Alextina</a></li>
-                                    <li><i class="far fa-clock"></i>Dec 28, 2022</li>
-                                    <li><a href="#!"><i class="far fa-comment-alt-lines"></i>(04) Coments</a>
-                                    </li>
-                                </ul>
-                                <h2 class="blog__title border_effect"><a href="blog-single">AI in Healthcare:
-                                        Revolutionizing the Future of Medicine and Clue</a></h2>
-                                <p>This blog post will delve into the various benefits and features of the XYZ
-                                    supplement. It will highlight how the supplement can enhance physical and mental
-                                    performance, boost energy levels</p>
-                                <div class="blog__link-warp">
-                                    <div class="blog__link">
-                                        <a href="blog-single">Read More<i class="far fa-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="blog__item mt-55">
-                                <a class="blog__thumb" href="blog-single">
-                                    <img src="{{ asset('technology/img/blog/img_04.jpg') }}" alt="">
-                                </a>
-                                <ul class="blog__meta ul_li_center mt-25 mb-30">
-                                    <li><a href="#!"><i class="far fa-user-circle"></i>Alextina</a></li>
-                                    <li><i class="far fa-clock"></i>Dec 28, 2022</li>
-                                    <li><a href="#!"><i class="far fa-comment-alt-lines"></i>(04) Coments</a>
-                                    </li>
-                                </ul>
-                                <h2 class="blog__title border_effect"><a href="blog-single">AI in Education: Unlocking
-                                        New Possibilities for Personalized Learning</a></h2>
-                                <p>This blog post will delve into the various benefits and features of the XYZ
-                                    supplement. It will highlight how the supplement can enhance physical and mental
-                                    performance, boost energy levels</p>
-                                <div class="blog__link-warp">
-                                    <div class="blog__link">
-                                        <a href="blog-single">Read More<i class="far fa-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                            <div class="pagination_wrap pt-50">
+                            @foreach ($articles as $item)
+                                @if ($item->enabled == 1)
+                                    <article class="blog__item mt-55">
+                                        <a class="blog__thumb" href="blog-single-{{ $item->id }}">
+                                            <img src="{{ json_decode($item->image_url, true)[0] }}" alt=""
+                                                style="height: 50%; width: 70%">
+                                        </a>
+                                        <ul class="blog__meta ul_li_center mt-25 mb-30">
+                                            <li><i class="far fa-clock"
+                                                    style ="color: white;"></i>{{ $item->published_at }}</li>
+                                            </li>
+                                        </ul>
+                                        <h2 class="blog__title border_effect"><a
+                                                href="blog-single-{{ $item->id }}" style ="color: white;"
+                                                style ="color: white;">{{ $item->title }}</a>
+                                        </h2>
+                                        <div class="collapse-content"
+                                            style="background-color: transparent;color: inherit;">
+                                            {!! $item->description !!}
+                                        </div>
+                                        <script>
+                                            // Lấy tất cả các div có class collapse-content
+                                            document.querySelectorAll('.collapse-content').forEach(div => {
+                                                // Lấy tất cả các phần tử con (bao gồm thẻ HTML bên trong)
+                                                const elements = div.getElementsByTagName('*');
+
+                                                // Lặp qua từng phần tử con và đổi màu chữ
+                                                Array.from(elements).forEach(element => {
+                                                    element.style.color = 'inherit'; // Thay đổi màu chữ thành đỏ (hoặc màu bạn muốn)
+                                                });
+                                            });
+                                        </script>
+                                        <style>
+                                            .collapse-content {
+                                                height: 100px;
+                                                /* Chiều cao ban đầu */
+                                                overflow: hidden;
+                                                /* Ẩn phần vượt quá */
+                                                padding: 15px;
+                                                background-color: #f9f9f9;
+                                                border-radius: 4px;
+                                                font-size: 15px;
+                                                color: #333;
+                                                transition: height 0.3s ease;
+                                                /* Hiệu ứng trượt mượt mà */
+                                            }
+                                        </style>
+                                        <div class="blog__link-warp">
+                                            <div class="blog__link" style="background-color: transparent;"
+                                                style="background-color: transparent;">
+                                                <a href="blog-single-{{ $item->id }}">Read More<i
+                                                        class="far fa-chevron-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                @endif
+                            @endforeach
+
+                            {{-- <div class="pagination_wrap pt-50">
                                 <ul>
                                     <li><a href="#"><i class="far fa-long-arrow-left"></i></a></li>
                                     <li><a href="#" class="current_page">01</a></li>
@@ -363,315 +233,42 @@
                                     <li><a href="#">08</a></li>
                                     <li><a href="#"><i class="far fa-long-arrow-right"></i></a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- blog end -->
-
-            <!-- testimonial start -->
-            <section class="testimonial testimonial__bg pt-130 pb-130"
-                data-background="assets/img/bg/testimonial__bg.jpg">
-                <div class="container">
-                    <div class="sec-title sec-title--white text-center mb-60">
-                        <h2 class="sec-title__title mb-15">Million of people <span>already use Helax</span> to <br>
-                            improve their writing</h2>
-                    </div>
-                </div>
-                <div class="testimonial__slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide testimonial__item">
-                            <div class="image">
-                                <img src="{{ asset('technology/img/testimonial/img_01.jpg') }}" alt="">
-                            </div>
-                            <div class="content">
-                                <div class="testimonial__icon ul_li mb-50">
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                </div>
-                                <p>I’ve tried every free and paid writing/editing/grammar extension out there and this
-                                    by far is the best one my team and I have found. It’s fast, accurate and really
-                                    helps improve your writing beyond simple grammar suggestions.</p>
-                                <div class="testimonial__author ul_li mt-50">
-                                    <div class="avatar">
-                                        <img src="{{ asset('technology/img/testimonial/avatar.jpg') }}"
-                                            alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h4>Florida Campain</h4>
-                                        <span>Web Developer</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial__quote">
-                                    <img src="{{ asset('technology/img/icon/quote.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide testimonial__item">
-                            <div class="image">
-                                <img src="{{ asset('technology/img/testimonial/img_02.jpg') }}" alt="">
-                            </div>
-                            <div class="content">
-                                <div class="testimonial__icon ul_li mb-50">
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                </div>
-                                <p>I’ve tried every free and paid writing/editing/grammar extension out there and this
-                                    by far is the best one my team and I have found. It’s fast, accurate and really
-                                    helps improve your writing beyond simple grammar suggestions.</p>
-                                <div class="testimonial__author ul_li mt-50">
-                                    <div class="avatar">
-                                        <img src="{{ asset('technology/img/testimonial/avatar.jpg') }}"
-                                            alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h4>Florida Campain</h4>
-                                        <span>Web Developer</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial__quote">
-                                    <img src="{{ asset('technology/img/icon/quote.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide testimonial__item">
-                            <div class="image">
-                                <img src="{{ asset('technology/img/testimonial/img_03.jpg') }}" alt="">
-                            </div>
-                            <div class="content">
-                                <div class="testimonial__icon ul_li mb-50">
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                </div>
-                                <p>I’ve tried every free and paid writing/editing/grammar extension out there and this
-                                    by far is the best one my team and I have found. It’s fast, accurate and really
-                                    helps improve your writing beyond simple grammar suggestions.</p>
-                                <div class="testimonial__author ul_li mt-50">
-                                    <div class="avatar">
-                                        <img src="{{ asset('technology/img/testimonial/avatar.jpg') }}"
-                                            alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h4>Florida Campain</h4>
-                                        <span>Web Developer</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial__quote">
-                                    <img src="{{ asset('technology/img/icon/quote.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide testimonial__item">
-                            <div class="image">
-                                <img src="{{ asset('technology/img/testimonial/img_01.jpg') }}" alt="">
-                            </div>
-                            <div class="content">
-                                <div class="testimonial__icon ul_li mb-50">
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                    <span><img src="{{ asset('technology/img/icon/trustpilot.svg') }}"
-                                            alt=""></span>
-                                </div>
-                                <p>I’ve tried every free and paid writing/editing/grammar extension out there and this
-                                    by far is the best one my team and I have found. It’s fast, accurate and really
-                                    helps improve your writing beyond simple grammar suggestions.</p>
-                                <div class="testimonial__author ul_li mt-50">
-                                    <div class="avatar">
-                                        <img src="{{ asset('technology/img/testimonial/avatar.jpg') }}"
-                                            alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h4>Florida Campain</h4>
-                                        <span>Web Developer</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial__quote">
-                                    <img src="{{ asset('technology/img/icon/quote.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="testimonial__review">
-                        <div class="row justify-content-center mt-none-30">
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="testimonial__review-item text-center">
-                                    <ul class="rating-star ul_li_center mb-15">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <h4>"Perfect solution for business"</h4>
-                                    <img src="{{ asset('technology/img/icon/trustpilot.png') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="testimonial__review-item text-center">
-                                    <ul class="rating-star ul_li_center mb-15">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <h4>"I am completely blown away"</h4>
-                                    <img src="{{ asset('technology/img/icon/trustpilot.png') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="testimonial__review-item text-center">
-                                    <ul class="rating-star ul_li_center mb-15">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <h4>"I wish I would have thought of it first"</h4>
-                                    <img src="{{ asset('technology/img/icon/trustpilot.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- testimonial end -->
-
-            <!-- cta start -->
-            <section class="cta pos-rel pt-125 pb-120">
-                <div class="cta__content text-center">
-                    <div class="sec-title sec-title--big text-center mb-30">
-                        <h2 class="sec-title__title mb-20">Ready to <span class="shape">level-up</span>?</h2>
-                        <p>Write 10x faster, engage your audience, & never struggle with <br> the blank page again.</p>
-                    </div>
-                    <a class="thm-btn thm-btn--gradient" href="#!">Get Started Free</a>
-                </div>
-                <div class="brand__vector">
-                    <div class="vector vector--1" data-parallax='{"y" : 80}'>
-                        <img class="wow fadeInLeft" src="{{ asset('technology/img/shape/br_shape2.png') }}"
-                            alt="">
-                    </div>
-                    <div class="vector vector--2" data-parallax='{"y" : 70}'>
-                        <img class="wow fadeInRight" src="{{ asset('technology/img/shape/br_shape1.png') }}"
-                            alt="">
-                    </div>
-                </div>
-            </section>
-            <!-- cta end -->
         </main>
 
-        <footer class="site-footer">
+        <footer class="site-footer footer-style-two pos-rel pt-85" data-background="assets/img/shape/fot_shape2.png">
             <div class="container">
-                <ul class="footer__top ul_li_between">
-                    <li><i class="far fa-check"></i>No credit card required</li>
-                    <li><i class="far fa-check"></i>2,000 free words per month</li>
-                    <li><i class="far fa-check"></i>90+ content types to explore</li>
-                </ul>
-                <div class="footer__widget-warp pt-80 pb-75">
-                    <div class="row mt-none-30 row-cols-1 row-cols-xl-5 row-cols-lg-5 row-cols-md-3 row-cols-sm-2">
-                        <div class="col mt-30">
-                            <div class="footer__widget">
-                                <h3 class="widget-title">Product</h3>
-                                <ul class="widget__link list-unstyled">
-                                    <li><a href="#!">About Helax</a></li>
-                                    <li><a href="#!">Review</a></li>
-                                    <li><a href="#!">Jasper AI</a></li>
-                                    <li><a href="#!">Pricing Plan</a></li>
-                                    <li><a href="#!">Templates</a></li>
-                                    <li><a href="#!">Alternatives</a></li>
-                                </ul>
-                            </div>
+                <div class="row mt-none-30 pb-90">
+                    <div class="col-lg-4 col-md-6 mt-30">
+                        <div class="footer__cta pl-45">
+                            <span class="title">QUICK CONTACT</span>
+                            <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24 giờ của chúng tôi</h4>
+                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}"
+                                        alt=""></span>0907 859 668</span>
                         </div>
-                        <div class="col mt-30">
-                            <div class="footer__widget">
-                                <h3 class="widget-title">Company</h3>
-                                <ul class="widget__link list-unstyled">
-                                    <li><a href="#!">Blog</a></li>
-                                    <li><a href="#!">Webinars</a></li>
-                                    <li><a href="#!">Press</a></li>
-                                    <li><a href="#!">Careers</a></li>
-                                    <li><a href="#!">Community</a></li>
-                                    <li><a href="#!">Creator</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col mt-30">
-                            <div class="footer__widget">
-                                <h3 class="widget-title">Support</h3>
-                                <ul class="widget__link list-unstyled">
-                                    <li><a href="#!">Affiliate Program</a></li>
-                                    <li><a href="#!">Contact us</a></li>
-                                    <li><a href="#!">Report a Bug</a></li>
-                                    <li><a href="#!">Report an Outage</a></li>
-                                    <li><a href="#!">Request</a></li>
-                                    <li><a href="#!">New Features</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col mt-30">
-                            <div class="footer__widget">
-                                <h3 class="widget-title">Use Cases</h3>
-                                <ul class="widget__link list-unstyled">
-                                    <li><a href="#!">For Teams</a></li>
-                                    <li><a href="#!">For Blog Writers</a></li>
-                                    <li><a href="#!">For Social Media</a></li>
-                                    <li><a href="#!">Managers</a></li>
-                                    <li><a href="#!">For Mail marketing</a></li>
-                                    <li><a href="#!">Content Writing</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col mt-30">
-                            <div class="footer__widget">
-                                <h3 class="widget-title">More info</h3>
-                                <ul class="widget__link list-unstyled">
-                                    <li><a href="#!">Privacy Policy</a></li>
-                                    <li><a href="#!">Terms of Service</a></li>
-                                    <li><a href="#!">Cokie Policy</a></li>
-                                    <li><a href="#!">GDPR</a></li>
-                                    <li><a href="#!">Sitemaps</a></li>
-                                    <li><a href="#!">Get in touch</a></li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-30">
+                        <div class="footer__cta text-lg-end">
+                            <span class="title">FOLLOW US</span>
+                            <ul class="footer__cta-social ul_li_right mb-60">
+                                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                            <ul class="footer__cta-link ul_li_right">
+                                <li><a href="#!">PayPal</a></li>
+                                <li><a href="#!">VISA</a></li>
+                                <li><a href="#!">Master Card</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer__copyright gradient-bg">
+            {{-- <div class="footer__copyright">
                 <div class="container">
                     <div class="ul_li_between mt-none-10">
                         <div class="footer__copyright-text mt-10">
@@ -685,12 +282,21 @@
                         </ul>
                     </div>
                 </div>
+            </div> --}}
+            <div class="crm-footer__shape">
+                <div class="shape shape--1" data-parallax='{"y" : 70}'>
+                    <img src="{{ asset('technology/img/shape/fot_shape1.png') }}" alt="">
+                </div>
+                <div class="shape shape--2" data-parallax='{"y" : 80}'>
+                    <img src="{{ asset('technology/img/shape/fot_shape3.png') }}" alt="">
+                </div>
             </div>
         </footer>
 
     </div>
 
     <!-- jquery include -->
+    <script src="{{ asset('technology/js/index.js') }}"></script>
     <script src="{{ asset('technology/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('technology/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('technology/js/swiper.min.js') }}"></script>
@@ -708,6 +314,6 @@
 </body>
 
 
-<!-- Mirrored from html.xpressbuddy.com/helax/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:22:03 GMT -->
+<!-- Mirrored from html.xpressbuddy.com/helax/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:21:49 GMT -->
 
 </html>

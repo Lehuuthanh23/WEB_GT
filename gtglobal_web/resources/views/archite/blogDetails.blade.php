@@ -238,7 +238,6 @@
                                                         </style>
                                                     </div>
                                                 @endforeach
-
                                             </div>
                                         </div>
                                     </div>
@@ -261,8 +260,7 @@
                                     <img src="{{ asset('archite/img/Logo.png') }}" style="height: 30%; width: 30%;"
                                         alt="logo">
                                 </div>
-                                <p class="p text-white fw-500 line-height-5 mt-15"
-                                    style="font-size: 15px !important;">
+                                <p class="p text-white fw-500 line-height-5 mt-15">
                                     Công ty TNHH TM & DV TOÀN CẦU GT là một trong những công ty có thế mạnh và tiềm năng
                                     trong lĩnh vực thiết kế, thi công, sản xuất,… nội – ngoại thất với hơn 10 năm hoạt
                                     động trong lĩnh vực và triển khai các dự án khối công trình văn phòng, showroom, nhà

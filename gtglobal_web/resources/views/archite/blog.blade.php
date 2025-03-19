@@ -169,6 +169,9 @@
                         <div class="blogs-archieve-wrapper">
                             <div class="row">
                                 <div class="col-12 col-lg-8 pr-80 blog-archieve-body">
+                                    @php
+                                        $enabledCount = 0;
+                                    @endphp
                                     @foreach ($articles as $item)
                                         @if ($item->enabled == 1)
                                             <div class="blogs-archieve-card mb-70">
@@ -276,148 +279,46 @@
                                                     <span><i class="fa-solid fa-arrow-right"></i></span>
                                                 </a>
                                             </div>
+                                            @php
+                                                $enabledCount++; // Tăng biến đếm khi hiển thị một phần tử enabled
+                                            @endphp
+
+                                            @if ($enabledCount == 3)
+                                                @break
+                                            @endif
                                         @endif
                                     @endforeach
 
 
                                 </div>
                                 <div class="col-12 col-lg-4 pl-20 mt-5 mt-lg-0 blog-sidebar">
-                                    <div class="input-group mb-30">
-                                        <input type="text" class="form-control blog-sidebar-search-input"
-                                            placeholder="Search" aria-label="Recipient's username"
-                                            aria-describedby="button-addon2">
-                                        <button class="btn btn-outline-secondary blog-sidebar-search-icon"
-                                            type="button" id="button-addon2"><i
-                                                class="fa-solid fa-magnifying-glass"></i></button>
-                                    </div>
-                                    <div
-                                        class="author-details d-flex justify-content-center align-items-center flex-column mb-50">
-                                        <img class="img-fluid rounded-circle text-center"
-                                            src="{{ asset('archite/img/authorOne.jpg') }}" alt="author image">
-                                        <h6 class="h6 fw-700 dark-text line-height-3 mt-3 text-center">Ralph Waldo</h6>
-                                        <p class="p body-text fw-500 line-height-5 pt-10 text-center">
-                                            I'm are many variations of passages of Lor available.
-                                        </p>
-                                        <div
-                                            class="blog-author-social d-flex justify-content-center align-items-center mt-30">
-                                            <i class="fa-brands fa-facebook-f me-3"></i>
-                                            <i class="fa-brands fa-twitter me-3"></i>
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </div>
-                                    </div>
-                                    <div class="blog-sidebar-category">
-                                        <h5 class="h5 dark-text fw-700 line-height-3">Popular Category</h5>
-                                        <ul class="sidebar-category-container mt-20">
-                                            <li class="sidebar-category-item mb-20">
-                                                <a class="fs-6 fw-500 body-text" href="blogDetails">Architecture
-                                                    Design</a>
-                                            </li>
-                                            <li class="sidebar-category-item mb-20">
-                                                <a class="fs-6 fw-500 body-text" href="blogDetails">Interior
-                                                    Design</a>
-                                            </li>
-                                            <li class="sidebar-category-item mb-20">
-                                                <a class="fs-6 fw-500 body-text" href="blogDetails">Luxury Interior
-                                                    Design</a>
-                                            </li>
-                                            <li class="sidebar-category-item mb-20">
-                                                <a class="fs-6 fw-500 body-text" href="blogDetails">Office Interior
-                                                    Design</a>
-                                            </li>
-                                            <li class="sidebar-category-item mb-20">
-                                                <a class="fs-6 fw-500 body-text" href="blogDetails">Home
-                                                    Decoration</a>
-                                            </li>
-                                            <li class="sidebar-category-item">
-                                                <a class="fs-6 fw-500 body-text" href="blogDetails">House Exterior
-                                                    Design</a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                     <div class="recent-articles mt-60">
                                         <h5 class="h5 dark-text fw-700 line-height-3 mb-20">Recent Article</h5>
-                                        <div class="recent-article-item mb-25">
-                                            <div class="row g-2 g-sm-0 g-lg-2 align-items-center">
-                                                <div class="col-3 col-sm-2 col-lg-3">
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('archite/img/recentBlogOne.jpg') }}"
-                                                        alt="blog image">
+                                        @foreach ($articles as $item)
+                                            @if ($item->enabled == 1)
+                                                <div class="recent-article-item mb-25">
+                                                    <div class="row g-2 g-sm-0 g-lg-2 align-items-center">
+                                                        <div class="col-3 col-sm-2 col-lg-3">
+                                                            <img class="img-fluid"
+                                                                src="{{ json_decode($item->image_url, true)[0] }}"
+                                                                alt="blog image">
+                                                        </div>
+                                                        <div class="col-9 col-sm-10 col-lg-9">
+                                                            <h6 class="mb-10">
+                                                                <a class="fs-6 dark-text fw-500 recent-article-title"
+                                                                    href="blogDetails-{{ $item->id }}">
+                                                                    {{ $item->title }}
+                                                                </a>
+                                                            </h6>
+                                                            <p class="p body-text fw-500 line-height-5">
+                                                                {{ $item->published_at }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-9 col-sm-10 col-lg-9">
-                                                    <h6 class="mb-10">
-                                                        <a class="fs-6 dark-text fw-500 recent-article-title"
-                                                            href="blogDetails">
-                                                            Interior Design Trends for 2023: The Latest and Greatest
-                                                            Ideas
-                                                        </a>
-                                                    </h6>
-                                                    <p class="p body-text fw-500 line-height-5">
-                                                        14 Mar, 2023
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="recent-article-item mb-25">
-                                            <div class="row g-2 g-sm-0 g-lg-2 align-items-center">
-                                                <div class="col-3 col-sm-2 col-lg-3">
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('archite/img/recentBlogTwo.jpg') }}"
-                                                        alt="blog image">
-                                                </div>
-                                                <div class="col-9 col-sm-10 col-lg-9">
-                                                    <h6 class="mb-10">
-                                                        <a class="fs-6 dark-text fw-500 recent-article-title"
-                                                            href="blogDetails">
-                                                            Small Spaces, Big Design: Maximizing Functionality.
-                                                        </a>
-                                                    </h6>
-                                                    <p class="p body-text fw-500 line-height-5">
-                                                        05 Mar, 2023
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="recent-article-item mb-25">
-                                            <div class="row g-2 g-sm-0 g-lg-2 align-items-center">
-                                                <div class="col-3 col-sm-2 col-lg-3">
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('archite/img/recentBlogThree.jpg') }}"
-                                                        alt="blog image">
-                                                </div>
-                                                <div class="col-9 col-sm-10 col-lg-9">
-                                                    <h6 class="mb-10">
-                                                        <a class="fs-6 dark-text fw-500 recent-article-title"
-                                                            href="blogDetails">
-                                                            From Concept to Reality, The Journey of Success.
-                                                        </a>
-                                                    </h6>
-                                                    <p class="p body-text fw-500 line-height-5">
-                                                        02 Feb, 2023
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="recent-article-item mb-25">
-                                            <div class="row g-2 g-sm-0 g-lg-2 align-items-center">
-                                                <div class="col-3 col-sm-2 col-lg-3">
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('archite/img/recentBlogFour.jpg') }}"
-                                                        alt="blog image">
-                                                </div>
-                                                <div class="col-9 col-sm-10 col-lg-9">
-                                                    <h6 class="mb-10">
-                                                        <a class="fs-6 dark-text fw-500 recent-article-title"
-                                                            href="blogDetails">
-                                                            Luxury Living: Designing High-End Interiors and Architecture
-                                                        </a>
-                                                    </h6>
-                                                    <p class="p body-text fw-500 line-height-5">
-                                                        14 Mar, 2023
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            @endif
+                                        @endforeach
 
-                                        </div>
                                     </div>
                                     <div class="popular-tags mt-60">
                                         <h5 class="h5 dark-text fw-700 line-height-3 mb-20">Popular Tag</h5>

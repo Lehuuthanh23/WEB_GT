@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from html.xpressbuddy.com/helax/home-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:21:49 GMT -->
+<!-- Mirrored from html.xpressbuddy.com/helax/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:22:01 GMT -->
 
 <head>
 
@@ -101,8 +101,8 @@
                                             <li class="active"><a href="home-3">Home Copy Writing</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="scrollspy-btn" href="#whatwedo">What we do</a></li>
-                                    <li><a class="scrollspy-btn" href="#process">Process</a></li>
+                                    <li><a class="scrollspy-btn" href="home-3.html#whatwedo">What we do</a></li>
+                                    <li><a class="scrollspy-btn" href="home-3.html#process">Process</a></li>
                                     <li class="menu-item-has-children">
                                         <a href="#!">Blog</a>
                                         <ul class="submenu">
@@ -217,8 +217,8 @@
                             <li class="active"><a href="home-3">Home Copy Writing</a></li>
                         </ul>
                     </li>
-                    <li><a class="scrollspy-btn" href="#whatwedo">What we do</a></li>
-                    <li><a class="scrollspy-btn" href="#process">Process</a></li>
+                    <li><a class="scrollspy-btn" href="home-3.html#whatwedo">What we do</a></li>
+                    <li><a class="scrollspy-btn" href="home-3.html#process">Process</a></li>
                     <li class="dropdown">
                         <a href="#!">Blog</a>
                         <ul class="sub-menu">
@@ -248,356 +248,127 @@
         <!-- slide bar end -->
 
         <main>
-            <!-- hero start -->
-            <section class="hero hero-style-three hero__height pos-rel">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="hero__content">
-                                <h1 class="title mb-35">
-                                    <span class="wow fadeInUp-2" data-wow-delay="100ms" data-wow-duration=".5s">Helax
-                                        the Next</span>
-                                    <span class="wow fadeInUp-2" data-wow-delay="200ms" data-wow-duration=".5s"><span
-                                            class="shape">Generation</span> of</span>
-                                    <span class="wow fadeInUp-2" data-wow-delay="300ms"
-                                        data-wow-duration=".5s">Content Creation</span>
-                                </h1>
-                                <p class="wow fadeInUp-2 mb-45" data-wow-delay="400ms" data-wow-duration=".5s">Make
-                                    your writing shine with our all-in-one Helax <br> tool, wherever you write.</p>
-                                <div class="btns wow fadeInUp-2" data-wow-delay="500ms" data-wow-duration=".5s">
-                                    <a class="thm-btn thm-btn--gradient" href="#!">Get Started Free</a>
-                                    <a class="thm-btn thm-btn--outline popup-video"
-                                        href="https://www.youtube.com/watch?v=cRXm1p-CNyk"><i
-                                            class="fas fa-play"></i>Get Started Free</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="hero__img hero__img--shape">
-                                <img src="{{ asset('technology/img/hero/hero_img.png') }}" alt="">
-                                <div class="hero__img-shape">
-                                    <div class="shape shape--1 wow fadeInLeft" data-wow-delay="200ms"
-                                        data-wow-duration=".7s"><img
-                                            src="{{ asset('technology/img/icon/hs_01.png') }}" alt="">Grammar
-                                        Checking</div>
-                                    <div class="shape shape--2 wow fadeInLeft" data-wow-delay="300ms"
-                                        data-wow-duration=".7s"><img
-                                            src="{{ asset('technology/img/icon/hs_02.png') }}"
-                                            alt="">Rephrase Suggestions</div>
-                                    <div class="shape shape--3 wow fadeInRight" data-wow-delay="200ms"
-                                        data-wow-duration=".7s"><img
-                                            src="{{ asset('technology/img/icon/hs_03.png') }}" alt="">And
-                                        More ...</div>
-                                    <div class="shape shape--4 wow fadeInRight" data-wow-delay="300ms"
-                                        data-wow-duration=".7s"><img
-                                            src="{{ asset('technology/img/icon/hs_04.png') }}" alt="">Style
-                                        Improvement</div>
-                                    <div class="shape shape--5 wow fadeInRight" data-wow-delay="400ms"
-                                        data-wow-duration=".7s"><img
-                                            src="{{ asset('technology/img/icon/hs_05.png') }}" alt="">Live
-                                        Trainings Events</div>
-                                </div>
-                                <div class="hero__layer-shape">
-                                    <div class="shape shape--1"><img
-                                            src="{{ asset('technology/img/icon/hs_06.png') }}" alt=""></div>
-                                    <div class="shape shape--2"><img
-                                            src="{{ asset('technology/img/icon/hs_07.png') }}" alt=""></div>
-                                    <div class="shape shape--3"><img
-                                            src="{{ asset('technology/img/icon/hs_08.png') }}" alt=""></div>
-                                    <div class="shape shape--4"><img
-                                            src="{{ asset('technology/img/icon/hs_09.png') }}" alt=""></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero__shape">
-                    <img src="{{ asset('technology/img/shape/h_shape.png') }}" alt="">
-                </div>
-                <div class="hero__shape-icon">
-                    <img src="{{ asset('technology/img/shape/h_shape2.png') }}" alt="">
-                </div>
-            </section>
-            <!-- hero start -->
 
-            <!-- service start -->
-            <section id="whatwedo" class="service service__bg pt-130 pb-130"
-                data-background="assets/img/bg/about.jpg">
+            <!-- breadcrumb start -->
+            <section class="breadcrumb pos-rel bg_img" data-background="assets/img/bg/breadcrumb_bg.jpg">
                 <div class="container">
-                    <div class="sec-title sec-title--white text-center mb-60">
-                        <h2 class="sec-title__title mb-15">Helax for <span>Tech Startup</span><br> business</h2>
-                        <p>Get better results in a fraction of the time.Finally, a writing <br> tool you’ll actually
-                            use.</p>
-                    </div>
-                    <div class="row mt-none-20">
-                        <div class="col-lg-4 col-md-6 mt-20">
-                            <div class="service__item">
-                                <div class="icon">
-                                    <img src="{{ asset('technology/img/icon/s_01.svg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h3><a href="#!">Blog Content</a></h3>
-                                    <p>Convert your audience with copy that sells.</p>
-                                    <a class="link" href="#!">Try Blog Content<i
-                                            class="far fa-angle-right"></i></a>
-                                </div>
-                                <a class="service-link" href="#!"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-20">
-                            <div class="service__item">
-                                <div class="icon">
-                                    <img src="{{ asset('technology/img/icon/s_02.svg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h3><a href="#!">Digital Add Copy</a></h3>
-                                    <p>Produce compelling ad copy in just a few clicks.</p>
-                                    <a class="link" href="#!">Try Add Copy<i
-                                            class="far fa-angle-right"></i></a>
-                                </div>
-                                <a class="service-link" href="#!"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-20">
-                            <div class="service__item">
-                                <div class="icon">
-                                    <img src="{{ asset('technology/img/icon/s_03.svg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h3><a href="#!">Ecommerce Copy</a></h3>
-                                    <p>Increase sales with better product descriptions.</p>
-                                    <a class="link" href="#!">Try Ecommerce Copy<i
-                                            class="far fa-angle-right"></i></a>
-                                </div>
-                                <a class="service-link" href="#!"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-20">
-                            <div class="service__item">
-                                <div class="icon">
-                                    <img src="{{ asset('technology/img/icon/s_04.svg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h3><a href="#!">Sales Copy</a></h3>
-                                    <p>Convert your audience with copy that sells.</p>
-                                    <a class="link" href="#!">Try Sales Copy<i
-                                            class="far fa-angle-right"></i></a>
-                                </div>
-                                <a class="service-link" href="#!"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-20">
-                            <div class="service__item">
-                                <div class="icon">
-                                    <img src="{{ asset('technology/img/icon/s_05.svg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h3><a href="#!">Social Media Copy</a></h3>
-                                    <p>Engage your audience with compelling social copy.</p>
-                                    <a class="link" href="#!">Try Social Media Copy<i
-                                            class="far fa-angle-right"></i></a>
-                                </div>
-                                <a class="service-link" href="#!"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-20">
-                            <div class="service__item">
-                                <div class="icon">
-                                    <img src="{{ asset('technology/img/icon/s_06.svg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h3><a href="#!">Website Copy</a></h3>
-                                    <p>Overhaul your website with more compelling copy.</p>
-                                    <a class="link" href="#!">Try Website Copy<i
-                                            class="far fa-angle-right"></i></a>
-                                </div>
-                                <a class="service-link" href="#!"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature__wrap">
-                        <div class="row justify-content-center mt-none-30">
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="feature__item text-center">
-                                    <span class="number"><span>01</span></span>
-                                    <h3>Write better content faster</h3>
-                                    <p>Leverage AI to write your content and <br> copy in minutes.</p>
-                                    <div class="feature__dot">
-                                        <span></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="feature__item text-center">
-                                    <span class="number"><span>02</span></span>
-                                    <h3>Say ‘goodbye’ to the blank page</h3>
-                                    <p>Leverage AI to write your content and <br> copy in minutes.</p>
-                                    <div class="feature__dot">
-                                        <span></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 mt-30">
-                                <div class="feature__item text-center">
-                                    <span class="number"><span>03</span></span>
-                                    <h3>90+ tools and templates</h3>
-                                    <p>Leverage AI to write your content and <br> copy in minutes.</p>
-                                    <div class="feature__dot">
-                                        <span></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="breadcrumb__title">Blog & Article</h2>
                 </div>
-            </section>
-            <!-- service end -->
-
-            <!-- brand start -->
-            <section class="brand pt-130 pb-130">
-                <div class="container">
-                    <div class="brand__head text-center mb-100">
-                        <h5 class="content">Experience the full power of an Helax content generator that <br> delivers
-                            premium results in seconds.</h5>
-                        <h1 class="number">80,0000+</h1>
-                        <h5 class="sub-title">professionals & teams choose Helax</h5>
-                    </div>
-                </div>
-                <div class="brand__marquee">
-                    <div class="brand__marquee-left">
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_01.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_02.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_03.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_04.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_05.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_06.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_07.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_08.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_09.png') }}"
-                                    alt=""></a>
-                        </div>
-                    </div>
-                    <div class="brand__marquee-right mt-20">
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_10.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_11.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_12.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_13.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_14.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_15.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_16.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class="brand__marquee-item">
-                            <a href="#!"><img src="{{ asset('technology/img/brand/img_17.png') }}"
-                                    alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="brand__vector">
-                    <div class="vector vector--1" data-parallax='{"y" : 80}'>
-                        <img class="wow fadeInLeft" src="{{ asset('technology/img/shape/br_shape1.png') }}"
-                            alt="">
-                    </div>
-                    <div class="vector vector--2" data-parallax='{"y" : 70}'>
-                        <img class="wow fadeInRight" src="{{ asset('technology/img/shape/br_shape2.png') }}"
-                            alt="">
-                    </div>
-                </div>
-            </section>
-            <!-- brand end -->
-
-            <!-- steps start -->
-            <section id="process" class="step pos-rel pb-130">
-                <div class="container">
-                    <div class="sec-title text-center mb-60">
-                        <h2 class="sec-title__title mb-15">Great writing in three <br> easy <span>steps</span></h2>
-                        <p>Make your writing shine with our all-in-one AI tool, <br> wherever you write.</p>
-                    </div>
-                    <div class="row mt-none-30 justify-content-center">
-                        <div class="col-lg-4 col-md-6 mt-30">
-                            <div class="step__single">
-                                <span>Step 01</span>
-                                <h4><span>01.</span> Sign up for free</h4>
-                                <p>Sign up in 30 seconds—no credit card required.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-30">
-                            <div class="step__single">
-                                <span>Step 02</span>
-                                <h4><span>02.</span> Improve your writing</h4>
-                                <p>Sign up in 30 seconds—no credit card required.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-30">
-                            <div class="step__single">
-                                <span>Step 03</span>
-                                <h4><span>03.</span> Share with confidence</h4>
-                                <p>Sign up in 30 seconds—no credit card required.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="step__shape">
+                <div class="breadcrumb__shape">
                     <div class="shape shape--1">
-                        <img src="{{ asset('technology/img/shape/h_shape.png') }}" alt="">
+                        <img src="{{ asset('technology/img/shape/brc_shape1.png') }}" alt="">
                     </div>
                     <div class="shape shape--2">
-                        <img class="wow fadeInRight" src="{{ asset('technology/img/shape/st_shape.png') }}"
-                            alt="">
+                        <img src="{{ asset('technology/img/shape/brc_shape2.png') }}" alt="">
                     </div>
                 </div>
             </section>
-            <!-- steps end -->
+            <!-- breadcrumb end -->
+
+            <!-- blog start -->
+            <section class="blog pt-130 pb-120">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 mt-none-55">
+                            <article class="blog__item mt-55">
+                                <a class="blog__thumb" href="blog-single">
+                                    <img src="{{ asset('technology/img/blog/img_01.jpg') }}" alt="">
+                                </a>
+                                <ul class="blog__meta ul_li_center mt-25 mb-30">
+                                    <li><a href="#!"><i class="far fa-user-circle"></i>Alextina</a></li>
+                                    <li><i class="far fa-clock"></i>Dec 28, 2022</li>
+                                    <li><a href="#!"><i class="far fa-comment-alt-lines"></i>(04) Coments</a>
+                                    </li>
+                                </ul>
+                                <h2 class="blog__title border_effect"><a href="blog-single">Demystifying Artificial
+                                        Intelligence: A Beginner's Guide to AI</a></h2>
+                                <p>This blog post will delve into the various benefits and features of the XYZ
+                                    supplement. It will highlight how the supplement can enhance physical and mental
+                                    performance, boost energy levels</p>
+                                <div class="blog__link-warp">
+                                    <div class="blog__link">
+                                        <a href="blog-single">Read More<i class="far fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="blog__item mt-55">
+                                <a class="blog__thumb" href="blog-single">
+                                    <img src="{{ asset('technology/img/blog/img_02.jpg') }}" alt="">
+                                </a>
+                                <ul class="blog__meta ul_li_center mt-25 mb-30">
+                                    <li><a href="#!"><i class="far fa-user-circle"></i>Alextina</a></li>
+                                    <li><i class="far fa-clock"></i>Dec 28, 2022</li>
+                                    <li><a href="#!"><i class="far fa-comment-alt-lines"></i>(04) Coments</a>
+                                    </li>
+                                </ul>
+                                <h2 class="blog__title border_effect"><a href="blog-single">Exploring the Ethical
+                                        Implications of Artificial Intelligence 2023</a></h2>
+                                <p>This blog post will delve into the various benefits and features of the XYZ
+                                    supplement. It will highlight how the supplement can enhance physical and mental
+                                    performance, boost energy levels</p>
+                                <div class="blog__link-warp">
+                                    <div class="blog__link">
+                                        <a href="blog-single">Read More<i class="far fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="blog__item mt-55">
+                                <a class="blog__thumb" href="blog-single">
+                                    <img src="{{ asset('technology/img/blog/img_03.jpg') }}" alt="">
+                                </a>
+                                <ul class="blog__meta ul_li_center mt-25 mb-30">
+                                    <li><a href="#!"><i class="far fa-user-circle"></i>Alextina</a></li>
+                                    <li><i class="far fa-clock"></i>Dec 28, 2022</li>
+                                    <li><a href="#!"><i class="far fa-comment-alt-lines"></i>(04) Coments</a>
+                                    </li>
+                                </ul>
+                                <h2 class="blog__title border_effect"><a href="blog-single">AI in Healthcare:
+                                        Revolutionizing the Future of Medicine and Clue</a></h2>
+                                <p>This blog post will delve into the various benefits and features of the XYZ
+                                    supplement. It will highlight how the supplement can enhance physical and mental
+                                    performance, boost energy levels</p>
+                                <div class="blog__link-warp">
+                                    <div class="blog__link">
+                                        <a href="blog-single">Read More<i class="far fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="blog__item mt-55">
+                                <a class="blog__thumb" href="blog-single">
+                                    <img src="{{ asset('technology/img/blog/img_04.jpg') }}" alt="">
+                                </a>
+                                <ul class="blog__meta ul_li_center mt-25 mb-30">
+                                    <li><a href="#!"><i class="far fa-user-circle"></i>Alextina</a></li>
+                                    <li><i class="far fa-clock"></i>Dec 28, 2022</li>
+                                    <li><a href="#!"><i class="far fa-comment-alt-lines"></i>(04) Coments</a>
+                                    </li>
+                                </ul>
+                                <h2 class="blog__title border_effect"><a href="blog-single">AI in Education: Unlocking
+                                        New Possibilities for Personalized Learning</a></h2>
+                                <p>This blog post will delve into the various benefits and features of the XYZ
+                                    supplement. It will highlight how the supplement can enhance physical and mental
+                                    performance, boost energy levels</p>
+                                <div class="blog__link-warp">
+                                    <div class="blog__link">
+                                        <a href="blog-single">Read More<i class="far fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="pagination_wrap pt-50">
+                                <ul>
+                                    <li><a href="#"><i class="far fa-long-arrow-left"></i></a></li>
+                                    <li><a href="#" class="current_page">01</a></li>
+                                    <li><a href="#">02</a></li>
+                                    <li><a href="#"><i class="fal fa-ellipsis-h"></i></a></li>
+                                    <li><a href="#">08</a></li>
+                                    <li><a href="#"><i class="far fa-long-arrow-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- blog end -->
 
             <!-- testimonial start -->
             <section class="testimonial testimonial__bg pt-130 pb-130"
@@ -938,6 +709,6 @@
 </body>
 
 
-<!-- Mirrored from html.xpressbuddy.com/helax/home-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:22:01 GMT -->
+<!-- Mirrored from html.xpressbuddy.com/helax/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:22:03 GMT -->
 
 </html>
