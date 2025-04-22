@@ -52,8 +52,7 @@
                 <div class="container">
                     <div class="header__main ul_li_between">
                         <div class="header__logo">
-                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}" style="width: auto; height: 40px;"
-                                    alt=""></a>
+                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}" style="width: auto; height: 40px;" alt=""></a>
                         </div>
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
@@ -123,19 +122,14 @@
                                 <div class="ct-item col-auto ">
                                     <span class="item-content"><a href="tel:0907859668" class="tel">0907 859 668</a></span>
                                 </div>
-                                <div class="ct-item col-auto "> <span class="item-content"><a
-                                            href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
+                                <div class="ct-item col-auto "> <span class="item-content"><a href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="sidebar-socials-wrap mt-30"> <a class="social-item" href="https://facebook.com/"
-                        target="_blank">Facebook</a><a class="social-item" href="https://www.behance.net/"
-                        target="_blank">Behance</a><a class="social-item" href="#"
-                        target="_blank">Telegram</a><a class="social-item" href="https://dribbble.com/"
-                        target="_blank">Dribbble</a></div>
+                <div class="sidebar-socials-wrap mt-30"> <a class="social-item" href="https://facebook.com/" target="_blank">Facebook</a><a class="social-item" href="https://www.behance.net/" target="_blank">Behance</a><a class="social-item" href="#" target="_blank">Telegram</a><a class="social-item" href="https://dribbble.com/" target="_blank">Dribbble</a></div>
             </div>
             <!-- sidebar-info end -->
 
@@ -164,8 +158,7 @@
         <main>
             <!-- hero start -->
             <section class="hero hero-style-two pos-rel pb-55">
-                <div class="hero-bg wow fadeInUp" data-wow-delay="500ms" data-wow-duration=".5s"
-                    data-background="assets/img/bg/hero_bg.png"></div>
+                <div class="hero-bg wow fadeInUp" data-wow-delay="500ms" data-wow-duration=".5s" data-background="assets/img/bg/hero_bg.png"></div>
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-10">
@@ -188,8 +181,7 @@
                                     <a class="thm-btn thm-btn--gradient style-2" href="#!">Get a demo</a>
                                     <a class="thm-btn thm-btn--outline style-2" href="#!">View pricing</a>
                                 </div>
-                                <div class="hero-image mt-90 wow fadeInUp" data-wow-delay="400ms"
-                                    data-wow-duration=".5s">
+                                <div class="hero-image mt-90 wow fadeInUp" data-wow-delay="400ms" data-wow-duration=".5s">
                                     <img src="{{ asset('technology/img/hero/hero_img-3.png') }}" alt="">
                                 </div>
                             </div>
@@ -198,15 +190,13 @@
                 </div>
                 <div class="crm-hero__shape">
                     <div class="shape shape--1" data-parallax='{"y" : 80}'>
-                        <img class="wow fadeInLeft" src="{{ asset('technology/img/shape/h_shape6.png') }}"
-                            alt="">
+                        <img class="wow fadeInLeft" src="{{ asset('technology/img/shape/h_shape6.png') }}" alt="">
                     </div>
                     <div class="shape shape--2">
                         <img src="{{ asset('technology/img/shape/h_shape7.png') }}" alt="">
                     </div>
                     <div class="shape shape--3" data-parallax='{"y" : 70}'>
-                        <img class=" wow fadeInRight" src="{{ asset('technology/img/shape/h_shape8.png') }}"
-                            alt="">
+                        <img class=" wow fadeInRight" src="{{ asset('technology/img/shape/h_shape8.png') }}" alt="">
                     </div>
                     <div class="shape shape--4">
                         <img src="{{ asset('technology/img/shape/h_shape9.png') }}" alt="">
@@ -388,8 +378,7 @@
                                                     maecenas ac bibendum consectetur.</p>
                                             </div>
                                             <div class="text-center">
-                                                <img src="{{ asset('technology/img/process/img_05.png') }}"
-                                                    alt="">
+                                                <img src="{{ asset('technology/img/process/img_05.png') }}" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -401,8 +390,7 @@
                                                     maecenas ac bibendum consectetur.</p>
                                             </div>
                                             <div class="text-center">
-                                                <img src="{{ asset('technology/img/process/img_06.png') }}"
-                                                    alt="">
+                                                <img src="{{ asset('technology/img/process/img_06.png') }}" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -413,107 +401,176 @@
                 </div>
             </section>
             <!-- process end -->
+            <style>
+                .crm-testimonial {
+                    padding-bottom: 80px;
+                    position: relative;
+                }
 
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 15px;
+                }
+
+                .crm-title {
+                    text-align: center;
+                    margin-bottom: 60px;
+                }
+
+                .crm-title__heading {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                }
+
+                .contact-form {
+                    margin-top: 100px;
+                }
+
+                .row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -15px;
+                }
+
+                .col-lg-6,
+                .col-12 {
+                    padding: 0 15px;
+                    margin-bottom: 20px;
+                }
+
+                .row input,
+                .row select {
+                    background-color: transparent;
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    width: 100%;
+                }
+
+                .contact-form__btn {
+                    text-align: center;
+                }
+
+                .thm-btn {
+                    padding: 10px 20px;
+                    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .result {
+                    margin-top: 20px;
+                    text-align: center;
+                }
+
+                select {
+                    color: white;
+                }
+
+            </style>
             <!-- testimonial start -->
             <section class="crm-testimonial pos-rel pb-80">
                 <div class="container">
                     <div class="crm-title text-center mb-60">
-                        <h2 class="crm-title__heading">Our happy customer <br> feedback</h2>
+                        <h2 class="crm-title__heading">Tính toán tỉ lệ màn hình</h2>
                     </div>
                 </div>
-                <div class="crm-testimonial__slide swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="crm-testimonial__item swiper-slide">
-                            <div class="rating mb-40">
-                                <img src="{{ asset('technology/img/icon/rating.png') }}" alt="">
-                            </div>
-                            <p>Since implementing ABC CRM service in our organization, we have experienced a remarkable
-                                transformation in our customer management practices. The platform's intuitive interface
-                                and powerful automation tools have revolutionized the way we interact</p>
-                            <div class="crm-testimonial__author ul_li_center text-start mt-45">
-                                <div class="avatar">
-                                    <img src="{{ asset('technology/img/avatar/tm_avatar1.jpg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4>Florida Campain</h4>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote">
-                                <img src="{{ asset('technology/img/icon/quote-2.png') }}" alt="">
-                            </div>
+
+                <div class="contact-form mt-100 mx-5">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="inputType">Chọn loại đầu vào:</label>
+                            <select id="inputType">
+                                <option value="Width" style="color: black;">Nhập chiều ngang</option>
+                                <option value="Height" style="color: black;">Nhập chiều cao</option>
+                            </select>
                         </div>
-                        <div class="crm-testimonial__item swiper-slide">
-                            <div class="rating mb-40">
-                                <img src="{{ asset('technology/img/icon/rating.png') }}" alt="">
-                            </div>
-                            <p>I have been using XYZ CRM service for over a year now, and I am extremely satisfied with
-                                the results. The platform is user-friendly, making it easy for me and my team to manage
-                                our customer relationships efficiently way of this ways. </p>
-                            <div class="crm-testimonial__author ul_li_center text-start mt-45">
-                                <div class="avatar">
-                                    <img src="{{ asset('technology/img/avatar/tm_avatar2.jpg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4>Florida Campain</h4>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote">
-                                <img src="{{ asset('technology/img/icon/quote-2.png') }}" alt="">
-                            </div>
+                        <div class="col-lg-6">
+                            <label for="unit">Chọn đơn vị:</label>
+                            <select id="unit">
+                                <option value="inch" style="color: black;">inch</option>
+                                <option value="mm" style="color: black;">mm</option>
+                            </select>
                         </div>
-                        <div class="crm-testimonial__item swiper-slide">
-                            <div class="rating mb-40">
-                                <img src="{{ asset('technology/img/icon/rating.png') }}" alt="">
-                            </div>
-                            <p>I cannot imagine running my business without PQR CRM service. It has become an
-                                indispensable tool in managing our customer relationships. The ability to centralize all
-                                customer data and communication in one place has saved us countless.</p>
-                            <div class="crm-testimonial__author ul_li_center text-start mt-45">
-                                <div class="avatar">
-                                    <img src="{{ asset('technology/img/avatar/tm_avatar3.jpg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4>Florida Campain</h4>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote">
-                                <img src="{{ asset('technology/img/icon/quote-2.png') }}" alt="">
-                            </div>
+                        <div class="col-lg-6">
+                            <label for="ratio">Chọn tỷ lệ:</label>
+                            <select id="ratio">
+                                <option value="16:9" style="color: black;">16:9</option>
+                                <option value="4:3" style="color: black;">4:3</option>
+                            </select>
                         </div>
-                        <div class="crm-testimonial__item swiper-slide">
-                            <div class="rating mb-40">
-                                <img src="{{ asset('technology/img/icon/rating.png') }}" alt="">
-                            </div>
-                            <p>I have been using XYZ CRM service for over a year now, and I am extremely satisfied with
-                                the results. The platform is user-friendly, making it easy for me and my team to manage
-                                our customer relationships efficiently way of this ways. </p>
-                            <div class="crm-testimonial__author ul_li_center text-start mt-45">
-                                <div class="avatar">
-                                    <img src="{{ asset('technology/img/avatar/tm_avatar1.jpg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4>Florida Campain</h4>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote">
-                                <img src="{{ asset('technology/img/icon/quote-2.png') }}" alt="">
-                            </div>
+                        <div class="col-lg-6">
+                            <label id="inputLabel">Nhập chiều ngang:</label>
+                            <input type="number" id="inputValue" placeholder="Nhập giá trị" style="color: white;">
+                        </div>
+                        <div class="col-12 contact-form__btn">
+                            <button type="button" class="thm-btn thm-btn--gradient" onclick="calculateSize()">Tính toán</button>
                         </div>
                     </div>
-                </div>
-                <div class="crm-testimonial__shape">
-                    <div class="shape shape--1">
-                        <img src="{{ asset('technology/img/shape/tm_shape1.png') }}" alt="">
-                    </div>
-                    <div class="shape shape--2" data-parallax='{"y" : 80}'>
-                        <img src="{{ asset('technology/img/shape/tm_shape2.png') }}" alt="">
-                    </div>
+                    <div class="result" id="result"></div>
                 </div>
             </section>
+            <script>
+                document.getElementById('inputType').addEventListener('change', function() {
+                    var inputType = this.value;
+                    var label = document.getElementById('inputLabel');
+                    if (inputType === 'Width') {
+                        label.textContent = 'Nhập chiều ngang:';
+                    } else {
+                        label.textContent = 'Nhập chiều cao:';
+                    }
+                    document.getElementById('result').innerHTML = '';
+                });
+
+                function calculateSize() {
+                    var inputType = document.getElementById('inputType').value;
+                    var unit = document.getElementById('unit').value;
+                    var ratio = document.getElementById('ratio').value;
+                    var inputValue = parseFloat(document.getElementById('inputValue').value);
+
+                    if (isNaN(inputValue) || inputValue <= 0) {
+                        document.getElementById('result').innerHTML = 'Vui lòng nhập giá trị hợp lệ.';
+                        return;
+                    }
+
+                    var isMm = unit === 'mm';
+                    if (isMm) {
+                        inputValue = inputValue / 25.4; // Chuyển từ mm sang inch
+                    }
+
+                    var widthRatio = ratio === '16:9' ? 16 : 4;
+                    var heightRatio = ratio === '16:9' ? 9 : 3;
+
+                    var width, height, diagonal;
+
+                    if (inputType === 'Width') {
+                        width = inputValue;
+                        height = (width / widthRatio) * heightRatio;
+                    } else {
+                        height = inputValue;
+                        width = (height / heightRatio) * widthRatio;
+                    }
+
+                    diagonal = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+
+                    if (isMm) {
+                        width = width * 25.4;
+                        height = height * 25.4;
+                    }
+
+                    var distanceMin = (width * 1.34) / 1000;
+                    var distanceMax = (width * 2.22) / 1000;
+
+                    document.getElementById('result').innerHTML = `
+                Chiều ngang: ${width.toFixed(2)} ${unit}<br>
+                Chiều cao: ${height.toFixed(2)} ${unit}<br>
+                Kích thước màn hình: ${diagonal.toFixed(2)} inch<br>
+                Khoảng cách xem: ${distanceMin.toFixed(2)} - ${distanceMax.toFixed(2)} m
+            `;
+                }
+
+            </script>
             <!-- testimonial end -->
 
         </main>
@@ -523,12 +580,9 @@
                 <div class="row">
                     <div class="crm-community text-center">
                         <ul class="crm-community__social ul_li_center mb-35">
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/discord.png') }}"
-                                        alt=""></a></li>
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/whatsapp.png') }}"
-                                        alt=""></a></li>
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/telegram.png') }}"
-                                        alt=""></a></li>
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/discord.png') }}" alt=""></a></li>
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/whatsapp.png') }}" alt=""></a></li>
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/telegram.png') }}" alt=""></a></li>
                         </ul>
                         <div class="crm-title text-center mb-40">
                             <h2 class="crm-title__heading">Join our Global Community</h2>
@@ -551,8 +605,7 @@
                         <div class="footer__cta pl-45">
                             <span class="title">QUICK CONTACT</span>
                             <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24 giờ của chúng tôi</h4>
-                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}"
-                                        alt=""></span>0907 859 668</span>
+                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}" alt=""></span>0907 859 668</span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-30">

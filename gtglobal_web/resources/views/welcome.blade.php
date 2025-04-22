@@ -490,7 +490,7 @@
                         <div class="content-overlay">
                             <h1>Chi tiết công nghệ</h1>
                             <p>Đây là phần nội dung chi tiết khi hover vào panel thiết kế Công nghệ.</p>
-                            <a href="technology/index" class="btn">Xem thêm</a>
+                            <a href="technology/home-2" class="btn">Xem thêm</a>
                         </div>
                     </div>
                 </div>
