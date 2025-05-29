@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
-<!-- Mirrored from thememarch.com/demo/html/archite/portfolio by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:28:56 GMT -->
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Portfolio</title>
+    <title>Dự án</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('archite/img/favicon.ico') }}">
     <!-- Fonts (google font) -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
         rel="stylesheet">
     <!-- Font awesome Stylesheet -->
     <link rel="stylesheet" href="{{ asset('archite/css/all.min.css') }}">
@@ -67,6 +64,9 @@
                                         <a class="menu-link text-uppercase fw-500" href="about">Giới thiệu</a>
                                     </li>
                                     <li>
+                                        <a class="menu-link text-uppercase fw-500" href="math">Dự toán chi phí</a>
+                                    </li>
+                                    <li>
                                         <a class="menu-link text-uppercase fw-500" href="portfolio">Dự án</a>
                                     </li>
                                     <li>
@@ -80,67 +80,127 @@
                                     </li>
                                 </ul>
                                 <div class="desktop-menu-offcanvas position-relative">
-                                    <img class="off-canvas-icon" data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-                                        src="{{ asset('archite/img/menuToggleIvonTwo.png') }}" alt="menu toggle icon">
-                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                                        aria-labelledby="offcanvasRightLabel">
-                                        <div class="offcanvas-header">
-                                            <img id="offcanvasRightLabel" class="header-logo offcanvas-title img-fluid"
-                                                src="{{ asset('archite/img/LogoTwo.png') }}" alt="logo">
-                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                                aria-label="Close"></button>
+                                    <!-- Toggle Button -->
+                                    <button class="off-canvas-toggle" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                                        <img class="off-canvas-icon"
+                                            src="{{ asset('archite/img/menuToggleIvonTwo.png') }}"
+                                            alt="Biểu tượng menu" style="width: 30px; height: 30px;">
+                                    </button>
+
+                                    <!-- Offcanvas Menu -->
+                                    <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1"
+                                        id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                                        <!-- Header -->
+                                        <div
+                                            class="offcanvas-header d-flex align-items-center justify-content-between p-4">
+                                            <img id="offcanvasMenuLabel" class="header-logo img-fluid"
+                                                src="{{ asset('archite/img/LogoTwo.png') }}" alt="Logo"
+                                                style="max-width: 150px;">
+                                            <button type="button" class="btn-close btn-close-dark"
+                                                data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
                                         </div>
-                                        <div class="offcanvas-body">
-                                            <ul class="accordion-menu">
-                                                <li>
-                                                    <div class="dropdownlink">
-                                                        <span class="text-uppercase">
-                                                            <a href="index">Trang chủ</a>
-                                                        </span>
 
-                                                    </div>
-
-                                                </li>
-                                                <li>
-                                                    <div class="dropdownlink">
-                                                        <span class="text-uppercase">
-                                                            <a href="about">Giới thiệu</a>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="dropdownlink">
-                                                        <span class="text-uppercase">
-                                                            <a href="portfolio">Dự án</a>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="dropdownlink">
-                                                        <span class="text-uppercase">
-                                                            <a href="blog">Tin tức</a>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="dropdownlink">
-                                                        <span class="text-uppercase">
-                                                            <a href="recruitment">Tuyển dụng</a>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="dropdownlink">
-                                                        <span class="text-uppercase">
-                                                            <a href="contact">Liên hệ</a>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                        <!-- Body -->
+                                        <div class="offcanvas-body p-4">
+                                            <nav>
+                                                <ul class="nav flex-column custom-menu">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="index">Trang chủ</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="about">Giới thiệu</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="math">Dự toán chi phí</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="portfolio">Dự án</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="blog">Tin tức</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="recruitment">Tuyển dụng</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="contact">Liên hệ</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Custom CSS -->
+                                <style>
+                                    .custom-offcanvas {
+                                        background-color: #ffffff;
+                                        width: 280px !important;
+                                        transition: transform 0.3s ease-in-out;
+                                    }
+
+                                    .off-canvas-toggle {
+                                        background: none;
+                                        border: none;
+                                        padding: 10px;
+                                        cursor: pointer;
+                                        transition: transform 0.2s ease;
+                                    }
+
+                                    .off-canvas-toggle:hover {
+                                        transform: scale(1.1);
+                                    }
+
+                                    .custom-menu {
+                                        list-style: none;
+                                        padding: 0;
+                                        margin: 0;
+                                    }
+
+                                    .custom-menu .nav-item {
+                                        margin-bottom: 10px;
+                                    }
+
+                                    .custom-menu .nav-link {
+                                        color: #ffffff;
+                                        font-size: 1.1rem;
+                                        font-weight: 500;
+                                        text-transform: uppercase;
+                                        padding: 12px 0;
+                                        transition: color 0.3s ease, padding-left 0.3s ease;
+                                        display: block;
+                                        text-decoration: none;
+                                        padding-left: 10px;
+                                    }
+
+                                    .custom-menu .nav-link:hover {
+                                        color: #00aaff;
+                                        padding-left: 15px;
+                                    }
+
+                                    .offcanvas-header {
+                                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                                    }
+
+                                    .btn-close-dark {
+                                        filter: invert(0);
+                                    }
+
+                                    @media (max-width: 576px) {
+                                        .custom-offcanvas {
+                                            width: 80% !important;
+                                        }
+
+                                        .custom-menu .nav-link {
+                                            font-size: 1rem;
+                                        }
+
+                                        .header-logo {
+                                            max-width: 120px;
+                                        }
+                                    }
+                                </style>
                             </div>
                         </nav>
                     </div>
@@ -155,10 +215,9 @@
                     <div class="col-12">
                         <div class="inner-page-banner-wrapper d-flex justify-content-center align-items-center">
                             <h2 class="h2 dark-text fw-700 line-height-3 text-center">
-                                Our Expert Interior Design <br>Projects
+                                Các dự án thiết kế nội thất chuyên nghiệp của chúng tôi
                             </h2>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -198,10 +257,10 @@
                                                 <div class="portfolio-content">
                                                     <div
                                                         class="portfolio-image {{ $isVertical ? 'vertical-img' : 'horizontal-img' }}">
-                                                        <img src="{{ $article['image'] }}" alt="project image">
+                                                        <img src="{{ $article['image'] }}" alt="hình ảnh dự án">
                                                         <a href="portfolioDetails-{{ $article['id'] }}"
                                                             class="portfolio-btn">
-                                                            <span style="color: white">View Project</span>
+                                                            <span style="color: white">Xem dự án</span>
                                                             <i class="fa-solid fa-arrow-right-long"></i>
                                                         </a>
                                                     </div>
@@ -213,12 +272,11 @@
                                         @endif
                                     @endforeach
                                 @endforeach
-
                             </div>
                         </div>
                         {{-- <div class="portfolio-cta-btn text-center">
                             <a href="portfolioDetails" class="btn text-uppercase project-btn">
-                                <span class="position-relative z-1">View Project</span>
+                                <span class="position-relative z-1">Xem dự án</span>
                                 <i class="fa-solid fa-arrow-right-long ms-2"></i>
                             </a>
                         </div> --}}
@@ -228,19 +286,19 @@
         </section>
         <!-- end projects -->
         <!-- start work together -->
-        <section class="work-together ">
+        <section class="work-together">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div
                             class="d-flex align-items-center justify-content-center flex-column work-together-content-wrapper">
                             <p class="p text-white fw-500 line-height-3 mb-10">
-                                Let’s Work Together
+                                Hãy cùng hợp tác
                             </p>
-                            <h2 class="h2 fw-700 line-height-3 text-white text-center">Let's Create Your Dream Space
-                                Together!</h2>
+                            <h2 class="h2 fw-700 line-height-3 text-white text-center">Cùng nhau tạo nên không gian mơ
+                                ước của bạn!</h2>
                             <a href="contact" class="btn brand-btn text-uppercase mt-50 border-0"><span
-                                    class="z-1 position-relative">let's build</span></a>
+                                    class="z-1 position-relative">Xây dựng ngay</span></a>
                         </div>
                     </div>
                 </div>
@@ -258,11 +316,10 @@
 
                         if (filterValue === "all" || projectCategory === filterValue) {
                             project.classList.add("show");
-                            // Thêm stagger effect bằng cách delay từng item
                             setTimeout(() => {
                                 project.style.opacity = "1";
                                 project.style.transform = "translateY(0)";
-                            }, index * 100); // Mỗi item cách nhau 100ms
+                            }, index * 100);
                         } else {
                             project.classList.remove("show");
                             project.style.opacity = "0";
@@ -271,13 +328,11 @@
                     });
                 }
 
-                // Thiết lập bộ lọc "All" mặc định khi trang tải
                 const defaultButton = document.querySelector('.filter-btn.active');
                 if (defaultButton) {
                     applyFilter(defaultButton.getAttribute("data-filter"));
                 }
 
-                // Xử lý sự kiện nhấp chuột
                 buttons.forEach(button => {
                     button.addEventListener("click", function() {
                         const filter = this.getAttribute("data-filter");
@@ -285,7 +340,6 @@
                         buttons.forEach(btn => btn.classList.remove("active"));
                         this.classList.add("active");
 
-                        // Áp dụng bộ lọc với hiệu ứng
                         applyFilter(filter);
                     });
                 });
@@ -312,14 +366,9 @@
                 padding-right: 3rem;
             }
 
-            /* -----------------------
-   TÁI SỬ DỤNG CÁC CLASS
------------------------- */
             .projects-one-item {
                 margin-top: 100px;
-                /* mt-100 */
                 opacity: 0;
-                /* Ẩn ban đầu để làm hiệu ứng fade-in */
                 transform: translateY(20px);
                 transition: all 0.5s ease;
             }
@@ -352,15 +401,9 @@
                 line-height: 1.3;
                 display: inline-block;
                 color: transparent;
-                /* Hiệu ứng stroke, giữ nguyên nếu bạn có css stroke riêng */
-                /* Thêm stroke thực tế nếu cần:
-        -webkit-text-stroke: 1px #000;
-    */
             }
 
-            .project-text-stroke-utility {
-                /* Giữ lại nếu có hiệu ứng stroke bổ sung */
-            }
+            .project-text-stroke-utility {}
 
             .projects-one-contents {
                 position: relative;
@@ -390,9 +433,6 @@
                 margin-top: 15px;
             }
 
-            /* -----------------------------
-   BỐ CỤC HIỆN ĐẠI CHO PORTFOLIO
------------------------------- */
             .portfolio-container {
                 max-width: 1200px;
                 margin: 0 auto;
@@ -405,17 +445,12 @@
                 gap: 90px;
             }
 
-            /*
-   Ở màn hình nhỏ (mobile - tablet),
-   chuyển về 1 cột cho dễ nhìn.
-*/
             @media (max-width: 768px) {
                 .portfolio-grid {
                     grid-template-columns: 1fr;
                     gap: 40px;
                 }
 
-                /* Giảm margin-left ở mobile */
                 .ml-100,
                 .project-item-margin {
                     margin-left: 0 !important;
@@ -432,17 +467,13 @@
 
             .portfolio-item {
                 display: none;
-                /* Ban đầu ẩn, chờ JS hiển thị bằng class .show */
                 opacity: 1;
                 transform: translateY(50px);
-                /* Hiệu ứng ban đầu */
                 transition: opacity 0.5s ease, transform 0.5s ease;
             }
 
             .portfolio-item.show {
                 display: block;
-                /* Khi JS gán .show thì item hiển thị */
-                /* opacity và transform thay đổi qua transition */
             }
 
             .portfolio-title {
@@ -462,12 +493,10 @@
                 position: relative;
             }
 
-            /* Vùng chứa ảnh */
             .portfolio-image {
                 position: relative;
                 overflow: hidden;
                 border-radius: 8px;
-                /* Bo góc nhẹ */
             }
 
             .portfolio-image img {
@@ -475,21 +504,17 @@
                 height: auto;
                 display: block;
                 transition: transform 0.3s ease;
-                /* Zoom khi hover */
             }
 
-            /* Zoom nhẹ khi hover */
             .portfolio-image:hover img {
                 transform: scale(1.05);
             }
 
-            /* Hình dọc / ngang (nếu có) */
             .vertical-img img,
             .horizontal-img img {
                 height: auto;
             }
 
-            /* Tiêu đề nhỏ */
             .portfolio-subtitle {
                 font-size: 1rem;
                 color: #333;
@@ -498,7 +523,6 @@
                 margin-top: 15px;
             }
 
-            /* Nút View Project */
             .portfolio-btn {
                 position: absolute;
                 bottom: 20px;
@@ -530,7 +554,6 @@
                 transition: transform 0.3s ease;
             }
 
-            /* Hover nút */
             .portfolio-btn:hover {
                 background: linear-gradient(135deg, #d28901, #FFA500);
                 box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
@@ -539,27 +562,18 @@
 
             .fa-arrow-right-long {
                 color: #fff;
-
             }
 
             .portfolio-btn:hover .fa-arrow-right-long {
                 transform: translateX(5px);
                 color: #fff;
-
             }
 
-            /* Hiển thị nút khi hover ảnh */
             .portfolio-image:hover .portfolio-btn {
                 opacity: 1;
                 transform: translateY(0);
             }
 
-            /* -----------------------
-   MENU FILTER DỰ ÁN
------------------------- */
-            /* -----------------------
-   MENU FILTER DỰ ÁN
------------------------- */
             .filter-menu {
                 display: flex;
                 justify-content: center;
@@ -568,30 +582,21 @@
             }
 
             .filter-menu button {
-                /* Màu nền cam & chữ trắng */
                 background: none;
-                /* Cam tươi */
                 border: 2px solid #FFA500;
                 color: #FFA500;
-
-                /* Kích thước & bo góc */
                 padding: 10px 20px;
                 font-size: 16px;
                 font-weight: 600;
                 border-radius: 25px;
-
-                /* Hiệu ứng */
                 cursor: pointer;
                 transition: all 0.3s ease;
                 outline: none;
-                /* Bỏ viền mặc định trên di động, nếu có */
             }
 
-            /* Hover và trạng thái đang hoạt động (active) */
             .filter-menu button:hover,
             .filter-menu button.active {
                 background: #FF8C00;
-                /* Cam đậm hơn */
                 border: 2px solid #FF8C00;
                 color: #fff;
                 box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
@@ -601,102 +606,71 @@
             @media (max-width: 576px) {
                 .filter-menu {
                     gap: 10px;
-                    /* Giảm khoảng cách */
                     margin-top: 20px;
-                    /* Giảm khoảng cách trên */
                 }
 
                 .filter-menu button {
                     padding: 8px 16px;
-                    /* Giảm padding để nhỏ gọn hơn */
                     font-size: 14px;
-                    /* Giảm kích cỡ chữ */
                     border-radius: 20px;
-                    /* Bo ít hơn cho gọn mắt */
                 }
 
                 .h2.text-uppercase.fw-700.line-height-3.projects-text-stroke {
                     display: none;
-                    /* Cho nó hiển thị dạng block thay vì inline-block */
                 }
             }
         </style>
 
         <!-- end work together -->
         <!-- start footer -->
-        <footer class="footer-one">
+        <footer class="footer-one" style="background-color: #1a1a1a; padding: 60px 0;">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-12 col-sm-5">
-                                <div class="logo mb-1">
-                                    <img src="{{ asset('archite/img/Logo.png') }}" style="height: 30%; width: 30%;"
-                                        alt="logo">
-                                </div>
-                                <p class="p text-white fw-500 line-height-5 mt-15">
-                                    Công ty TNHH TM & DV TOÀN CẦU GT là một trong những công ty có thế mạnh và tiềm năng
-                                    trong lĩnh vực thiết kế, thi công, sản xuất,… nội – ngoại thất với hơn 10 năm hoạt
-                                    động trong lĩnh vực và triển khai các dự án khối công trình văn phòng, showroom, nhà
-                                    hàng, biệt thự, chung cư…tới xây dựng hình ảnh cho các doanh nghiệp, tập đoàn đa
-                                    quốc gia.
-
-                                    Chúng tôi với phương châm mỗi khách hàng đều là những người thân, người bạn tri kỉ.
-                                    Lấy sự hài lòng của khách hàng làm tôn chỉ, để từ đó cung cấp cho khách hàng những
-                                    sản phẩm tối ưu nhất cả về chất lượng sản phẩm và dịch vụ.
-
-                                    Với đội ngủ trẻ và nhiệt huyết, chuyên môn cao cùng với sự đầu tư, học hỏi không
-                                    ngừng nghỉ về công nghệ, dây chuyền sản xuất, cơ sở hạ tầng cho cán bộ công nhân
-                                    viên. Chúng tôi sẽ mang đến cho khách hàng những sản phẩm và dịch vụ tiệm cận gần
-                                    nhất với nhu cầu và yêu cầu của khách hàng.
-                                </p>
-                                <h2 class="fw-700 text-white mt-30 footer-email">dongtrieuarc@gmail.com</h2>
+                <div class="footer-one-wrapper">
+                    <div class="row">
+                        <!-- Cột thông tin công ty -->
+                        <div class="col-12 col-md-6 col-lg-5 mb-5 mb-md-0">
+                            <div class="logo mb-4">
+                                <img src="{{ asset('archite/img/Logo.png') }}" style="height: 50px; width: auto;"
+                                    alt="logo">
                             </div>
-                            <div class="col-12 col-sm-3">
-                                <div class="mt-5 mt-sm-0">
-                                    <ul class="d-flex flex-column gap-4">
-                                        <li><a class="fw-500 text-uppercase" href="index">Trang chủ</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="about">Giới thiệu</a></li>
-
-                                        <li><a class="fw-500 text-uppercase" href="portfolio">Dự án</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="blog">Tin tức</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="contact">Liên hệ</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4">
-                                <div class="d-flex align-items-start mb-30 mt-5 mt-sm-0">
-                                    <i class="fa-solid fa-location-dot brand-text d-inline-block mr-10 mt-2"></i>
-                                    <h6 class="h6 fw-400 line-height-4 footer-address">
-                                        159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
-                                    </h6>
-                                </div>
-                                <div class="d-flex align-items-start mb-30">
-                                    <i class="fa-solid fa-phone-volume brand-text d-inline-block mr-10 mt-2"></i>
-                                    <h6 class="h6 fw-400 line-height-4 footer-address">
-                                        0907 859 668
-                                    </h6>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="mt-100 d-flex justify-content-between align-items-center flex-column flex-xl-row">
-                            <div class="footer-one-social-container">
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://facebook.com/"><span
-                                        class="z-1 position-relative">Facebook</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://linkedin.com/"><span
-                                        class="z-1 position-relative">LinkedIn</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://instagram.com/"><span
-                                        class="z-1 position-relative">Instagram</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://twitter.com/"><span
-                                        class="z-1 position-relative">Twitter</span></a>
-                                <a class="btn dark-btn mb-4 mb-lg-0" href="https://dribble.com/"><span
-                                        class="z-1 position-relative">Dribble</span></a>
-                            </div>
-                            <p class="p fw-500 line-height-3 footer-copyright-text pt-4 pt-xl-0">
-                                Copyright 2025, All Right reserved
+                            <p class="text-white fw-400 line-height-4" style="font-size: 15px; opacity: 0.9;">
+                                Công ty TNHH TM & DV TOÀN CẦU GT – Đơn vị hàng đầu với hơn 10 năm kinh nghiệm trong
+                                thiết kế, thi công và sản xuất nội – ngoại thất. Chúng tôi chuyên thực hiện các dự án
+                                văn phòng, showroom, nhà hàng, biệt thự, chung cư và xây dựng hình ảnh cho các doanh
+                                nghiệp, tập đoàn đa quốc gia. Với phương châm "Khách hàng là người thân", chúng tôi cam
+                                kết mang đến sản phẩm và dịch vụ chất lượng cao, đáp ứng tối ưu nhu cầu của bạn.
                             </p>
+                            <h5 class="text-white fw-600 mt-4" style="font-size: 18px;">
+                                Email: <span style="color: #f5a623;">dongtrieuarc@gmail.com</span>
+                            </h5>
                         </div>
+                        <!-- Cột thông tin liên hệ -->
+                        <div class="col-12 col-md-6 col-lg-4 offset-lg-3">
+                            <h5 class="text-white fw-600 mb-4"
+                                style="font-size: 18px; border-bottom: 2px solid #f5a623; padding-bottom: 10px;">
+                                Thông tin liên hệ
+                            </h5>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fa-solid fa-location-dot text-white d-inline-block mr-6 mt-2"
+                                    style="font-size: 20px; color: #f5a623; padding-right: 10px"></i>
+                                <p class="text-white fw-400 line-height-4 mb-0" style="font-size: 15px;">
+                                    159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fa-solid fa-phone-volume text-white d-inline-block mr-6 mt-2"
+                                    style="font-size: 20px; color: #f5a623; padding-right: 10px"></i>
+                                <p class="text-white fw-400 line-height-4 mb-0" style="font-size: 15px;">
+                                    0907 859 668
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dòng bản quyền -->
+                    <div class="mt-5 pt-4 text-center" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p class="text-white fw-400 line-height-3 mb-0" style="font-size: 14px; opacity: 0.7;">
+                            Copyright © 2025 Công ty TNHH TM & DV TOÀN CẦU GT. All Rights Reserved.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -730,8 +704,5 @@
     <!-- Main JS script -->
     <script src="{{ asset('archite/js/main.js') }}"></script>
 </body>
-
-
-<!-- Mirrored from thememarch.com/demo/html/archite/portfolio by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:28:57 GMT -->
 
 </html>

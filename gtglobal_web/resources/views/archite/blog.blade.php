@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Blogs</title>
+    <title>Tin tức</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('archite/img/favicon.ico') }}">
     <!-- Fonts (google font) -->
@@ -68,6 +68,9 @@
                                 <a class="menu-link text-uppercase fw-500" href="about">Giới thiệu</a>
                             </li>
                             <li>
+                                <a class="menu-link text-uppercase fw-500" href="#">Dự toán chi phí</a>
+                            </li>
+                            <li>
                                 <a class="menu-link text-uppercase fw-500" href="portfolio">Dự án</a>
                             </li>
                             <li>
@@ -82,67 +85,135 @@
                             </li>
                         </ul>
                         <div class="desktop-menu-offcanvas position-relative">
-                            <img class="off-canvas-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                                aria-controls="offcanvasRight" src="{{ asset('archite/img/menuToggleIvonTwo.png') }}"
-                                alt="menu toggle icon">
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                                aria-labelledby="offcanvasRightLabel">
-                                <div class="offcanvas-header">
-                                    <img id="offcanvasRightLabel" class="header-logo offcanvas-title img-fluid"
-                                        src="{{ asset('archite/img/LogoTwo.png') }}" alt="logo">
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            <!-- Toggle Button -->
+                            <button class="off-canvas-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                                aria-controls="offcanvasMenu">
+                                <img class="off-canvas-icon" src="{{ asset('archite/img/menuToggleIvonTwo.png') }}"
+                                    alt="Menu Toggle Icon" style="width: 30px; height: 30px;">
+                            </button>
+
+                            <!-- Offcanvas Menu -->
+                            <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasMenu"
+                                aria-labelledby="offcanvasMenuLabel">
+                                <!-- Header -->
+                                <div class="offcanvas-header d-flex align-items-center justify-content-between p-4">
+                                    <img id="offcanvasMenuLabel" class="header-logo img-fluid"
+                                        src="{{ asset('archite/img/LogoTwo.png') }}" alt="Logo"
+                                        style="max-width: 150px;">
+                                    <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="offcanvas-body">
-                                    <div class="offcanvas-body">
-                                        <ul class="accordion-menu">
-                                            <li>
-                                                <div class="dropdownlink">
-                                                    <span class="text-uppercase">
-                                                        <a href="index">Trang chủ</a>
-                                                    </span>
-                                                </div>
+
+                                <!-- Body -->
+                                <div class="offcanvas-body p-4">
+                                    <nav>
+                                        <ul class="nav flex-column custom-menu">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="index">Trang chủ</a>
                                             </li>
-                                            <li>
-                                                <div class="dropdownlink">
-                                                    <span class="text-uppercase">
-                                                        <a href="about">Giới thiệu</a>
-                                                    </span>
-                                                </div>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="about">Giới thiệu</a>
                                             </li>
-                                            <li>
-                                                <div class="dropdownlink">
-                                                    <span class="text-uppercase">
-                                                        <a href="portfolio">Dự án</a>
-                                                    </span>
-                                                </div>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Dự toán chi phí</a>
                                             </li>
-                                            <li>
-                                                <div class="dropdownlink">
-                                                    <span class="text-uppercase">
-                                                        <a href="blog">Tin tức</a>
-                                                    </span>
-                                                </div>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="portfolio">Dự án</a>
                                             </li>
-                                            <li>
-                                                <div class="dropdownlink">
-                                                    <span class="text-uppercase">
-                                                        <a href="recruitment">Tuyển dụng</a>
-                                                    </span>
-                                                </div>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="blog">Tin tức</a>
                                             </li>
-                                            <li>
-                                                <div class="dropdownlink">
-                                                    <span class="text-uppercase">
-                                                        <a href="contact">Liên hệ</a>
-                                                    </span>
-                                                </div>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="recruitment">Tuyển dụng</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="contact">Liên hệ</a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Custom CSS -->
+                        <style>
+                            .custom-offcanvas {
+                                background-color: #ffffff;
+                                /* White background */
+                                width: 280px !important;
+                                /* Consistent width */
+                                transition: transform 0.3s ease-in-out;
+                            }
+
+                            .off-canvas-toggle {
+                                background: none;
+                                border: none;
+                                padding: 10px;
+                                cursor: pointer;
+                                transition: transform 0.2s ease;
+                            }
+
+                            .off-canvas-toggle:hover {
+                                transform: scale(1.1);
+                            }
+
+                            .custom-menu {
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                            }
+
+                            .custom-menu .nav-item {
+                                margin-bottom: 10px;
+                            }
+
+                            .custom-menu .nav-link {
+                                color: #ffffff;
+                                /* White text */
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                                padding: 12px 0;
+                                transition: color 0.3s ease, padding-left 0.3s ease;
+                                display: block;
+                                text-decoration: none;
+                                padding-left: 10px;
+                            }
+
+                            .custom-menu .nav-link:hover {
+                                color: #00aaff;
+                                /* Teal/blue on hover */
+                                padding-left: 15px;
+                            }
+
+                            .offcanvas-header {
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                                /* Subtle border for white background */
+                            }
+
+                            .btn-close-dark {
+                                filter: invert(0);
+                                /* Dark close button for white background */
+                            }
+
+                            /* Mobile adjustments */
+                            @media (max-width: 576px) {
+                                .custom-offcanvas {
+                                    width: 80% !important;
+                                    /* Wider on mobile */
+                                }
+
+                                .custom-menu .nav-link {
+                                    font-size: 1rem;
+                                    /* Smaller font for mobile */
+                                }
+
+                                .header-logo {
+                                    max-width: 120px;
+                                    /* Smaller logo on mobile */
+                                }
+                            }
+                        </style>
                     </div>
                 </nav>
             </div>
@@ -154,7 +225,7 @@
                 <div class="col-12">
                     <div class="inner-page-banner-wrapper d-flex justify-content-center align-items-center">
                         <h2 class="h2 dark-text fw-700 line-height-3 text-center">
-                            Dedicated Our Inspiration <br>News Team
+                            Dành tặng nguồn cảm hứng của chúng tôi <br>Tin tức mới
                         </h2>
                     </div>
                 </div>
@@ -293,7 +364,7 @@
                                 </div>
                                 <div class="col-12 col-lg-4 pl-20 mt-5 mt-lg-0 blog-sidebar">
                                     <div class="recent-articles mt-60">
-                                        <h5 class="h5 dark-text fw-700 line-height-3 mb-20">Recent Article</h5>
+                                        <h5 class="h5 dark-text fw-700 line-height-3 mb-20">Bài viết khác</h5>
                                         @foreach ($articles as $item)
                                             @if ($item->enabled == 1)
                                                 <div class="recent-article-item mb-25">
@@ -320,91 +391,7 @@
                                         @endforeach
 
                                     </div>
-                                    <div class="popular-tags mt-60">
-                                        <h5 class="h5 dark-text fw-700 line-height-3 mb-20">Popular Tag</h5>
-                                        <div class="d-flex flex-wrap">
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Interior
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Architecture
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Design
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Décor
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Furniture
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Office
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Home
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Décor
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Furniture
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Design
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Flat
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Door
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Architecture
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Gallery
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Office
-                                                </a>
-                                            </p>
-                                            <p class="mr-20">
-                                                <a class="p body-text fw-500 line-height-5" href="blogDetails">
-                                                    Urban
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -414,78 +401,55 @@
         </section>
         <!-- end blogs -->
         <!-- start footer -->
-        <footer class="footer-one">
+        <footer class="footer-one" style="background-color: #1a1a1a; padding: 60px 0;">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-12 col-sm-5">
-                                <div class="logo mb-1">
-                                    <img src="{{ asset('archite/img/Logo.png') }}" style="height: 30%; width: 30%;"
-                                        alt="logo">
-                                </div>
-                                <p class="p text-white fw-500 line-height-5 mt-15">
-                                    Công ty TNHH TM & DV TOÀN CẦU GT là một trong những công ty có thế mạnh và tiềm năng
-                                    trong lĩnh vực thiết kế, thi công, sản xuất,… nội – ngoại thất với hơn 10 năm hoạt
-                                    động trong lĩnh vực và triển khai các dự án khối công trình văn phòng, showroom, nhà
-                                    hàng, biệt thự, chung cư…tới xây dựng hình ảnh cho các doanh nghiệp, tập đoàn đa
-                                    quốc gia.
-
-                                    Chúng tôi với phương châm mỗi khách hàng đều là những người thân, người bạn tri kỉ.
-                                    Lấy sự hài lòng của khách hàng làm tôn chỉ, để từ đó cung cấp cho khách hàng những
-                                    sản phẩm tối ưu nhất cả về chất lượng sản phẩm và dịch vụ.
-
-                                    Với đội ngủ trẻ và nhiệt huyết, chuyên môn cao cùng với sự đầu tư, học hỏi không
-                                    ngừng nghỉ về công nghệ, dây chuyền sản xuất, cơ sở hạ tầng cho cán bộ công nhân
-                                    viên. Chúng tôi sẽ mang đến cho khách hàng những sản phẩm và dịch vụ tiệm cận gần
-                                    nhất với nhu cầu và yêu cầu của khách hàng.
-                                </p>
-                                <h2 class="fw-700 text-white mt-30 footer-email">dongtrieuarc@gmail.com</h2>
+                <div class="footer-one-wrapper">
+                    <div class="row">
+                        <!-- Cột thông tin công ty -->
+                        <div class="col-12 col-md-6 col-lg-5 mb-5 mb-md-0">
+                            <div class="logo mb-4">
+                                <img src="{{ asset('archite/img/Logo.png') }}" style="height: 50px; width: auto;"
+                                    alt="logo">
                             </div>
-                            <div class="col-12 col-sm-3">
-                                <div class="mt-5 mt-sm-0">
-                                    <ul class="d-flex flex-column gap-4">
-                                        <li><a class="fw-500 text-uppercase" href="index-2">Trang chủ</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="about">Giới thiệu</a></li>
-
-                                        <li><a class="fw-500 text-uppercase" href="portfolio">Dự án</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="blog">Tin tức</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="contact">Liên hệ</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4">
-                                <div class="d-flex align-items-start mb-30 mt-5 mt-sm-0">
-                                    <i class="fa-solid fa-location-dot brand-text d-inline-block mr-10 mt-2"></i>
-                                    <h6 class="h6 fw-400 line-height-4 footer-address">
-                                        159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
-                                    </h6>
-                                </div>
-                                <div class="d-flex align-items-start mb-30">
-                                    <i class="fa-solid fa-phone-volume brand-text d-inline-block mr-10 mt-2"></i>
-                                    <h6 class="h6 fw-400 line-height-4 footer-address">
-                                        0907 859 668
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-100 d-flex justify-content-between align-items-center flex-column flex-xl-row">
-                            <div class="footer-one-social-container">
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://facebook.com/"><span
-                                        class="z-1 position-relative">Facebook</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://linkedin.com/"><span
-                                        class="z-1 position-relative">LinkedIn</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://instagram.com/"><span
-                                        class="z-1 position-relative">Instagram</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://twitter.com/"><span
-                                        class="z-1 position-relative">Twitter</span></a>
-                                <a class="btn dark-btn mb-4 mb-lg-0" href="https://dribble.com/"><span
-                                        class="z-1 position-relative">Dribble</span></a>
-                            </div>
-                            <p class="p fw-500 line-height-3 footer-copyright-text pt-4 pt-xl-0">
-                                Copyright 2025, All Right reserved
+                            <p class="text-white fw-400 line-height-4" style="font-size: 15px; opacity: 0.9;">
+                                Công ty TNHH TM & DV TOÀN CẦU GT – Đơn vị hàng đầu với hơn 10 năm kinh nghiệm trong
+                                thiết kế, thi công và sản xuất nội – ngoại thất. Chúng tôi chuyên thực hiện các dự án
+                                văn phòng, showroom, nhà hàng, biệt thự, chung cư và xây dựng hình ảnh cho các doanh
+                                nghiệp, tập đoàn đa quốc gia. Với phương châm "Khách hàng là người thân", chúng tôi cam
+                                kết mang đến sản phẩm và dịch vụ chất lượng cao, đáp ứng tối ưu nhu cầu của bạn.
                             </p>
+                            <h5 class="text-white fw-600 mt-4" style="font-size: 18px;">
+                                Email: <span style="color: #f5a623;">dongtrieuarc@gmail.com</span>
+                            </h5>
                         </div>
+                        <!-- Cột thông tin liên hệ -->
+                        <div class="col-12 col-md-6 col-lg-4 offset-lg-3">
+                            <h5 class="text-white fw-600 mb-4"
+                                style="font-size: 18px; border-bottom: 2px solid #f5a623; padding-bottom: 10px;">
+                                Thông tin liên hệ
+                            </h5>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fa-solid fa-location-dot text-white d-inline-block mr-6 mt-2"
+                                    style="font-size: 20px; color: #f5a623; padding-right: 10px"></i>
+                                <p class="text-white fw-400 line-height-4 mb-0" style="font-size: 15px;">
+                                    159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fa-solid fa-phone-volume text-white d-inline-block mr-6 mt-2"
+                                    style="font-size: 20px; color: #f5a623; padding-right: 10px"></i>
+                                <p class="text-white fw-400 line-height-4 mb-0" style="font-size: 15px;">
+                                    0907 859 668
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Dòng bản quyền -->
+                    <div class="mt-5 pt-4 text-center" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p class="text-white fw-400 line-height-3 mb-0" style="font-size: 14px; opacity: 0.7;">
+                            Copyright © 2025 Công ty TNHH TM & DV TOÀN CẦU GT. All Rights Reserved.
+                        </p>
                     </div>
                 </div>
             </div>

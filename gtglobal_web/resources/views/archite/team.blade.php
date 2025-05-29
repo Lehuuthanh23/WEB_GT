@@ -464,8 +464,7 @@
                             <div class="d-flex align-items-start mb-30">
                                 <i class="fa-solid fa-location-dot brand-text d-inline-block mr-10 mt-2"></i>
                                 <h6 class="h6 fw-400 line-height-4 footer-address">
-                                    901 N Pitt Str., Suite 170
-                                    Alexandria, NY, USA
+                                    159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
                                 </h6>
                             </div>
                             <div class="d-flex align-items-start mb-30">

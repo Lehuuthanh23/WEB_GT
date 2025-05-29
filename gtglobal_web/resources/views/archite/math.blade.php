@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from thememarch.com/demo/html/archite/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:28:59 GMT -->
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Liên hệ</title>
+    <title>Dự toán chi phí</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('archite/img/favicon.ico') }}">
     <!-- Fonts (google font) -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
         rel="stylesheet">
     <!-- Font awesome Stylesheet -->
     <link rel="stylesheet" href="{{ asset('archite/css/all.min.css') }}">
@@ -64,7 +61,6 @@
                             <li>
                                 <a class="menu-link text-uppercase fw-500" href="about">Giới thiệu</a>
                             </li>
-
                             <li>
                                 <a class="menu-link text-uppercase fw-500" href="math">Dự toán chi phí</a>
                             </li>
@@ -79,7 +75,6 @@
                             </li>
                             <li>
                                 <a class="menu-link text-uppercase fw-500" href="recruitment">Tuyển dụng</a>
-
                             </li>
                         </ul>
                         <div class="desktop-menu-offcanvas position-relative">
@@ -133,13 +128,11 @@
                             </div>
                         </div>
 
-                        <!-- Custom CSS -->
+                        <!-- Custom CSS for Offcanvas Menu -->
                         <style>
                             .custom-offcanvas {
                                 background-color: #ffffff;
-                                /* White background */
                                 width: 280px !important;
-                                /* Consistent width */
                                 transition: transform 0.3s ease-in-out;
                             }
 
@@ -166,8 +159,7 @@
                             }
 
                             .custom-menu .nav-link {
-                                color: #ffffff;
-                                /* White text */
+                                color: #000000;
                                 font-size: 1.1rem;
                                 font-weight: 500;
                                 text-transform: uppercase;
@@ -180,35 +172,28 @@
 
                             .custom-menu .nav-link:hover {
                                 color: #00aaff;
-                                /* Teal/blue on hover */
                                 padding-left: 15px;
                             }
 
                             .offcanvas-header {
                                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                                /* Subtle border for white background */
                             }
 
                             .btn-close-dark {
                                 filter: invert(0);
-                                /* Dark close button for white background */
                             }
 
-                            /* Mobile adjustments */
                             @media (max-width: 576px) {
                                 .custom-offcanvas {
                                     width: 80% !important;
-                                    /* Wider on mobile */
                                 }
 
                                 .custom-menu .nav-link {
                                     font-size: 1rem;
-                                    /* Smaller font for mobile */
                                 }
 
                                 .header-logo {
                                     max-width: 120px;
-                                    /* Smaller logo on mobile */
                                 }
                             }
                         </style>
@@ -222,99 +207,183 @@
             <div class="container">
                 <div class="inner-page-banner-wrapper d-flex justify-content-center align-items-center">
                     <h2 class="h2 dark-text fw-700 line-height-3 text-center">
-                        Liên hệ
+                        Dự toán chi phí
                     </h2>
                 </div>
             </div>
         </section>
         <!-- end inner page banner-->
-        <!-- start contact -->
-        <section class="contact section-padding-bottom-xl section-padding-top-xl overflow-hidden">
-            <div class="contact-container">
-                <div class="contact-wrapper">
-                    <div class="row">
-                        <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500" data-aos-offset="0"
-                            class="col-12 col-lg-6">
-                            <div class="row gy-5 gy-lg-0">
-                                <div class="col-12 col-sm-4 count-one-border-responsive position-relative">
-                                    <div class="contact-info-wrapper">
-                                        <div
-                                            class="contact-info-icon d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-location-dot dark-text d-inline-block"></i>
-                                        </div>
-                                        <h4 class="dark-text fw-700 line-height-3 ">Địa chỉ</h4>
-                                        <p class="p body-text fw-500 line-height-5">
-                                            159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4 count-one-border-responsive position-relative">
-                                    <div class="contact-info-wrapper">
-                                        <div
-                                            class="contact-info-icon d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-phone-volume dark-text d-inline-block"></i>
-                                        </div>
-                                        <h4 class="dark-text fw-700 line-height-3 ">SĐT</h4>
-                                        <p class="p body-text fw-500 line-height-5">
-                                            <a class="body-text" href="tel:0907 859 668">0907 859 668</a><br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4 position-relative">
-                                    <div class="contact-info-wrapper">
-                                        <div
-                                            class="contact-info-icon d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-envelope dark-text d-inline-block"></i>
-                                        </div>
-                                        <h4 class="dark-text fw-700 line-height-3 ">Email</h4>
-                                        <p class="p body-text fw-500 line-height-5">
-                                            <a class="body-text"
-                                                href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a>
-                                        </p>
-                                    </div>
-                                </div>
+        <!-- start cost estimation section -->
+        <section class="cost-estimation section-padding-bottom-xl section-padding-top-xl overflow-hidden">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- Form Dự toán chi phí -->
+                    <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"
+                        data-aos-offset="0">
+                        <h4 class="fw-700 line-height-2 dark-text mb-20 text-center">DỰ TOÁN CHI PHÍ THI CÔNG</h4>
+                        <form id="costEstimationForm" class="cost-estimation-form p-3"
+                            style="background-color: #f8f9fa; border-radius: 10px;">
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Địa điểm</label>
+                                <select class="form-select" name="location">
+                                    <option selected>Chọn Tỉnh / Thành</option>
+                                    <option value="1">Hồ Chí Minh</option>
+                                    <option value="2">Hà Nội</option>
+                                    <option value="3">Đà Nẵng</option>
+                                </select>
                             </div>
-                            <div class="mt-100">
-                                <h4 class="contact-form-heading fw-700 line-height-3 dark-text mb-70">Gửi mail cho tôi
-                                </h4>
-                                <form class="contact-page-form">
-                                    <div class="row mb-50">
-                                        <div class="col">
-                                            <input type="text" class="form-control" placeholder="Tên">
-                                        </div>
-                                        <div class="col">
-                                            <input type="email" class="form-control" placeholder="Email">
-                                        </div>
-                                        <div class="col">
-                                            <input type="phone" class="form-control" placeholder="Số điện thoại">
-                                        </div>
-                                    </div>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Nội dung" rows="3"></textarea>
-                                    <a class="btn brand-btn text-uppercase d-inline-block mt-60" href="contact">
-                                        <span class="position-relative z-1">gửi</span>
-                                    </a>
-                                </form>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Loại hình đầu tư</label>
+                                <select class="form-select" name="investmentType">
+                                    <option selected>Chọn loại hình đầu tư</option>
+                                    <option value="1">Nhà ở</option>
+                                    <option value="2">Văn phòng</option>
+                                    <option value="3">Thương mại</option>
+                                </select>
                             </div>
-                        </div>
-                        <div class="col-12 col-lg-6 text-center text-lg-end d-none d-lg-flex">
-                            <div class="w-100">
-                                <img src="{{ asset('archite/img/experienceOneImg.jpg') }}"
-                                    class="img-no-hover-effect" alt="contact img">
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Hiện trạng</label>
+                                <select class="form-select" name="condition">
+                                    <option selected>Chọn hiện trạng</option>
+                                    <option value="1">Đất trống</option>
+                                    <option value="2">Nhà cũ cần cải tạo</option>
+                                    <option value="3">Đang xây dựng</option>
+                                </select>
                             </div>
-                        </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Mức độ đầu tư</label>
+                                <select class="form-select" name="investmentLevel">
+                                    <option selected>Chọn Mức độ đầu tư</option>
+                                    <option value="1">Cơ bản</option>
+                                    <option value="2">Trung bình</option>
+                                    <option value="3">Cao cấp</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Tổng diện tích</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="area">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">m²</span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Tên chủ đầu tư</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="investorName">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Email</label>
+                                <input type="email" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Số điện thoại</label>
+                                <input type="tel" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="phone">
+                            </div>
+                            <button type="submit" class="btn brand-btn text-uppercase w-100"
+                                style="background-color: #f5a623; border-color: #f5a623;">
+                                <span class="position-relative z-1">NHẬN KẾT QUẢ DỰ TOÁN</span>
+                            </button>
+                            <div id="confirmationMessage" class="mt-3 text-center text-success"
+                                style="display: none;">
+                                Cảm ơn bạn! Kết quả dự toán sẽ được gửi qua email trong thời gian sớm nhất.
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Form Thời gian hòa vốn -->
+                    <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"
+                        data-aos-offset="0">
+                        <h4 class="fw-700 line-height-2 dark-text mb-20 text-center">THỜI GIAN HÒA VỐN</h4>
+                        <form id="breakEvenForm" class="cost-estimation-form p-3"
+                            style="background-color: #f8f9fa; border-radius: 10px;">
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Đầu tư xây dựng + nội thất</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="constructionAndInteriorCost">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">VND</span>
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Trang thiết bị công cụ dụng cụ</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="equipmentCost">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">VND</span>
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Chi phí vận hành phục vụ khách</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="operationCost">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">VND</span>
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Chi phí thuê mặt bằng trên
+                                    tháng</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="rentalCostPerMonth">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">VND</span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Thời gian thuê mặt bằng (năm)</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="rentalDuration">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Tổng số nhân viên dự kiến (nhân viên
+                                    phục vụ, bếp, bar, khác...)</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="totalStaff">
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Chi phí marketing hàng tháng</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="marketingCost">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">VND</span>
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Chi phí cơ định khác (điện, nước,
+                                    internet...)</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="otherFixedCost">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">VND</span>
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Dự trù phát sinh khác trong
+                                    tháng</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="miscellaneousCost">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">VND</span>
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <label class="form-label fw-500 text-uppercase">Giá bán trung bình trên một
+                                    khách</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="averagePricePerCustomer">
+                                <span class="position-absolute end-0 top-50 translate-middle-y pe-3">VND</span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Chi phí nguyệt vật liệu đầu vào trung
+                                    bình trên một khách (30%-50% trên giá...)</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="materialCostPerCustomer">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-500 text-uppercase">Doanh thu trung bình một ngày</label>
+                                <input type="text" class="form-control" placeholder="Nhập thông tin (*)"
+                                    name="averageDailyRevenue">
+                            </div>
+                            <button type="submit" class="btn brand-btn text-uppercase w-100"
+                                style="background-color: #f5a623; border-color: #f5a623;">
+                                <span class="position-relative z-1">NHẬN KẾT QUẢ DỰ TOÁN</span>
+                            </button>
+                            <div id="confirmationMessage2" class="mt-3 text-center text-success"
+                                style="display: none;">
+                                Cảm ơn bạn! Kết quả dự toán sẽ được gửi qua email trong thời gian sớm nhất.
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end contact -->
-        <!-- start map -->
-        <div class="contact-location-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4863.05687444326!2d106.60765667586887!3d10.80964975857836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bec147a8955%3A0x9b98528e913f8ba3!2zMTU5IMSQxrDhu51uZyBDTjExLCBTxqFuIEvhu7MsIFTDom4gUGjDuiwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e1!3m2!1svi!2s!4v1741855185003!5m2!1svi!2s"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <!-- end map -->
+        <!-- end cost estimation section -->
         <!-- start footer -->
         <footer class="footer-one" style="background-color: #1a1a1a; padding: 60px 0;">
             <div class="container">
@@ -397,9 +466,22 @@
     <script src="{{ asset('archite/js/jquery.animatedheadline.min.js') }}"></script>
     <!-- Main JS script -->
     <script src="{{ asset('archite/js/main.js') }}"></script>
+    <!-- Custom JS for Form Submission -->
+    <script>
+        $(document).ready(function() {
+            $('#costEstimationForm').on('submit', function(e) {
+                e.preventDefault();
+                $('#confirmationMessage').show().delay(3000).fadeOut();
+                // Thêm logic gửi dữ liệu nếu cần, ví dụ: $.post('/submit-form', $(this).serialize());
+            });
+
+            $('#breakEvenForm').on('submit', function(e) {
+                e.preventDefault();
+                $('#confirmationMessage2').show().delay(3000).fadeOut();
+                // Thêm logic gửi dữ liệu nếu cần, ví dụ: $.post('/submit-break-even', $(this).serialize());
+            });
+        });
+    </script>
 </body>
-
-
-<!-- Mirrored from thememarch.com/demo/html/archite/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:28:59 GMT -->
 
 </html>

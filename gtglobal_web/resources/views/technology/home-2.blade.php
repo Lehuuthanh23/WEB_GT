@@ -25,6 +25,171 @@
     <link rel="stylesheet" href="{{ asset('technology/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('technology/css/main.css') }}">
 </head>
+<style>
+    /* CSS cho Popup */
+    .popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        background: #1a1a1a;
+        color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 500px;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        border: 1px solid #00ffff;
+        font-family: 'Arial', sans-serif;
+        animation: popupFadeIn 0.3s ease;
+    }
+
+    @keyframes popupFadeIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .popup-content h3 {
+        margin: 0 0 20px;
+        font-size: 24px;
+        color: #00ffff;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .popup-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .popup-content ul li {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+    }
+
+    .popup-content ul li::before {
+        content: '✔';
+        color: #00ffff;
+        margin-right: 10px;
+    }
+
+    .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        color: #00ffff;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .popup-close:hover {
+        color: #ff3333;
+    }
+
+    /* CSS cho nút "Xem tất cả tính năng" */
+    .thm-btn--gradient {
+        background: linear-gradient(90deg, #00ffff, #007bff);
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.2s;
+    }
+
+    .thm-btn--gradient:hover {
+        transform: scale(1.05);
+    }
+
+    .crm-testimonial {
+        padding-bottom: 80px;
+        position: relative;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .crm-title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .crm-title__heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .contact-form {
+        margin-top: 100px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    .col-lg-6,
+    .col-12 {
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+
+    .row input,
+    .row select {
+        background-color: transparent;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .contact-form__btn {
+        text-align: center;
+    }
+
+    .thm-btn {
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .result {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    select {
+        color: white;
+    }
+</style>
 
 <body class="home-dark">
 
@@ -52,8 +217,8 @@
                 <div class="container">
                     <div class="header__main ul_li_between">
                         <div class="header__logo">
-                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}" style="width: auto; height: 40px;"
-                                    alt=""></a>
+                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}"
+                                    style="width: auto; height: 40px;" alt=""></a>
                         </div>
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
@@ -121,7 +286,8 @@
                         <div class="ct-content-wrap col">
                             <div class="ct-item-wrap row">
                                 <div class="ct-item col-auto ">
-                                    <span class="item-content"><a href="tel:0907859668" class="tel">0907 859 668</a></span>
+                                    <span class="item-content"><a href="tel:0907859668" class="tel">0907 859
+                                            668</a></span>
                                 </div>
                                 <div class="ct-item col-auto "> <span class="item-content"><a
                                             href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
@@ -133,9 +299,8 @@
 
                 <div class="sidebar-socials-wrap mt-30"> <a class="social-item" href="https://facebook.com/"
                         target="_blank">Facebook</a><a class="social-item" href="https://www.behance.net/"
-                        target="_blank">Behance</a><a class="social-item" href="#"
-                        target="_blank">Telegram</a><a class="social-item" href="https://dribbble.com/"
-                        target="_blank">Dribbble</a></div>
+                        target="_blank">Behance</a><a class="social-item" href="#" target="_blank">Telegram</a><a
+                        class="social-item" href="https://dribbble.com/" target="_blank">Dribbble</a></div>
             </div>
             <!-- sidebar-info end -->
 
@@ -182,15 +347,16 @@
                                     <img src="{{ asset('technology/img/shape/h_line_shape.png') }}" alt="">
                                 </div>
                                 <p class="mb-30 wow fadeInUp" data-wow-delay="200ms" data-wow-duration=".5s">
-                                    Revolutionizing Technical Operations: Boosting Efficiency with an Intuitive and <br>
-                                    Comprehensive CRM Dashboard for Your Tech Teams</p>
+                                    Chiếu sáng thương hiệu, khuấy động mọi ánh nhìn!</p>
                                 <div class="btns wow fadeInUp" data-wow-delay="300ms" data-wow-duration=".5s">
-                                    <a class="thm-btn thm-btn--gradient style-2" href="#!">Get a demo</a>
-                                    <a class="thm-btn thm-btn--outline style-2" href="#!">View pricing</a>
+                                    <a class="thm-btn thm-btn--gradient style-2" href="#!">Xem chi tiết sản
+                                        phẩm</a>
+
                                 </div>
                                 <div class="hero-image mt-90 wow fadeInUp" data-wow-delay="400ms"
                                     data-wow-duration=".5s">
-                                    <img src="{{ asset('technology/img/hero/hero_img-3.png') }}" alt="">
+                                    <img style="border-radius: 20px"
+                                        src="{{ asset('technology/img/shape/acccc.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -219,7 +385,7 @@
             <section id="feature" class="crm-feature pos-rel pt-70 pb-140">
                 <div class="container">
                     <div class="crm-feature__title text-center mb-60">
-                        Powerful features
+                        Tính năng nổi bật của máy chiếu GT GLOBAL
                     </div>
                     <div class="row justify-content-center mt-none-20">
                         <div class="col-lg-3 col-md-6 mt-20">
@@ -227,8 +393,9 @@
                                 <div class="icon mb-40">
                                     <img src="{{ asset('technology/img/icon/ft_01.svg') }}" alt="">
                                 </div>
-                                <h3>User Information</h3>
-                                <p>Hey there, fellow employees! Welcome to our</p>
+                                <h3>Điều khiển qua ứng dụng</h3>
+                                <p>Dễ dàng thiết lập và quản lý nội dung quảng cáo mọi lúc, mọi nơi với ứng dụng thân
+                                    thiện.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mt-20">
@@ -236,8 +403,9 @@
                                 <div class="icon mb-40">
                                     <img src="{{ asset('technology/img/icon/ft_02.svg') }}" alt="">
                                 </div>
-                                <h3>Deal Tracking</h3>
-                                <p>Hey there, fellow employees! Welcome to our</p>
+                                <h3>Nhận lệnh thông minh</h3>
+                                <p>Điều khiển ở app mobile để vận hành máy chiếu nhanh chóng, chính xác.
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mt-20">
@@ -245,8 +413,8 @@
                                 <div class="icon mb-40">
                                     <img src="{{ asset('technology/img/icon/ft_03.svg') }}" alt="">
                                 </div>
-                                <h3>Pipeline Management</h3>
-                                <p>Hey there, fellow employees! Welcome to our</p>
+                                <h3>Bảo mật thông tin</h3>
+                                <p>Mã hóa dữ liệu cấp cao, đảm bảo an toàn tuyệt đối cho nội dung quảng cáo của bạn.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mt-20">
@@ -254,8 +422,8 @@
                                 <div class="icon mb-40">
                                     <img src="{{ asset('technology/img/icon/ft_04.svg') }}" alt="">
                                 </div>
-                                <h3>Reporting Dashboard</h3>
-                                <p>Hey there, fellow employees! Welcome to our</p>
+                                <h3>Tối ưu chi phí điện</h3>
+                                <p>Công nghệ tiết kiệm năng lượng, giảm tiêu thụ điện mà vẫn giữ độ sáng vượt trội.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mt-20">
@@ -263,8 +431,9 @@
                                 <div class="icon mb-40">
                                     <img src="{{ asset('technology/img/icon/ft_05.svg') }}" alt="">
                                 </div>
-                                <h3>Meeting Scheduling</h3>
-                                <p>Hey there, fellow employees! Welcome to our</p>
+                                <h3>Hình ảnh sắc nét</h3>
+                                <p>Độ phân giải cao, màu sắc sống động, thu hút mọi ánh nhìn trong mọi điều kiện ánh
+                                    sáng.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mt-20">
@@ -272,8 +441,8 @@
                                 <div class="icon mb-40">
                                     <img src="{{ asset('technology/img/icon/ft_06.svg') }}" alt="">
                                 </div>
-                                <h3>Email Tracking</h3>
-                                <p>Hey there, fellow employees! Welcome to our</p>
+                                <h3>Kết nối đa dạng</h3>
+                                <p>Hỗ trợ Wi-Fi, Bluetooth, HDMI, USB, dễ dàng tích hợp với mọi thiết bị.</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12 mt-20">
@@ -281,11 +450,11 @@
                                 <div class="icon mb-40">
                                     <img src="{{ asset('technology/img/icon/ft_07.svg') }}" alt="">
                                 </div>
-                                <h3>Deal and Tech Data Tracking</h3>
-                                <p>Hey there, fellow employees! Welcome to our</p>
-                                <div class="ft_icon">
-                                    <img src="{{ asset('technology/img/icon/ft_icon.png') }}" alt="">
-                                </div>
+                                <h3>Quản lý nội dung thông minh</h3>
+                                <p>Lên lịch trình quảng cáo tự động, theo dõi hiệu suất
+                                    và tối ưu chiến dịch dễ dàng.
+                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -316,93 +485,92 @@
                 </div>
                 <div class="container">
                     <div class="crm-title text-center mb-60">
-                        <h2 class="crm-title__heading">Essential apps that protect <br> your data</h2>
+                        <h2 class="crm-title__heading">Các ứng dụng thiết yếu để bảo vệ <br>dữ liệu của bạn</h2>
                     </div>
                     <div class="process__wrap ul_li_between">
                         <div class="process__title mt-30">
-                            <h3 class="title">End-to-end encrypted inbox <br> and messages</h3>
-                            <p>Rorem ipsum dolor sit amet consectetur. Proin dignissim tortor mauris viverra sed
-                                volutpat mauris. Amet nisi amet commodo adipiscing ut imperdiet nunc.</p>
-                            <div class="mt-35">
-                                <a class="thm-btn thm-btn--gradient style-2" href="#!">Learn More</a>
-                            </div>
+                            <h3 class="title">Hộp thư và tin nhắn được mã hóa toàn diện</h3>
+                            <p>Dữ liệu của bạn được bảo vệ an toàn với công nghệ mã hóa từ đầu đến cuối. Tận hưởng sự
+                                riêng tư và bảo mật tuyệt đối trong mọi giao tiếp.</p>
                         </div>
                         <div class="process__ss mt-30">
-                            <img src="{{ asset('technology/img/process/img_01.png') }}" alt="">
+                            <img style="border-radius: 20px" src="{{ asset('technology/img/process/notifi.png') }}"
+                                alt="">
                         </div>
                     </div>
                     <div class="row g-38 mt-10">
                         <div class="col-lg-5 mt-30">
                             <div class="process__app-item">
                                 <div class="text-center">
-                                    <img src="{{ asset('technology/img/process/img_02.png') }}" alt="">
+                                    <img src="{{ asset('technology/img/process/phone.png') }}" alt="">
                                 </div>
                                 <div class="process__title mt-40">
-                                    <h3 class="title">Mobile applications</h3>
-                                    <p>Prem ipsum dolor sit amet consectetur. Viverra sed dignissim risus aliquet
-                                        condimentum. Vulputate varius </p>
+                                    <h3 class="title">Ứng dụng di động</h3>
+                                    <p>Truy cập và quản lý dữ liệu mọi lúc, mọi nơi với ứng dụng di động tiện lợi, bảo
+                                        mật và dễ sử dụng.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-7 mt-30">
                             <div class="process__app-item style-2">
                                 <div class="process__title mb-30">
-                                    <h3 class="title">Upload, share, and preview any file</h3>
-                                    <p>Prem ipsum dolor sit amet consectetur. Viverra sed dignissim risus aliquet
-                                        condimentum. Vulputate varius </p>
+                                    <h3 class="title">Tải lên, chia sẻ và xem trước mọi loại tệp</h3>
+                                    <p>Dễ dàng tải lên, chia sẻ và xem trước các tệp tài liệu, hình ảnh hay video một
+                                        cách nhanh chóng và an toàn.</p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="{{ asset('technology/img/process/img_03.png') }}" alt="">
+                                    <img style="border-radius: 20px; margin-bottom: 20px"
+                                        src="{{ asset('technology/img/process/manager.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="process__button mt-60">
-                        <div class="btns text-center">
-                            <a class="thm-btn thm-btn--gradient style-2" href="#!">Get Started Today</a>
-                            <a class="thm-btn thm-btn--outline style-2" href="#!">Browse all Features</a>
-                        </div>
-                    </div>
+
+                    <!-- Projector Section -->
                     <div class="row pt-150 pt-xs-90">
                         <div class="col-12">
                             <div class="process__area">
                                 <div class="process__top ul_li_between mt-none-30">
                                     <div class="crm-title mt-30">
-                                        <h2 class="crm-title__heading mb-15">Transparent, audited, and open source</h2>
-                                        <p>Torem ipsum dolor sit amet consectetur. scelerisque eget quis. </p>
+                                        <h2 class="crm-title__heading mb-15">Máy chiếu sắc nét, thông minh và đa năng
+                                        </h2>
+                                        <p>Khám phá trải nghiệm trình chiếu đỉnh cao với hình ảnh Full HD và hệ điều
+                                            hành Android tích hợp.</p>
                                         <div class="mt-40">
-                                            <a class="thm-btn thm-btn--gradient style-2" href="#!">Browse all
-                                                feature</a>
+                                            <a class="thm-btn thm-btn--gradient style-2" href="javascript:void(0)"
+                                                onclick="showPopup()">Xem thông số máy chiếu</a>
                                         </div>
                                     </div>
                                     <div class="image mt-30">
-                                        <img src="{{ asset('technology/img/process/img_04.png') }}" alt="">
+                                        <img style="width: 30rem; border-radius:20px"
+                                            src="{{ asset('technology/img/process/project.png') }}"
+                                            alt="Máy chiếu Full HD">
                                     </div>
                                 </div>
                                 <div class="row g-26 mt-10">
                                     <div class="col-lg-6 mt-30">
                                         <div class="process__app-item style-3">
                                             <div class="process__title process__title--lg mb-30">
-                                                <h3 class="title">Product Mail</h3>
-                                                <p>Gonsectetur eque nec nunc facilisis tellus tincidunt. <br> Malesuada
-                                                    maecenas ac bibendum consectetur.</p>
+                                                <h3 class="title">Chiếu video quảng cáo sống động</h3>
+                                                <p>Trình chiếu các video quảng cáo với độ phân giải Full HD, hình ảnh
+                                                    sắc nét và màu sắc chân thực, thu hút mọi ánh nhìn.</p>
                                             </div>
                                             <div class="text-center">
-                                                <img src="{{ asset('technology/img/process/img_05.png') }}"
-                                                    alt="">
+                                                <img src="{{ asset('technology/img/process/project1.png') }}"
+                                                    alt="Video quảng cáo trên máy chiếu">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mt-30">
                                         <div class="process__app-item style-3">
                                             <div class="process__title process__title--lg mb-30">
-                                                <h3 class="title">Product UI</h3>
-                                                <p>Honsectetur eque nec nunc facilisis tellus tincidunt. <br> Malesuada
-                                                    maecenas ac bibendum consectetur.</p>
+                                                <h3 class="title">Tích hợp Android thông minh</h3>
+                                                <p>Truy cập ứng dụng, phát trực tuyến nội dung và điều khiển dễ dàng nhờ
+                                                    hệ điều hành Android tích hợp sẵn.</p>
                                             </div>
                                             <div class="text-center">
-                                                <img src="{{ asset('technology/img/process/img_06.png') }}"
-                                                    alt="">
+                                                <img src="{{ asset('technology/img/process/android.png') }}"
+                                                    alt="Máy chiếu tích hợp Android">
                                             </div>
                                         </div>
                                     </div>
@@ -410,111 +578,291 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- New Film Section -->
+                    <div class="row pt-150 pt-xs-90">
+                        <div class="col-12">
+                            <div class="process__area"
+                                style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 40px;">
+                                <div class="process__top ul_li_between mt-none-10">
+                                    <div class="crm-title mt-15">
+                                        <h2 class="crm-title__heading mb-15"
+                                            style="font-size: 2.5rem; font-weight: bold; color: #00ffff; text-transform: uppercase;">
+                                            Tấm Phim Trình Chiếu Công Nghệ Nano
+                                        </h2>
+                                        <p style="font-size: 1.1rem; color: #b0c4de;">
+                                            Khám phá đỉnh cao công nghệ trình chiếu với tấm phim Nano PET, độ truyền
+                                            sáng tối ưu, hiệu ứng 3D sống động và ứng dụng linh hoạt trong mọi môi
+                                            trường.
+                                        </p>
+                                        <div class="mt-40">
+                                            <a class="thm-btn thm-btn--gradient style-2" href="javascript:void(0)"
+                                                onclick="showFilmPopup()">Xem thông số tấm phim</a>
+                                        </div>
+                                    </div>
+                                    <div class="image mt-30">
+                                        <img style="width: 30rem; border-radius: 20px"
+                                            src="{{ asset('technology/img/process/film.png') }}"
+                                            alt="Tấm phim trình chiếu Nano">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projector Popup -->
+                    <div class="popup-overlay" id="featurePopup">
+                        <div class="popup-content">
+                            <span class="popup-close" onclick="hidePopup()">×</span>
+                            <h3>Thông số kỹ thuật máy chiếu</h3>
+                            <img style="margin-left:30px" src="{{ asset('technology/img/process/proj.png') }}"
+                                alt="Máy chiếu TS - AS010" class="popup-image">
+                            <ul>
+                                <li>MODEL: TS - AS010 (SA466X+)</li>
+                                <li>Công nghệ: 3LCD</li>
+                                <li>Cường độ sáng: 4700 Ansi lumen (tương thích màn 50 – 150 inch)</li>
+                                <li>Độ phân giải: XGA (1024 x 768 pixel) – Hỗ trợ Full HD (có thể điều chỉnh tỉ lệ 16:9)
+                                </li>
+                                <li>Độ phóng đại: 1.66x (60 - 150''@1.63 - 4.46m: 1.34~2.22:1)</li>
+                                <li>Tuổi thọ bóng đèn: 10.000 giờ (Normal) / 20.000 giờ (ECO)</li>
+                                <li>Góc độ: ~27 độ nếu đặt sát trần</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- New Film Popup -->
+                    <div class="popup-overlay" id="filmPopup">
+                        <div class="popup-content"
+                            style="max-width: 360px; width: 90%; padding: 20px; background: linear-gradient(135deg, #1a1a1a, #2a2a3a); border: 2px solid #00ffff; box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);">
+                            <span class="popup-close" onclick="hideFilmPopup()"
+                                style="font-size: 20px; color: #00ffff; transition: color 0.3s;">×</span>
+                            <h3
+                                style="font-size: 18px; color: #00ffff; text-transform: uppercase; text-align: center; margin-bottom: 15px;">
+                                Tấm Phim Nano Công Nghệ</h3>
+
+                            <!-- Thông số kỹ thuật chính -->
+                            <div class="tech-specs"
+                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px; color: #b0c4de; margin-bottom: 15px;">
+                                <div><strong>Truyền sáng:</strong> 92-98%</div>
+                                <div><strong>Góc nhìn:</strong> 150°</div>
+                                <div><strong>Công nghệ:</strong> PET Nano</div>
+
+
+                                <div><strong>Bảo hành:</strong> 1 năm</div>
+                                <div><strong>Kích thước:</strong> 1524x30000mm</div>
+                            </div>
+
+                            <!-- Tabs cho 4 dòng phim -->
+                            <div class="film-tabs">
+                                <div class="tab-buttons"
+                                    style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <button class="tab-btn active" onclick="showTab(1)"
+                                        style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT01</button>
+                                    <button class="tab-btn" onclick="showTab(2)"
+                                        style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT02</button>
+                                    <button class="tab-btn" onclick="showTab(3)"
+                                        style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT03</button>
+                                    <button class="tab-btn" onclick="showTab(4)"
+                                        style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT04</button>
+                                </div>
+                                <div class="tab-content" id="tab1" style="font-size: 13px; color: #b0c4de;">
+                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT01 – Trong
+                                        suốt</h4>
+                                    <ul style="list-style: none; padding: 0;">
+                                        <li>95% xuyên sáng, hiệu ứng 3D</li>
+                                        <li>Chiếu trước/sau, trong/ngoài trời</li>
+                                        <li>Hình ảnh nổi, nhìn xuyên rõ</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="tab2"
+                                    style="display: none; font-size: 13px; color: #b0c4de;">
+                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT02 – Trắng
+                                        mờ</h4>
+                                    <ul style="list-style: none; padding: 0;">
+                                        <li>Giữ sáng tối ưu, cản sáng hoàn toàn</li>
+                                        <li>Chiếu trước/sau, trong/ngoài trời</li>
+                                        <li>Hình ảnh sáng rõ</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="tab3"
+                                    style="display: none; font-size: 13px; color: #b0c4de;">
+                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT03 – Xám
+                                    </h4>
+                                    <ul style="list-style: none; padding: 0;">
+                                        <li>Hiển thị tốt mọi ánh sáng</li>
+                                        <li>Chiếu sau, trong/ngoài trời</li>
+                                        <li>Linh hoạt sáng mạnh/yếu</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="tab4"
+                                    style="display: none; font-size: 13px; color: #b0c4de;">
+                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT04 – Đen
+                                    </h4>
+                                    <ul style="list-style: none; padding: 0;">
+                                        <li>Tăng tương phản, cản sáng</li>
+                                        <li>Chiếu sau, trong/ngoài trời</li>
+                                        <li>Tối ưu ánh sáng mạnh</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- JavaScript cho Popup và Tabs -->
+                <script>
+                    function showPopup() {
+                        document.getElementById('featurePopup').style.display = 'flex';
+                    }
+
+                    function hidePopup() {
+                        document.getElementById('featurePopup').style.display = 'none';
+                    }
+
+                    function showFilmPopup() {
+                        document.getElementById('filmPopup').style.display = 'flex';
+                    }
+
+                    function hideFilmPopup() {
+                        document.getElementById('filmPopup').style.display = 'none';
+                    }
+
+                    function showTab(tabNumber) {
+                        document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+                        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                        document.getElementById('tab' + tabNumber).style.display = 'block';
+                        document.querySelector(`.tab-btn[onclick="showTab(${tabNumber})"]`).classList.add('active');
+                    }
+                </script>
+
+                <!-- CSS bổ sung cho Tabs -->
+                <style>
+                    .tab-btn.active {
+                        background: linear-gradient(90deg, #00ffff, #007bff) !important;
+                        color: #fff !important;
+                        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+                    }
+
+                    .tab-btn:hover {
+                        background: linear-gradient(90deg, #00ffff, #007bff);
+                        color: #fff;
+                        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+                    }
+
+                    .popup-content {
+                        animation: popupFadeIn 0.3s ease;
+                    }
+
+                    .popup-close:hover {
+                        color: #ff3333;
+                    }
+                </style>
             </section>
             <!-- process end -->
+            <!-- process end -->
 
-            <!-- testimonial start -->
             <section class="crm-testimonial pos-rel pb-80">
                 <div class="container">
                     <div class="crm-title text-center mb-60">
-                        <h2 class="crm-title__heading">Our happy customer <br> feedback</h2>
+                        <h2 class="crm-title__heading">Tính toán tỉ lệ màn hình</h2>
                     </div>
                 </div>
-                <div class="crm-testimonial__slide swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="crm-testimonial__item swiper-slide">
-                            <div class="rating mb-40">
-                                <img src="{{ asset('technology/img/icon/rating.png') }}" alt="">
-                            </div>
-                            <p>Since implementing ABC CRM service in our organization, we have experienced a remarkable
-                                transformation in our customer management practices. The platform's intuitive interface
-                                and powerful automation tools have revolutionized the way we interact</p>
-                            <div class="crm-testimonial__author ul_li_center text-start mt-45">
-                                <div class="avatar">
-                                    <img src="{{ asset('technology/img/avatar/tm_avatar1.jpg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4>Florida Campain</h4>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote">
-                                <img src="{{ asset('technology/img/icon/quote-2.png') }}" alt="">
-                            </div>
+
+                <div class="contact-form mt-100 mx-5">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="inputType">Chọn loại đầu vào:</label>
+                            <select id="inputType">
+                                <option value="Width" style="color: black;">Nhập chiều ngang</option>
+                                <option value="Height" style="color: black;">Nhập chiều cao</option>
+                            </select>
                         </div>
-                        <div class="crm-testimonial__item swiper-slide">
-                            <div class="rating mb-40">
-                                <img src="{{ asset('technology/img/icon/rating.png') }}" alt="">
-                            </div>
-                            <p>I have been using XYZ CRM service for over a year now, and I am extremely satisfied with
-                                the results. The platform is user-friendly, making it easy for me and my team to manage
-                                our customer relationships efficiently way of this ways. </p>
-                            <div class="crm-testimonial__author ul_li_center text-start mt-45">
-                                <div class="avatar">
-                                    <img src="{{ asset('technology/img/avatar/tm_avatar2.jpg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4>Florida Campain</h4>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote">
-                                <img src="{{ asset('technology/img/icon/quote-2.png') }}" alt="">
-                            </div>
+                        <div class="col-lg-6">
+                            <label for="unit">Chọn đơn vị:</label>
+                            <select id="unit">
+                                <option value="inch" style="color: black;">inch</option>
+                                <option value="mm" style="color: black;">mm</option>
+                            </select>
                         </div>
-                        <div class="crm-testimonial__item swiper-slide">
-                            <div class="rating mb-40">
-                                <img src="{{ asset('technology/img/icon/rating.png') }}" alt="">
-                            </div>
-                            <p>I cannot imagine running my business without PQR CRM service. It has become an
-                                indispensable tool in managing our customer relationships. The ability to centralize all
-                                customer data and communication in one place has saved us countless.</p>
-                            <div class="crm-testimonial__author ul_li_center text-start mt-45">
-                                <div class="avatar">
-                                    <img src="{{ asset('technology/img/avatar/tm_avatar3.jpg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4>Florida Campain</h4>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote">
-                                <img src="{{ asset('technology/img/icon/quote-2.png') }}" alt="">
-                            </div>
+                        <div class="col-lg-6">
+                            <label for="ratio">Chọn tỷ lệ:</label>
+                            <select id="ratio">
+                                <option value="16:9" style="color: black;">16:9</option>
+                                <option value="4:3" style="color: black;">4:3</option>
+                            </select>
                         </div>
-                        <div class="crm-testimonial__item swiper-slide">
-                            <div class="rating mb-40">
-                                <img src="{{ asset('technology/img/icon/rating.png') }}" alt="">
-                            </div>
-                            <p>I have been using XYZ CRM service for over a year now, and I am extremely satisfied with
-                                the results. The platform is user-friendly, making it easy for me and my team to manage
-                                our customer relationships efficiently way of this ways. </p>
-                            <div class="crm-testimonial__author ul_li_center text-start mt-45">
-                                <div class="avatar">
-                                    <img src="{{ asset('technology/img/avatar/tm_avatar1.jpg') }}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4>Florida Campain</h4>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote">
-                                <img src="{{ asset('technology/img/icon/quote-2.png') }}" alt="">
-                            </div>
+                        <div class="col-lg-6">
+                            <label id="inputLabel">Nhập chiều ngang:</label>
+                            <input type="number" id="inputValue" placeholder="Nhập giá trị" style="color: white;">
+                        </div>
+                        <div class="col-12 contact-form__btn">
+                            <button type="button" class="thm-btn thm-btn--gradient" onclick="calculateSize()">Tính
+                                toán</button>
                         </div>
                     </div>
-                </div>
-                <div class="crm-testimonial__shape">
-                    <div class="shape shape--1">
-                        <img src="{{ asset('technology/img/shape/tm_shape1.png') }}" alt="">
-                    </div>
-                    <div class="shape shape--2" data-parallax='{"y" : 80}'>
-                        <img src="{{ asset('technology/img/shape/tm_shape2.png') }}" alt="">
-                    </div>
+                    <div class="result" id="result"></div>
                 </div>
             </section>
-            <!-- testimonial end -->
+            <script>
+                document.getElementById('inputType').addEventListener('change', function() {
+                    var inputType = this.value;
+                    var label = document.getElementById('inputLabel');
+                    if (inputType === 'Width') {
+                        label.textContent = 'Nhập chiều ngang:';
+                    } else {
+                        label.textContent = 'Nhập chiều cao:';
+                    }
+                    document.getElementById('result').innerHTML = '';
+                });
+
+                function calculateSize() {
+                    var inputType = document.getElementById('inputType').value;
+                    var unit = document.getElementById('unit').value;
+                    var ratio = document.getElementById('ratio').value;
+                    var inputValue = parseFloat(document.getElementById('inputValue').value);
+
+                    if (isNaN(inputValue) || inputValue <= 0) {
+                        document.getElementById('result').innerHTML = 'Vui lòng nhập giá trị hợp lệ.';
+                        return;
+                    }
+
+                    var isMm = unit === 'mm';
+                    if (isMm) {
+                        inputValue = inputValue / 25.4; // Chuyển từ mm sang inch
+                    }
+
+                    var widthRatio = ratio === '16:9' ? 16 : 4;
+                    var heightRatio = ratio === '16:9' ? 9 : 3;
+
+                    var width, height, diagonal;
+
+                    if (inputType === 'Width') {
+                        width = inputValue;
+                        height = (width / widthRatio) * heightRatio;
+                    } else {
+                        height = inputValue;
+                        width = (height / heightRatio) * widthRatio;
+                    }
+
+                    diagonal = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+
+                    if (isMm) {
+                        width = width * 25.4;
+                        height = height * 25.4;
+                    }
+
+                    var distanceMin = (width * 1.34) / 1000;
+                    var distanceMax = (width * 2.22) / 1000;
+
+                    document.getElementById('result').innerHTML = `
+                Chiều ngang: ${width.toFixed(2)} ${unit}<br>
+                Chiều cao: ${height.toFixed(2)} ${unit}<br>
+                Kích thước màn hình: ${diagonal.toFixed(2)} inch<br>
+                Khoảng cách xem: ${distanceMin.toFixed(2)} - ${distanceMax.toFixed(2)} m
+            `;
+                }
+            </script>
+
 
         </main>
 
@@ -531,9 +879,9 @@
                                         alt=""></a></li>
                         </ul>
                         <div class="crm-title text-center mb-40">
-                            <h2 class="crm-title__heading">Join our Global Community</h2>
+                            <h2 class="crm-title__heading">Liên hệ với chúng tôi</h2>
                         </div>
-                        <a class="thm-btn thm-btn--gradient style-2" href="#!">Join us Now</a>
+                        <a class="thm-btn thm-btn--gradient style-2" href="contact">Liên hệ ngay!</a>
                     </div>
                 </div>
                 <div class="row mt-none-30 pb-90">

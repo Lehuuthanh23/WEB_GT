@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Portfolio Details</title>
+    <title>Dự án</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('archite/img/favicon.ico') }}">
     <!-- Fonts (google font) -->
@@ -304,79 +304,55 @@
         </section>
         <!-- end work together -->
         <!-- start footer -->
-        <footer class="footer-one">
+        <footer class="footer-one" style="background-color: #1a1a1a; padding: 60px 0;">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-12 col-sm-5">
-                                <div class="logo mb-1">
-                                    <img src="{{ asset('archite/img/Logo.png') }}" style="height: 30%; width: 30%;"
-                                        alt="logo">
-                                </div>
-                                <p class="p text-white fw-500 line-height-5 mt-15">
-                                    Công ty TNHH TM & DV TOÀN CẦU GT là một trong những công ty có thế mạnh và tiềm năng
-                                    trong lĩnh vực thiết kế, thi công, sản xuất,… nội – ngoại thất với hơn 10 năm hoạt
-                                    động trong lĩnh vực và triển khai các dự án khối công trình văn phòng, showroom, nhà
-                                    hàng, biệt thự, chung cư…tới xây dựng hình ảnh cho các doanh nghiệp, tập đoàn đa
-                                    quốc gia.
-
-                                    Chúng tôi với phương châm mỗi khách hàng đều là những người thân, người bạn tri kỉ.
-                                    Lấy sự hài lòng của khách hàng làm tôn chỉ, để từ đó cung cấp cho khách hàng những
-                                    sản phẩm tối ưu nhất cả về chất lượng sản phẩm và dịch vụ.
-
-                                    Với đội ngủ trẻ và nhiệt huyết, chuyên môn cao cùng với sự đầu tư, học hỏi không
-                                    ngừng nghỉ về công nghệ, dây chuyền sản xuất, cơ sở hạ tầng cho cán bộ công nhân
-                                    viên. Chúng tôi sẽ mang đến cho khách hàng những sản phẩm và dịch vụ tiệm cận gần
-                                    nhất với nhu cầu và yêu cầu của khách hàng.
-                                </p>
-                                <h2 class="fw-700 text-white mt-30 footer-email">dongtrieuarc@gmail.com</h2>
+                <div class="footer-one-wrapper">
+                    <div class="row">
+                        <!-- Cột thông tin công ty -->
+                        <div class="col-12 col-md-6 col-lg-5 mb-5 mb-md-0">
+                            <div class="logo mb-4">
+                                <img src="{{ asset('archite/img/Logo.png') }}" style="height: 50px; width: auto;"
+                                    alt="logo">
                             </div>
-                            <div class="col-12 col-sm-3">
-                                <div class="mt-5 mt-sm-0">
-                                    <ul class="d-flex flex-column gap-4">
-                                        <li><a class="fw-500 text-uppercase" href="index">Trang chủ</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="about">Giới thiệu</a></li>
-
-                                        <li><a class="fw-500 text-uppercase" href="portfolio">Dự án</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="blog">Tin tức</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="contact">Liên hệ</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4">
-                                <div class="d-flex align-items-start mb-30 mt-5 mt-sm-0">
-                                    <i class="fa-solid fa-location-dot brand-text d-inline-block mr-10 mt-2"></i>
-                                    <h6 class="h6 fw-400 line-height-4 footer-address">
-                                        159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
-                                    </h6>
-                                </div>
-                                <div class="d-flex align-items-start mb-30">
-                                    <i class="fa-solid fa-phone-volume brand-text d-inline-block mr-10 mt-2"></i>
-                                    <h6 class="h6 fw-400 line-height-4 footer-address">
-                                        0907 859 668
-                                    </h6>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="mt-100 d-flex justify-content-between align-items-center flex-column flex-xl-row">
-                            <div class="footer-one-social-container">
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://facebook.com/"><span
-                                        class="z-1 position-relative">Facebook</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://linkedin.com/"><span
-                                        class="z-1 position-relative">LinkedIn</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://instagram.com/"><span
-                                        class="z-1 position-relative">Instagram</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://twitter.com/"><span
-                                        class="z-1 position-relative">Twitter</span></a>
-                                <a class="btn dark-btn mb-4 mb-lg-0" href="https://dribble.com/"><span
-                                        class="z-1 position-relative">Dribble</span></a>
-                            </div>
-                            <p class="p fw-500 line-height-3 footer-copyright-text pt-4 pt-xl-0">
-                                Copyright 2025, All Right reserved
+                            <p class="text-white fw-400 line-height-4" style="font-size: 15px; opacity: 0.9;">
+                                Công ty TNHH TM & DV TOÀN CẦU GT – Đơn vị hàng đầu với hơn 10 năm kinh nghiệm trong
+                                thiết kế, thi công và sản xuất nội – ngoại thất. Chúng tôi chuyên thực hiện các dự án
+                                văn phòng, showroom, nhà hàng, biệt thự, chung cư và xây dựng hình ảnh cho các doanh
+                                nghiệp, tập đoàn đa quốc gia. Với phương châm "Khách hàng là người thân", chúng tôi cam
+                                kết mang đến sản phẩm và dịch vụ chất lượng cao, đáp ứng tối ưu nhu cầu của bạn.
                             </p>
+                            <h5 class="text-white fw-600 mt-4" style="font-size: 18px;">
+                                Email: <span style="color: #f5a623;">dongtrieuarc@gmail.com</span>
+                            </h5>
                         </div>
+                        <!-- Cột thông tin liên hệ -->
+                        <div class="col-12 col-md-6 col-lg-4 offset-lg-3">
+                            <h5 class="text-white fw-600 mb-4"
+                                style="font-size: 18px; border-bottom: 2px solid #f5a623; padding-bottom: 10px;">
+                                Thông tin liên hệ
+                            </h5>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fa-solid fa-location-dot text-white d-inline-block mr-6 mt-2"
+                                    style="font-size: 20px; color: #f5a623; padding-right: 10px"></i>
+                                <p class="text-white fw-400 line-height-4 mb-0" style="font-size: 15px;">
+                                    159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fa-solid fa-phone-volume text-white d-inline-block mr-6 mt-2"
+                                    style="font-size: 20px; color: #f5a623; padding-right: 10px"></i>
+                                <p class="text-white fw-400 line-height-4 mb-0" style="font-size: 15px;">
+                                    0907 859 668
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Dòng bản quyền -->
+                    <div class="mt-5 pt-4 text-center" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p class="text-white fw-400 line-height-3 mb-0" style="font-size: 14px; opacity: 0.7;">
+                            Copyright © 2025 Công ty TNHH TM & DV TOÀN CẦU GT. All Rights Reserved.
+                        </p>
                     </div>
                 </div>
             </div>

@@ -1,546 +1,303 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>GT GLOBAL</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <!-- Styles -->
-    <style>
-        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-        html {
-            line-height: 1.15;
-            -webkit-text-size-adjust: 100%
-        }
-
-        body {
-            margin: 0
-        }
-
-        a {
-            background-color: transparent
-        }
-
-        [hidden] {
-            display: none
-        }
-
-        html {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            line-height: 1.5
-        }
-
-        *,
-        :after,
-        :before {
-            box-sizing: border-box;
-            border: 0 solid #e2e8f0
-        }
-
-        a {
-            color: inherit;
-            text-decoration: inherit
-        }
-
-        svg,
-        video {
-            display: block;
-            vertical-align: middle
-        }
-
-        video {
-            max-width: 100%;
-            height: auto
-        }
-
-        .bg-white {
-            --bg-opacity: 1;
-            background-color: #fff;
-            background-color: rgba(255, 255, 255, var(--bg-opacity))
-        }
-
-        .bg-gray-100 {
-            --bg-opacity: 1;
-            background-color: #f7fafc;
-            background-color: rgba(247, 250, 252, var(--bg-opacity))
-        }
-
-        .border-gray-200 {
-            --border-opacity: 1;
-            border-color: #edf2f7;
-            border-color: rgba(237, 242, 247, var(--border-opacity))
-        }
-
-        .border-t {
-            border-top-width: 1px
-        }
-
-        .flex {
-            display: flex
-        }
-
-        .grid {
-            display: grid
-        }
-
-        .hidden {
-            display: none
-        }
-
-        .items-center {
-            align-items: center
-        }
-
-        .justify-center {
-            justify-content: center
-        }
-
-        .font-semibold {
-            font-weight: 600
-        }
-
-        .h-5 {
-            height: 1.25rem
-        }
-
-        .h-8 {
-            height: 2rem
-        }
-
-        .h-16 {
-            height: 4rem
-        }
-
-        .text-sm {
-            font-size: .875rem
-        }
-
-        .text-lg {
-            font-size: 1.125rem
-        }
-
-        .leading-7 {
-            line-height: 1.75rem
-        }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        .ml-1 {
-            margin-left: .25rem
-        }
-
-        .mt-2 {
-            margin-top: .5rem
-        }
-
-        .mr-2 {
-            margin-right: .5rem
-        }
-
-        .ml-2 {
-            margin-left: .5rem
-        }
-
-        .mt-4 {
-            margin-top: 1rem
-        }
-
-        .ml-4 {
-            margin-left: 1rem
-        }
-
-        .mt-8 {
-            margin-top: 2rem
-        }
-
-        .ml-12 {
-            margin-left: 3rem
-        }
-
-        .-mt-px {
-            margin-top: -1px
-        }
-
-        .max-w-6xl {
-            max-width: 72rem
-        }
-
-        .min-h-screen {
-            min-height: 100vh
-        }
-
-        .overflow-hidden {
-            overflow: hidden
-        }
-
-        .p-6 {
-            padding: 1.5rem
-        }
-
-        .py-4 {
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        .px-6 {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem
-        }
-
-        .pt-8 {
-            padding-top: 2rem
-        }
-
-        .fixed {
-            position: fixed
-        }
-
-        .relative {
-            position: relative
-        }
-
-        .top-0 {
-            top: 0
-        }
-
-        .right-0 {
-            right: 0
-        }
-
-        .shadow {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)
-        }
-
-        .text-center {
-            text-align: center
-        }
-
-        .text-gray-200 {
-            --text-opacity: 1;
-            color: #edf2f7;
-            color: rgba(237, 242, 247, var(--text-opacity))
-        }
-
-        .text-gray-300 {
-            --text-opacity: 1;
-            color: #e2e8f0;
-            color: rgba(226, 232, 240, var(--text-opacity))
-        }
-
-        .text-gray-400 {
-            --text-opacity: 1;
-            color: #cbd5e0;
-            color: rgba(203, 213, 224, var(--text-opacity))
-        }
-
-        .text-gray-500 {
-            --text-opacity: 1;
-            color: #a0aec0;
-            color: rgba(160, 174, 192, var(--text-opacity))
-        }
-
-        .text-gray-600 {
-            --text-opacity: 1;
-            color: #718096;
-            color: rgba(113, 128, 150, var(--text-opacity))
-        }
-
-        .text-gray-700 {
-            --text-opacity: 1;
-            color: #4a5568;
-            color: rgba(74, 85, 104, var(--text-opacity))
-        }
-
-        .text-gray-900 {
-            --text-opacity: 1;
-            color: #1a202c;
-            color: rgba(26, 32, 44, var(--text-opacity))
-        }
-
-        .underline {
-            text-decoration: underline
-        }
-
-        .antialiased {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .w-5 {
-            width: 1.25rem
-        }
-
-        .w-8 {
-            width: 2rem
-        }
-
-        .w-auto {
-            width: auto
-        }
-
-        .grid-cols-1 {
-            grid-template-columns: repeat(1, minmax(0, 1fr))
-        }
-
-        @media (min-width:640px) {
-            .sm\:rounded-lg {
-                border-radius: .5rem
-            }
-
-            .sm\:block {
-                display: block
-            }
-
-            .sm\:items-center {
-                align-items: center
-            }
-
-            .sm\:justify-start {
-                justify-content: flex-start
-            }
-
-            .sm\:justify-between {
-                justify-content: space-between
-            }
-
-            .sm\:h-20 {
-                height: 5rem
-            }
-
-            .sm\:ml-0 {
-                margin-left: 0
-            }
-
-            .sm\:px-6 {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem
-            }
-
-            .sm\:pt-0 {
-                padding-top: 0
-            }
-
-            .sm\:text-left {
-                text-align: left
-            }
-
-            .sm\:text-right {
-                text-align: right
-            }
-        }
-
-        @media (min-width:768px) {
-            .md\:border-t-0 {
-                border-top-width: 0
-            }
-
-            .md\:border-l {
-                border-left-width: 1px
-            }
-
-            .md\:grid-cols-2 {
-                grid-template-columns: repeat(2, minmax(0, 1fr))
-            }
-        }
-
-        @media (min-width:1024px) {
-            .lg\:px-8 {
-                padding-left: 2rem;
-                padding-right: 2rem
-            }
-        }
-
-        @media (prefers-color-scheme:dark) {
-            .dark\:bg-gray-800 {
-                --bg-opacity: 1;
-                background-color: #2d3748;
-                background-color: rgba(45, 55, 72, var(--bg-opacity))
-            }
-
-            .dark\:bg-gray-900 {
-                --bg-opacity: 1;
-                background-color: #1a202c;
-                background-color: rgba(26, 32, 44, var(--bg-opacity))
-            }
-
-            .dark\:border-gray-700 {
-                --border-opacity: 1;
-                border-color: #4a5568;
-                border-color: rgba(74, 85, 104, var(--border-opacity))
-            }
-
-            .dark\:text-white {
-                --text-opacity: 1;
-                color: #fff;
-                color: rgba(255, 255, 255, var(--text-opacity))
-            }
-
-            .dark\:text-gray-400 {
-                --text-opacity: 1;
-                color: #cbd5e0;
-                color: rgba(203, 213, 224, var(--text-opacity))
-            }
-
-            .dark\:text-gray-500 {
-                --tw-text-opacity: 1;
-                color: #6b7280;
-                color: rgba(107, 114, 128, var(--tw-text-opacity))
-            }
-        }
-    </style>
-
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('technology/img/favicon.png') }}" type="images/x-icon" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
     <style>
         body {
-            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
         }
 
         .container-custom {
             display: flex;
-            height: 100vh;
+            min-height: 100vh;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .panel {
+            width: 45%;
+            height: 80vh;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Lớp phủ tối ban đầu */
+            background-blend-mode: darken;
+        }
+
+        #technology {
+            background-image: url('https://imgs.search.brave.com/mHjrv_2mHxLUzaf7P79HSf1XCPM3LhQtZnxDLx5DkGY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDcwNjU1/NjYuanBn');
+        }
+
+        #furniture {
+            background-image: url('https://imgs.search.brave.com/HsHMXb44FX_aK_o48hn-1G1-LZ0FGr1hEkZq8tFgxpM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXIuZm9yZnVu/LmNvbS9mZXRjaC85/My85MzdmN2I1OGMy/NjQ5OTJkOGIxNmI5/OGM0YzBiYTRmNi5q/cGVn');
+        }
+
+        /* Hiệu ứng hover cho desktop */
+        @media (min-width: 769px) {
+            .panel:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            .panel:hover .content-overlay {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Hiệu ứng khi panel trong viewport trên mobile */
+        .panel.active {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .panel.active .content-overlay {
+            transform: translateY(-10px);
+        }
+
+        .panel-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .content-overlay {
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+        }
+
+        #technology h1 {
+            color: #00ffff;
+            /* Màu cyan cho Công Nghệ */
+        }
+
+        #furniture h1 {
+            color: #FFD700;
+            /* Màu vàng cho Nội Thất */
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+        }
+
+        .neon {
+            position: absolute;
+            font-size: 6rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        #technology .neon {
+            top: -40px;
+            left: -40px;
+        }
+
+        #furniture .neon {
+            bottom: -40px;
+            right: -40px;
+        }
+
+        /* Logo Styles */
+        .logo-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .logo-gt {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #FF00FF;
+            /* Màu magenta neon nổi bật */
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 30px #00FFFF;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container:hover .logo-gt {
+            transform: scale(1.1);
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .container-custom {
+                flex-direction: column;
+                min-height: auto;
+                padding: 20px;
+            }
+
+            .panel {
+                width: 100%;
+                height: 60vh;
+                margin: 20px 0;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+
+            .neon {
+                font-size: 4rem;
+            }
+
+            #technology .neon {
+                top: -20px;
+                left: -20px;
+            }
+
+            #furniture .neon {
+                bottom: -20px;
+                right: -20px;
+            }
+
+            .logo-container {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                margin: 20px 0;
+            }
+
+            .logo-gt {
+                font-size: 2.5rem;
+            }
         }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap"
-        rel="stylesheet">
-    <!-- Font awesome Stylesheet -->
-    <!-- FontAwesome Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/all.min.css') }}">
-    <!-- Bootstrap Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/bootstrap.min.css') }}">
-    <!-- Owl Carousel stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/owl.carousel.css') }}">
-    <!-- Modal Video stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/modal-video.min.css') }}">
-    <!-- Owl theme stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/owl.theme.default.min.css') }}">
-    <!-- AOS stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/aos.css') }}">
-    <!-- Animated heading stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/jquery.animatedheadline.css') }}">
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="{{ asset('archite/css/normalize.css') }}">
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/style.css') }}">
-    <!-- Responsive stylesheet -->
-    <link rel="stylesheet" href="{{ asset('archite/css/responsive.css') }}">
 </head>
-<style>
-    .content-overlay {
-        text-align: center;
-        color: white;
-        /* Chữ trắng để tương phản với nền */
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Lớp phủ tối nhẹ để chữ dễ đọc */
-        padding: 20px;
-        border-radius: 10px;
-        /* Bo góc nhẹ cho đẹp */
-    }
-
-    h1 {
-        font-size: 3.5rem;
-        /* Kích thước tiêu đề lớn */
-        font-weight: 300;
-        /* Độ đậm nhẹ */
-    }
-
-    p {
-        font-size: 1.25rem;
-        /* Kích thước chữ mô tả */
-        margin-bottom: 20px;
-        /* Khoảng cách dưới */
-    }
-
-    .btn {
-        background-color: #007bff;
-        /* Màu nền nút */
-        color: white;
-        /* Chữ trắng */
-        padding: 10px 30px;
-        /* Đệm trong nút */
-        text-decoration: none;
-        /* Bỏ gạch chân */
-        font-size: 1.1rem;
-        /* Kích thước chữ nút */
-        border-radius: 5px;
-        /* Bo góc nút */
-    }
-</style>
 
 <body>
     <div class="container-custom">
         <div class="panel left-panel" id="technology">
+
             <div class="panel-content">
-                <div id="sub-content">
+                <div class="content-overlay">
                     <h1>Công Nghệ</h1>
-                    <p>Thông tin chi tiết về các sản phẩm công nghệ</p>
+                    <p>Khám phá công nghệ tiên tiến</p>
                 </div>
-                <div id="content">
-                    <div>
-                        <div class="content-overlay">
-                            <h1>Chi tiết công nghệ</h1>
-                            <p>Đây là phần nội dung chi tiết khi hover vào panel thiết kế Công nghệ.</p>
-                            <a href="technology/index" class="btn">Xem thêm</a>
-                        </div>
-                    </div>
-                </div>
+                <a href="technology/home-2" class="btn">Chi tiết</a>
             </div>
         </div>
-        <div class="panel right-panel" id="design">
+
+        <!-- Logo GT GLOBAL -->
+        <div class="logo-container">
+            <div class="logo-gt">GT GLOBAL</div>
+        </div>
+
+        <div class="panel right-panel" id="furniture">
+
             <div class="panel-content">
-                <div id="sub-content">
-                    <h1>Thiết Kế Xây Dựng</h1>
-                    <p>Thông tin chi tiết về thiết kế xây dựng</p>
+                <div class="content-overlay">
+                    <h1>Nội Thất</h1>
+                    <p>Khám phá thiết kế nội thất sáng tạo</p>
                 </div>
-                <div id="content">
-                    <div>
-                        <div class="content-overlay">
-                            <h1>Chi Tiết Xây dựng</h1>
-                            <p>Đây là phần nội dung chi tiết khi hover vào panel thiết kế xây dựng.</p>
-                            <a href="index" class="btn">Xem thêm</a>
-                        </div>
-                    </div>
-                </div>
+                <a href="index" class="btn">Chi tiết</a>
             </div>
         </div>
     </div>
-    <script src="{{ asset('js/index.js') }}"></script>
-    <!-- Jquery script -->
-    <!-- jQuery -->
-    <script src="{{ asset('archite/js/jquery-3.6.4.min.js') }}"></script>
-    <!-- Bootstrap Script -->
-    <script src="{{ asset('archite/js/bootstrap.min.js') }}"></script>
-    <!-- Font Awesome Script -->
-    <script src="{{ asset('archite/js/all.min.js') }}"></script>
-    <!-- Modal Video Script -->
-    <script src="{{ asset('archite/js/jquery-modal-video.min.js') }}"></script>
-    <!-- Owl Carousel Script -->
-    <script src="{{ asset('archite/js/owl.carousel.min.js') }}"></script>
-    <!-- AOS Script -->
-    <script src="{{ asset('archite/js/aos.js') }}"></script>
-    <!-- jQuery Counterup -->
-    <script src="{{ asset('archite/js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('archite/js/jquery.counterup.min.js') }}"></script>
-    <!-- Preloader Script -->
-    <script src="{{ asset('archite/js/jquery.preloader.min.js') }}"></script>
-    <!-- jQuery Viewport Checker Script -->
-    <script src="{{ asset('archite/js/jquery.viewportchecker.min.js') }}"></script>
-    <!-- Textyle Script -->
-    <script src="{{ asset('archite/js/textyle.min.js') }}"></script>
-    <!-- Animated Headline Script -->
-    <script src="{{ asset('archite/js/jquery.animatedheadline.min.js') }}"></script>
-    <!-- Main JS Script -->
-    <script src="{{ asset('archite/js/main.js') }}"></script>
+
+    <!-- JavaScript for scroll-based effect on mobile -->
+    <script>
+        // Chỉ chạy trên mobile (màn hình nhỏ hơn 768px)
+        if (window.innerWidth <= 768) {
+            const panels = document.querySelectorAll('.panel');
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                        } else {
+                            entry.target.classList.remove('active');
+                        }
+                    });
+                }, {
+                    threshold: 0.5,
+                    rootMargin: '0px'
+                }
+            );
+
+            panels.forEach((panel) => {
+                observer.observe(panel);
+            });
+        }
+    </script>
 </body>
 
 </html>

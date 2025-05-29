@@ -1,11 +1,7 @@
 <!doctype html>
 <html lang="zxx">
 
-
-<!-- Mirrored from html.xpressbuddy.com/helax/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:21:40 GMT -->
-
 <head>
-
     <!--========= Required meta tags =========-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -24,10 +20,83 @@
     <link rel="stylesheet" href="{{ asset('technology/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ asset('technology/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('technology/css/main.css') }}">
+
+    <style>
+        /* CSS cho Contact Info và Form */
+        .contact-info__item {
+            border: none;
+        }
+
+        .contact-info__item .icon {
+            border: none;
+        }
+
+        .row input,
+        .row textarea {
+            background-color: rgba(255, 255, 255, 0.05);
+            /* Nền tối nhẹ, hơi trong suốt */
+            border: 1px solid #b0c4de;
+            /* Viền xám nhạt */
+            color: #ffffff;
+            /* Màu chữ trắng */
+            padding: 12px 15px;
+            /* Padding cho dễ nhìn */
+            border-radius: 5px;
+            /* Bo góc nhẹ */
+            width: 100%;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .row input:focus,
+        .row textarea:focus {
+            outline: none;
+            border-color: #00ffff;
+            /* Viền cyan nhẹ khi focus */
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+            /* Hiệu ứng neon khi focus */
+        }
+
+        /* Placeholder màu xám nhạt */
+        .row input::placeholder,
+        .row textarea::placeholder {
+            color: #b0c4de;
+            /* Màu placeholder sáng, dễ đọc */
+            opacity: 1;
+            /* Đảm bảo placeholder rõ trên mọi trình duyệt */
+        }
+
+        /* CSS cho nút Submit */
+        .thm-btn--gradient {
+            background: linear-gradient(90deg, #00ffff, #007bff);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .thm-btn--gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Responsive cho form */
+        @media (max-width: 768px) {
+
+            .row input,
+            .row textarea {
+                font-size: 13px;
+                /* Giảm font trên mobile */
+                padding: 10px 12px;
+            }
+        }
+    </style>
 </head>
 
 <body class="home-dark">
-
     <div id="xb-loadding" class="xb-loader style-2">
         <div class="xb-dual-ring"></div>
     </div>
@@ -45,7 +114,6 @@
     </div>
 
     <div class="body_wrap">
-
         <!-- header start -->
         <header class="site-header header-style-two">
             <div class="header__main-wrap stricky">
@@ -58,13 +126,6 @@
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
                                 <ul>
-                                    {{-- <li class="menu-item-has-children active"><a href="index-2">Home</a>
-                                        <ul class="submenu">
-                                            <li><a href="index-2">Home Chatbot</a></li>
-                                            <li class="active"><a href="home-2">Home CRM</a></li>
-                                            <li><a href="home-3">Home Copy Writing</a></li>
-                                        </ul>
-                                    </li> --}}
                                     <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
                                     <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
                                     <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
@@ -82,9 +143,6 @@
                                 </div>
                             </a>
                         </div>
-                        {{-- <div class="header__button d-none d-lg-block">
-                            <a class="thm-btn thm-btn--gradient style-2" href="#!">Login\Signup</a>
-                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -96,8 +154,6 @@
             <div class="close-mobile-menu">
                 <a class="tx-close" href="javascript:void(0);"></a>
             </div>
-
-            <!-- sidebar-info start -->
             <div class="sidebar-info">
                 <div class="sidebar-logo mb-30">
                     <a href="index-2">
@@ -120,26 +176,25 @@
                         <div class="ct-title col-auto">Call us:</div>
                         <div class="ct-content-wrap col">
                             <div class="ct-item-wrap row">
-                                <div class="ct-item col-auto ">
+                                <div class="ct-item col-auto">
                                     <span class="item-content"><a href="tel:0907859668" class="tel">0907 859
                                             668</a></span>
                                 </div>
-                                <div class="ct-item col-auto "> <span class="item-content"><a
+                                <div class="ct-item col-auto">
+                                    <span class="item-content"><a
                                             href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="sidebar-socials-wrap mt-30"> <a class="social-item" href="https://facebook.com/"
-                        target="_blank">Facebook</a><a class="social-item" href="https://www.behance.net/"
-                        target="_blank">Behance</a><a class="social-item" href="#" target="_blank">Telegram</a><a
-                        class="social-item" href="https://dribbble.com/" target="_blank">Dribbble</a></div>
+                <div class="sidebar-socials-wrap mt-30">
+                    <a class="social-item" href="https://facebook.com/" target="_blank">Facebook</a>
+                    <a class="social-item" href="https://www.behance.net/" target="_blank">Behance</a>
+                    <a class="social-item" href="#" target="_blank">Telegram</a>
+                    <a class="social-item" href="https://dribbble.com/" target="_blank">Dribbble</a>
+                </div>
             </div>
-            <!-- sidebar-info end -->
-
-            <!-- side-mobile-menu start -->
             <nav class="side-mobile-menu">
                 <div class="header-mobile-search">
                     <form role="search" method="get" action="#">
@@ -154,9 +209,7 @@
                     <li><a href="blog">Tin tức</a></li>
                     <li><a href="contact">Liên hệ</a></li>
                 </ul>
-
             </nav>
-            <!-- side-mobile-menu end -->
         </aside>
         <div class="body-overlay"></div>
         <!-- slide bar end -->
@@ -165,7 +218,7 @@
             <!-- breadcrumb start -->
             <section class="breadcrumb pos-rel bg_img" data-background="assets/img/bg/breadcrumb_bg.jpg">
                 <div class="container">
-                    <h2 class="breadcrumb__title">Get in touch</h2>
+                    <h2 class="breadcrumb__title">Liên hệ</h2>
                 </div>
                 <div class="breadcrumb__shape">
                     <div class="shape shape--1">
@@ -183,21 +236,12 @@
                 <div class="container">
                     <div class="contact-info">
                         <div class="row justify-content-md-center mt-none-30">
-                            <style>
-                                .contact-info__item {
-                                    border: none;
-                                }
-
-                                .contact-info__item .icon {
-                                    border: none;
-                                }
-                            </style>
                             <div class="col-lg-4 col-md-6 mt-30">
                                 <div class="contact-info__item">
                                     <div class="icon">
                                         <img src="{{ asset('technology/img/icon/location.svg') }}" alt="">
                                     </div>
-                                    <h3 style="color: white;">Visit Us Daily</h3>
+                                    <h3 style="color: white;">Địa chỉ</h3>
                                     <p>159 Đường CN11, Sơn Kỳ, <br> Tân Phú, Hồ Chí Minh, Việt Nam</p>
                                 </div>
                             </div>
@@ -206,7 +250,7 @@
                                     <div class="icon">
                                         <img src="{{ asset('technology/img/icon/call2.svg') }}" alt="">
                                     </div>
-                                    <h3 style="color: white;">Contact Us</h3>
+                                    <h3 style="color: white;">Liên hệ</h3>
                                     <p>0907 859 668</p>
                                     <p>-</p>
                                 </div>
@@ -216,7 +260,7 @@
                                     <div class="icon">
                                         <img src="{{ asset('technology/img/icon/email.svg') }}" alt="">
                                     </div>
-                                    <h3 style="color: white;">Email Us</h3>
+                                    <h3 style="color: white;">Email</h3>
                                     <p>dongtrieuarc@gmail.com</p>
                                     <p>-</p>
                                 </div>
@@ -224,36 +268,22 @@
                         </div>
                     </div>
                     <div class="contact-form mt-100">
-                        <h2 class="title" style="color: white;">Send us a Massage :</h2>
+                        <h2 class="title" style="color: white;">Liên hệ:</h2>
                         <div class="row">
-                            <style>
-                                .row input {
-                                    background-color: transparent;
-                                    border: none;
-                                }
-
-                                .row textarea {
-                                    background-color: transparent;
-                                    border: none;
-                                }
-                            </style>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Enter your Name">
+                                <input type="text" placeholder="Tên">
                             </div>
                             <div class="col-lg-6">
-                                <input type="email" placeholder="Enter your mail">
+                                <input type="email" placeholder="Email">
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Enter your number">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Subject">
+                                <input type="text" placeholder="Số điện thoại">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your Massege"></textarea>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Nội dung"></textarea>
                             </div>
                             <div class="contact-form__btn text-center">
-                                <button type="submit" class="thm-btn thm-btn--gradient">Send Massage</button>
+                                <button type="submit" class="thm-btn thm-btn--gradient">Gửi</button>
                             </div>
                         </div>
                     </div>
@@ -268,7 +298,6 @@
                 </div>
             </section>
             <!-- contact end -->
-
         </main>
 
         <footer class="site-footer footer-style-two pos-rel pt-85" data-background="assets/img/shape/fot_shape2.png">
@@ -326,10 +355,6 @@
     <script src="{{ asset('technology/js/easing.min.js') }}"></script>
     <script src="{{ asset('technology/js/scrollspy.js') }}"></script>
     <script src="{{ asset('technology/js/main.js') }}"></script>
-
 </body>
-
-
-<!-- Mirrored from html.xpressbuddy.com/helax/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:21:49 GMT -->
 
 </html>

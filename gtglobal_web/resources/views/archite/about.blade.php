@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
-<!-- Mirrored from thememarch.com/demo/html/archite/about by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:28:56 GMT -->
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>About Us</title>
+    <title>Giới thiệu</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('archite/img/favicon.ico') }}">
     <!-- Fonts (google font) -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
         rel="stylesheet">
     <!-- Font awesome Stylesheet -->
     <link rel="stylesheet" href="{{ asset('archite/css/all.min.css') }}">
@@ -62,12 +59,18 @@
                                     class="header-menu d-none d-lg-flex flex-row align-items-center z-1 position-relative mr-35 menu">
                                     <li>
                                         <a class="menu-link text-uppercase fw-500" href="index">Trang chủ</a>
-
                                     </li>
                                     <li>
                                         <div class="dropdownlink">
                                             <span class="text-uppercase">
                                                 <a href="about">Giới thiệu</a>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="dropdownlink">
+                                            <span class="text-uppercase">
+                                                <a href="math">Dự toán chi phí</a>
                                             </span>
                                         </div>
                                     </li>
@@ -93,69 +96,127 @@
                                     </li>
                                 </ul>
                                 <div class="desktop-menu-offcanvas position-relative">
-                                    <img class="off-canvas-icon" data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-                                        src="{{ asset('archite/img/menuToggleIvonTwo.png') }}" alt="menu toggle icon">
-                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                                        aria-labelledby="offcanvasRightLabel">
-                                        <div class="offcanvas-header">
-                                            <img id="offcanvasRightLabel" class="header-logo offcanvas-title img-fluid"
-                                                src="{{ asset('archite/img/LogoTwo.png') }}" alt="logo">
-                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                                aria-label="Close"></button>
+                                    <!-- Toggle Button -->
+                                    <button class="off-canvas-toggle" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                                        <img class="off-canvas-icon"
+                                            src="{{ asset('archite/img/menuToggleIvonTwo.png') }}"
+                                            alt="Biểu tượng menu" style="width: 30px; height: 30px;">
+                                    </button>
+
+                                    <!-- Offcanvas Menu -->
+                                    <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1"
+                                        id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                                        <!-- Header -->
+                                        <div
+                                            class="offcanvas-header d-flex align-items-center justify-content-between p-4">
+                                            <img id="offcanvasMenuLabel" class="header-logo img-fluid"
+                                                src="{{ asset('archite/img/LogoTwo.png') }}" alt="Logo"
+                                                style="max-width: 150px;">
+                                            <button type="button" class="btn-close btn-close-dark"
+                                                data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
                                         </div>
-                                        <div class="offcanvas-body">
-                                            <div class="offcanvas-body">
-                                                <ul class="accordion-menu">
-                                                    <li>
-                                                        <div class="dropdownlink">
-                                                            <span class="text-uppercase">
-                                                                <a href="index">Trang chủ</a>
-                                                            </span>
 
-                                                        </div>
-
+                                        <!-- Body -->
+                                        <div class="offcanvas-body p-4">
+                                            <nav>
+                                                <ul class="nav flex-column custom-menu">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="index">Trang chủ</a>
                                                     </li>
-                                                    <li>
-                                                        <div class="dropdownlink">
-                                                            <span class="text-uppercase">
-                                                                <a href="about">Giới thiệu</a>
-                                                            </span>
-                                                        </div>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="about">Giới thiệu</a>
                                                     </li>
-                                                    <li>
-                                                        <div class="dropdownlink">
-                                                            <span class="text-uppercase">
-                                                                <a href="portfolio">Dự án</a>
-                                                            </span>
-                                                        </div>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="math">Dự toán chi phí</a>
                                                     </li>
-                                                    <li>
-                                                        <div class="dropdownlink">
-                                                            <span class="text-uppercase">
-                                                                <a href="blog">Tin tức</a>
-                                                            </span>
-                                                        </div>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="portfolio">Dự án</a>
                                                     </li>
-                                                    <li>
-                                                        <div class="dropdownlink">
-                                                            <span class="text-uppercase">
-                                                                <a href="recruitment">Tuyển dụng</a>
-                                                            </span>
-                                                        </div>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="blog">Tin tức</a>
                                                     </li>
-                                                    <li>
-                                                        <div class="dropdownlink">
-                                                            <span class="text-uppercase">
-                                                                <a href="contact">Liên hệ</a>
-                                                            </span>
-                                                        </div>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="recruitment">Tuyển dụng</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="contact">Liên hệ</a>
                                                     </li>
                                                 </ul>
-                                            </div>
+                                            </nav>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Custom CSS for Offcanvas Menu -->
+                                <style>
+                                    .custom-offcanvas {
+                                        background-color: #ffffff;
+                                        width: 280px !important;
+                                        transition: transform 0.3s ease-in-out;
+                                    }
+
+                                    .off-canvas-toggle {
+                                        background: none;
+                                        border: none;
+                                        padding: 10px;
+                                        cursor: pointer;
+                                        transition: transform 0.2s ease;
+                                    }
+
+                                    .off-canvas-toggle:hover {
+                                        transform: scale(1.1);
+                                    }
+
+                                    .custom-menu {
+                                        list-style: none;
+                                        padding: 0;
+                                        margin: 0;
+                                    }
+
+                                    .custom-menu .nav-item {
+                                        margin-bottom: 10px;
+                                    }
+
+                                    .custom-menu .nav-link {
+                                        color: #000000;
+                                        font-size: 1.1rem;
+                                        font-weight: 500;
+                                        text-transform: uppercase;
+                                        padding: 12px 0;
+                                        transition: color 0.3s ease, padding-left 0.3s ease;
+                                        display: block;
+                                        text-decoration: none;
+                                        padding-left: 10px;
+                                    }
+
+                                    .custom-menu .nav-link:hover {
+                                        color: #00aaff;
+                                        padding-left: 15px;
+                                    }
+
+                                    .offcanvas-header {
+                                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                                    }
+
+                                    .btn-close-dark {
+                                        filter: invert(0);
+                                    }
+
+                                    @media (max-width: 576px) {
+                                        .custom-offcanvas {
+                                            width: 80% !important;
+                                        }
+
+                                        .custom-menu .nav-link {
+                                            font-size: 1rem;
+                                        }
+
+                                        .header-logo {
+                                            max-width: 120px;
+                                        }
+                                    }
+                                </style>
                             </div>
                         </nav>
                     </div>
@@ -163,37 +224,6 @@
             </div>
         </header>
         <!-- end header -->
-        <!-- start video -->
-        <section class="intro-video-one section-padding-bottom section-padding-top-xl position-relative">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="video-title">
-                            <div class="intro-video-title">
-                                <h2 class="h2 text-white fw-700 line-height-3 mb-70 appear-text intro-video-title">
-                                    Design Haven Creating Beautiful Spaces That Inspire Your New Space
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="video-area position-relative">
-                <div class="contact-container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="video-thumbnail-container bg-zoom-in-out text-center">
-                                <a href="index-2" class="js-video-button intro-video-animation"
-                                    data-video-id='Us442Oh-znE'>
-                                    <img src="{{ asset('archite/img/videoPlay.png') }}" alt="video play icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end video -->
         <!-- start about -->
         <section id="homeOneAbout" class="about-one section-padding-top section-padding-bottom">
             <div class="container">
@@ -203,20 +233,19 @@
                             <div class="row">
                                 <div class="col-12 col-lg-6">
                                     <h2 class="h2 text-white line-height-3 appear-text">
-                                        Transforming Spaces Elevating Lives
+                                        Biến đổi không gian, nâng cao chất lượng sống
                                     </h2>
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <div class="about-one-first-text-box">
                                         <p class="p body-text fw-500 line-height-5">
-                                            Welcome to our interior design agency! Our team of experienced designers and
-                                            decorators
-                                            is passionate about creating beautiful, functional spaces that enhance our
-                                            clients'
-                                            lives.
+                                            Chào mừng bạn đến với Công ty TNHH TM & DV Toàn Cầu GT! Chúng tôi tự hào là
+                                            đơn vị hàng đầu trong lĩnh vực thiết kế nội thất và xây dựng, với hơn 10 năm
+                                            kinh nghiệm. Đội ngũ chuyên gia của chúng tôi cam kết mang đến những không
+                                            gian sống và làm việc đẳng cấp, đáp ứng mọi nhu cầu của khách hàng.
                                         </p>
                                         <a href="portfolio" class="btn brand-btn text-uppercase mt-30"><span
-                                                class="z-1 position-relative">learn more</span></a>
+                                                class="z-1 position-relative">Tìm hiểu thêm</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -226,46 +255,43 @@
                                 <div class="col-12 col-lg-6">
                                     <div class="position-relative d-flex align-items-center">
                                         <div class="hover-img-container about-one-img">
-                                            <img src="{{ asset('archite/img/aboutOne.jpg') }}" alt="about image"
-                                                class="rounded-0">
+                                            <img src="{{ asset('archite/img/aboutOne.jpg') }}"
+                                                alt="hình ảnh giới thiệu" class="rounded-0">
                                         </div>
                                         <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"
                                             class="hover-img-container about-one-img-small position-absolute d-none d-lg-inline-block">
                                             <img src="{{ asset('archite/img/aboutOneSmall.jpg') }}"
-                                                alt="about image small" class="rounded-0">
+                                                alt="hình ảnh giới thiệu nhỏ" class="rounded-0">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <div>
                                         <h3 class="h3 dark-text fw-700 about-one-subheading line-height-3">
-                                            Making Your Interior Dream Space
+                                            Tạo dựng không gian mơ ước của bạn
                                         </h3>
                                         <div class="about-one-second-text-box mt-85 ml-60">
                                             <div class="mb-60 about-second-text-box-first-item">
                                                 <h5 class="h5 fw-700 dark-text line-height-3">
-                                                    Our Story
+                                                    Câu chuyện của chúng tôi
                                                 </h5>
                                                 <p class="p body-text fw-500 line-height-5 mt-10">
-                                                    Welcome to our interior design agency! Our team of experienced
-                                                    designers
-                                                    and
-                                                    decorators is passionate about creating beautiful, functional spaces
-                                                    that
-                                                    enhance our clients' lives.
+                                                    Thành lập với sứ mệnh mang đến những giải pháp thiết kế nội thất và
+                                                    xây dựng hoàn hảo, Công ty TNHH TM & DV Toàn Cầu GT đã không ngừng
+                                                    phát triển, phục vụ hàng loạt dự án từ văn phòng, nhà ở đến các công
+                                                    trình lớn. Đam mê và sáng tạo là động lực để chúng tôi tạo ra những
+                                                    không gian độc đáo, phù hợp với từng khách hàng.
                                                 </p>
                                             </div>
                                             <div class="mb-0">
                                                 <h5 class="h5 fw-700 dark-text line-height-3">
-                                                    Our Goal
+                                                    Mục tiêu của chúng tôi
                                                 </h5>
                                                 <p class="p body-text fw-500 line-height-5 mt-10">
-                                                    Welcome to our interior design agency! Our team of experienced
-                                                    designers
-                                                    and
-                                                    decorators is passionate about creating beautiful, functional spaces
-                                                    that
-                                                    enhance our clients' lives.
+                                                    Chúng tôi hướng đến việc trở thành đơn vị hàng đầu trong ngành thiết
+                                                    kế nội thất và xây dựng tại Việt Nam, với cam kết mang lại chất
+                                                    lượng
+                                                    cao, giá trị bền vững và sự hài lòng tuyệt đối cho khách hàng.
                                                 </p>
                                             </div>
                                         </div>
@@ -279,52 +305,7 @@
         </section>
         <!-- end about -->
         <!-- start count -->
-        <section class="count-one section-padding-bottom-xl section-padding-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 col-xl-3">
-                        <div class="count-one-border position-relative py-3 py-sm-3 py-lg-4 py-xl-0">
-                            <div class="counter-container">
-                                <h1 class="h1 dark-text"><span class="counter">46</span>K</h1>
-                                <h4 class="h4 fw-400 line-height-1 body-text">
-                                    Project Completed
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-3">
-                        <div class="count-one-border position-relative py-3 py-sm-3 py-lg-4 py-xl-0">
-                            <div class="counter-container">
-                                <h1 class="h1 dark-text"><span class="counter">3</span>K</h1>
-                                <h4 class="h4 fw-400 line-height-1 body-text">
-                                    Happy customers
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-3">
-                        <div class="count-one-border position-relative py-3 py-sm-3 py-lg-4 py-xl-0">
-                            <div class="counter-container">
-                                <h1 class="h1 dark-text"><span class="counter">26</span></h1>
-                                <h4 class="h4 fw-400 line-height-1 body-text">
-                                    Years Experiences
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-3">
-                        <div class="position-relative py-3 py-sm-3 py-lg-4 py-xl-0">
-                            <div class="counter-container">
-                                <h1 class="h1 dark-text"><span class="counter">24</span></h1>
-                                <h4 class="h4 fw-400 line-height-1 body-text">
-                                    Awards Achievement
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!-- end count -->
         <!-- start features -->
         <section class="features-one section-padding-top-xl section-padding-bottom-xl">
@@ -335,14 +316,12 @@
                             <div class="col-12 col-lg-7">
                                 <div>
                                     <h2 class="h2 body-text-two fw-700 line-height-3 appear-text-dark">
-                                        Core Features of Our Interior Design Agency
+                                        Điểm nổi bật của chúng tôi trong thiết kế nội thất và xây dựng
                                     </h2>
                                     <p class="text-white fw-500 line-height-5 mt-40 position-relative pe-0 pe-lg-5">
-                                        Welcome to our interior design agency! Our team of experienced designers and
-                                        decorators
-                                        is
-                                        passionate about creating beautiful, functional spaces that enhance our client's
-                                        lives.
+                                        Với đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi cung cấp các giải pháp thiết
+                                        kế nội thất và xây dựng chuyên nghiệp, từ ý tưởng ban đầu đến hoàn thiện công
+                                        trình, nhằm tạo ra những không gian sống và làm việc hoàn hảo.
                                     </p>
                                 </div>
                             </div>
@@ -350,13 +329,7 @@
                                 <div class="mt-5 mt-lg-0">
                                     <div class="position-relative">
                                         <img src="{{ asset('archite/img/featuresVideoBg.png') }}"
-                                            class="img-no-hover-effect features-bg-img"
-                                            alt="features video background">
-                                        <a href="#" class="js-video-button features-video-animation"
-                                            data-video-id='Us442Oh-znE'><img
-                                                src="{{ asset('archite/img/playIconWhite.png') }}"
-                                                class="img-fluid features-play-icon" alt="features image">
-                                        </a>
+                                            class="img-no-hover-effect features-bg-img" alt="nền hình ảnh tính năng">
                                     </div>
                                 </div>
                             </div>
@@ -367,11 +340,12 @@
                                     <div class="feature-one-box">
                                         <p class="brand-text fw-700 feature-one-number-top">01</p>
                                         <h5 class="h5 text-white fw-700 line-height-3">
-                                            Creativity
+                                            Sáng tạo thiết kế
                                         </h5>
                                         <p
                                             class="text-white fw-500 line-height-5 mt-10 position-relative pe-0 pe-lg-5">
-                                            Welcome to our interior design agency! Our team of experienced designers.
+                                            Đội ngũ thiết kế của chúng tôi luôn tìm kiếm những ý tưởng mới mẻ để tạo ra
+                                            không gian độc đáo.
                                         </p>
                                     </div>
                                 </div>
@@ -379,11 +353,11 @@
                                     <div class="feature-one-box">
                                         <p class="brand-text fw-700 feature-one-number-top">02</p>
                                         <h5 class="h5 text-white fw-700 line-height-3">
-                                            Management
+                                            Quản lý dự án
                                         </h5>
                                         <p
                                             class="text-white fw-500 line-height-5 mt-10 position-relative pe-0 pe-lg-5">
-                                            Welcome to our interior design agency! Our team of experienced designers.
+                                            Chúng tôi đảm bảo mọi dự án được thực hiện đúng tiến độ và chất lượng cao.
                                         </p>
                                     </div>
                                 </div>
@@ -391,11 +365,11 @@
                                     <div class="feature-one-box">
                                         <p class="brand-text fw-700 feature-one-number-top">03</p>
                                         <h5 class="h5 text-white fw-700 line-height-3">
-                                            Space Planning
+                                            Lập kế hoạch không gian
                                         </h5>
                                         <p
                                             class="text-white fw-500 line-height-5 mt-10 position-relative pe-0 pe-lg-5">
-                                            Welcome to our interior design agency! Our team of experienced designers.
+                                            Tối ưu hóa không gian sống và làm việc với các giải pháp thông minh.
                                         </p>
                                     </div>
                                 </div>
@@ -418,23 +392,21 @@
                                         <div class="row">
                                             <div class="col-12 col-lg-2">
                                                 <img class="testimonial-one-quote-icon"
-                                                    src="{{ asset('archite/img/quoteIcon.png') }}" alt="quote icon">
+                                                    src="{{ asset('archite/img/quoteIcon.png') }}"
+                                                    alt="biểu tượng trích dẫn">
                                             </div>
                                             <div class="col-12 col-lg-10">
                                                 <div class="testimonial-item-content">
                                                     <h3 class="h3 fw-700 line-height-1 dark-text mb-50">
-                                                        Choosing the right architecture and interior design agency for
-                                                        your
-                                                        project
-                                                        depends
-                                                        on several factors, such as their experience.
+                                                        Việc lựa chọn một công ty thiết kế nội thất và xây dựng phù hợp
+                                                        phụ thuộc vào kinh nghiệm và sự chuyên nghiệp của họ.
                                                     </h3>
                                                     <p
                                                         class="dark-text fw-500 line-height-5 mt-10 position-relative pe-0 pe-lg-5 mb-1">
-                                                        From USA
+                                                        Từ Việt Nam
                                                     </p>
                                                     <h6 class="h6 fw-700 line-height-3 dark-text">
-                                                        Alex Smith Emer
+                                                        Nguyễn Văn A
                                                     </h6>
                                                 </div>
                                             </div>
@@ -444,23 +416,22 @@
                                         <div class="row">
                                             <div class="col-12 col-lg-2">
                                                 <img class="testimonial-one-quote-icon"
-                                                    src="{{ asset('archite/img/quoteIcon.png') }}" alt="quote icon">
+                                                    src="{{ asset('archite/img/quoteIcon.png') }}"
+                                                    alt="biểu tượng trích dẫn">
                                             </div>
                                             <div class="col-12 col-lg-10">
                                                 <div class="testimonial-item-content">
                                                     <h3 class="h3 fw-700 line-height-1 dark-text mb-50">
-                                                        Choosing the right architecture and interior design agency for
-                                                        your
-                                                        project
-                                                        depends
-                                                        on several factors, such as their experience.
+                                                        Dịch vụ của công ty thật sự tuyệt vời, không gian nhà tôi trở
+                                                        nên
+                                                        hoàn hảo hơn bao giờ hết.
                                                     </h3>
                                                     <p
                                                         class="dark-text fw-500 line-height-5 mt-10 position-relative pe-0 pe-lg-5 mb-1">
-                                                        From USA
+                                                        Từ Hà Nội
                                                     </p>
                                                     <h6 class="h6 fw-700 line-height-3 dark-text">
-                                                        Alex Smith Emer
+                                                        Trần Thị B
                                                     </h6>
                                                 </div>
                                             </div>
@@ -482,26 +453,26 @@
                         <div class="why-choose-two-left-col mb-5 mb-lg-0">
                             <div class="hover-img-container">
                                 <img src="{{ asset('archite/img/whyChooseTwo.jpg') }}" class="img-fluid"
-                                    alt="why choose us image">
+                                    alt="hình ảnh tại sao chọn chúng tôi">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-xl-7">
                         <div class="why-choose-two-right-col">
                             <p class="p dark-text fw-500 line-height-5 why-choose-subheading position-relative">
-                                Why Choose Us
+                                Tại sao chọn chúng tôi
                             </p>
                             <h2 class="h2 dark-text line-height-3 mb-50">
-                                We will Offer You Stunning Interior Design Services
+                                Chúng tôi mang đến dịch vụ thiết kế nội thất và xây dựng đỉnh cao
                             </h2>
                             <div class="why-choose-items-wrapper">
-                                <div class="why-choose-item why-choose-item-first  mb-35">
+                                <div class="why-choose-item why-choose-item-first mb-35">
                                     <h5 class="h5 dark-text fw-700 line-height-3">
-                                        <span class="brand-text"> 01 </span>High Quality Services
+                                        <span class="brand-text"> 01 </span>Dịch vụ chất lượng cao
                                     </h5>
                                     <p class="p body-text fw-500 line-height-5">
-                                        Welcome to our interior design agency! Our team of experienced designers and
-                                        decorators is passionate about creating beautiful.
+                                        Công ty chúng tôi cam kết cung cấp các giải pháp thiết kế và xây dựng đạt tiêu
+                                        chuẩn quốc tế.
                                     </p>
                                 </div>
                                 <div class="mt-55 why-choose-bottom">
@@ -509,22 +480,21 @@
                                         <div class="col-12 col-xl-6">
                                             <div class="why-choose-item">
                                                 <h5 class="h5 dark-text fw-700 line-height-3">
-                                                    <span class="brand-text"> 02 </span>Qualified Treatment
+                                                    <span class="brand-text"> 02 </span>Đội ngũ chuyên nghiệp
                                                 </h5>
                                                 <p class="p body-text fw-500 line-height-5 mb-35">
-                                                    Welcome to our interior design agency! Our team of experienced
-                                                    designers.
+                                                    Đội ngũ chuyên gia của chúng tôi luôn sẵn sàng hỗ trợ bạn từ ý tưởng
+                                                    đến hiện thực hóa.
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="col-12 col-xl-6">
                                             <div class="why-choose-item">
                                                 <h5 class="h5 dark-text fw-700 line-height-3">
-                                                    <span class="brand-text"> 03 </span>Affordable Price
+                                                    <span class="brand-text"> 03 </span>Giá cả hợp lý
                                                 </h5>
                                                 <p class="p body-text fw-500 line-height-5 mb-35">
-                                                    Welcome to our interior design agency! Our team of experienced
-                                                    designers.
+                                                    Chúng tôi cung cấp các dịch vụ chất lượng với mức giá cạnh tranh.
                                                 </p>
                                             </div>
                                         </div>
@@ -538,244 +508,25 @@
         </section>
         <!-- end why choose us -->
         <!-- start team-->
-        <section class="team-one section-padding-top section-padding-bottom bg-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <div>
-                            <h2 class="h2 text-white line-height-3 appear-text">
-                                Our Dedicated Interior Designer Team
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="about-one-first-text-box">
-                            <p class="p body-text fw-500 line-height-5">
-                                Welcome to our interior design agency! Our team of experienced designers and decorators
-                                is
-                                passionate about creating beautiful, functional spaces that enhance our clients' lives.
-                                Welcome to our interior design agency!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team-one-card-container mt-100">
-                <div class="team-one-card-carousel">
-                    <div class="owl-carousel owl-theme">
-                        <div class="team-one-item position-relative">
-                            <div class="team-img">
-                                <img class="img-fluid" src="{{ asset('archite/img/teamMemberOne.jpg') }}"
-                                    alt="team member">
-                            </div>
-                            <div class="team-one-card-info">
-                                <h6 class="h6 text-white fw-700 line-height-3">
-                                    Gerald K. Banks
-                                </h6>
-                                <p class="p body-text fw-500 line-height-5">
-                                    UI/UX Designer
-                                </p>
-                            </div>
-                            <div class="team-member-details d-flex flex-column">
-                                <div class="member-details-social d-flex align-items-center">
-                                    <a class="mx-2" href="https://facebook.com/">
-                                        <i class="fa-brands fa-facebook-f text-white fs-5"></i>
-                                    </a>
-                                    <a class="mx-2" href="https://linkedin.com/">
-                                        <i class="fa-brands fa-linkedin-in text-white fs-5"></i>
-                                    </a>
-                                    <a class="mx-2" href="https://twitter.com/">
-                                        <i class="fa-brands fa-twitter text-white fs-5"></i>
-                                    </a>
 
-                                </div>
-                                <a class="btn light-btn mt-20" href="teamDetails"><span
-                                        class="z-1 position-relative">Read More</span></a>
-                            </div>
-                        </div>
-                        <div class="team-one-item position-relative">
-                            <div class="team-img">
-                                <img class="img-fluid" src="{{ asset('archite/img/teamMemberTwo.jpg') }}"
-                                    alt="team member">
-                            </div>
-                            <div class="team-one-card-info">
-                                <h6 class="h6 text-white fw-700 line-height-3">
-                                    Gerald K. Banks
-                                </h6>
-                                <p class="p body-text fw-500 line-height-5 ">
-                                    UI/UX Designer
-                                </p>
-                            </div>
-                            <div class="team-member-details d-flex flex-column">
-                                <div class="member-details-social d-flex align-items-center">
-                                    <a class="mx-2" href="https://facebook.com/">
-                                        <i class="fa-brands fa-facebook-f text-white fs-5"></i>
-                                    </a>
-                                    <a class="mx-2" href="https://linkedin.com/">
-                                        <i class="fa-brands fa-linkedin-in text-white fs-5"></i>
-                                    </a>
-                                    <a class="mx-2" href="https://twitter.com/">
-                                        <i class="fa-brands fa-twitter text-white fs-5"></i>
-                                    </a>
-
-                                </div>
-                                <a class="btn light-btn mt-20" href="teamDetails"><span
-                                        class="z-1 position-relative">Read More</span></a>
-                            </div>
-                        </div>
-                        <div class="team-one-item position-relative">
-                            <div class="team-img">
-                                <img class="img-fluid" src="{{ asset('archite/img/teamMemberThree.jpg') }}"
-                                    alt="team member">
-                            </div>
-                            <div class="team-one-card-info">
-                                <h6 class="h6 text-white fw-700 line-height-3">
-                                    Gerald K. Banks
-                                </h6>
-                                <p class="p body-text fw-500 line-height-5 ">
-                                    UI/UX Designer
-                                </p>
-                            </div>
-                            <div class="team-member-details d-flex flex-column">
-                                <div class="member-details-social d-flex align-items-center">
-                                    <a class="mx-2" href="https://facebook.com/">
-                                        <i class="fa-brands fa-facebook-f text-white fs-5"></i>
-                                    </a>
-                                    <a class="mx-2" href="https://linkedin.com/">
-                                        <i class="fa-brands fa-linkedin-in text-white fs-5"></i>
-                                    </a>
-                                    <a class="mx-2" href="https://twitter.com/">
-                                        <i class="fa-brands fa-twitter text-white fs-5"></i>
-                                    </a>
-
-                                </div>
-                                <a class="btn light-btn mt-20" href="teamDetails"><span
-                                        class="z-1 position-relative">Read More</span></a>
-                            </div>
-                        </div>
-                        <div class="team-one-item position-relative">
-                            <div class="team-img">
-                                <img class="img-fluid" src="{{ asset('archite/img/teamMemberFour.jpg') }}"
-                                    alt="team member">
-                            </div>
-                            <div class="team-one-card-info">
-                                <h6 class="h6 text-white fw-700 line-height-3">
-                                    Gerald K. Banks
-                                </h6>
-                                <p class="p body-text fw-500 line-height-5 ">
-                                    UI/UX Designer
-                                </p>
-                            </div>
-                            <div class="team-member-details d-flex flex-column">
-                                <div class="member-details-social d-flex align-items-center">
-                                    <a class="mx-2" href="https://facebook.com/">
-                                        <i class="fa-brands fa-facebook-f text-white fs-5"></i>
-                                    </a>
-                                    <a class="mx-2" href="https://linkedin.com/">
-                                        <i class="fa-brands fa-linkedin-in text-white fs-5"></i>
-                                    </a>
-                                    <a class="mx-2" href="https://twitter.com/">
-                                        <i class="fa-brands fa-twitter text-white fs-5"></i>
-                                    </a>
-
-                                </div>
-                                <a class="btn light-btn mt-20" href="teamDetails"><span
-                                        class="z-1 position-relative">Read More</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- end team -->
         <!-- start clients -->
-        <section class="clients-one section-padding-bottom-xl section-padding-top overflow-hidden">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="text-center">
-                            <div class="row g-5 justify-content-between">
-                                <div class="col-6 col-lg-2">
-                                    <div class="client-hover-img-container">
-                                        <img class="testimonial-one-icon"
-                                            src="{{ asset('archite/img/testimonialIconOne.jpg') }}"
-                                            alt="testimonial item logo">
-                                    </div>
-                                    <h6
-                                        class="testimonial-one-icon-heading dark-text fw-700 line-height-3 text-uppercase">
-                                        Wof
-                                        Daks
-                                    </h6>
-                                </div>
-                                <div class="col-6 col-lg-2">
-                                    <div class="client-hover-img-container">
-                                        <img class="testimonial-one-icon"
-                                            src="{{ asset('archite/img/testimonialIconTwo.jpg') }}"
-                                            alt="testimonial item logo">
-                                    </div>
-                                    <h6
-                                        class="testimonial-one-icon-heading dark-text fw-700 line-height-3 text-uppercase">
-                                        Adka
-                                        Alko
-                                    </h6>
-                                </div>
-                                <div class="col-6 col-lg-2">
-                                    <div class="client-hover-img-container">
-                                        <img class="testimonial-one-icon"
-                                            src="{{ asset('archite/img/testimonialIconThree.jpg') }}"
-                                            alt="testimonial item logo">
-                                    </div>
-                                    <h6
-                                        class="testimonial-one-icon-heading dark-text fw-700 line-height-3 text-uppercase">
-                                        Juba
-                                        Had
-                                    </h6>
-                                </div>
-                                <div class="col-6 col-lg-2">
-                                    <div class="client-hover-img-container">
-                                        <img class="testimonial-one-icon"
-                                            src="{{ asset('archite/img/testimonialIconFour.jpg') }}"
-                                            alt="testimonial item logo">
-                                    </div>
-                                    <h6
-                                        class="testimonial-one-icon-heading dark-text fw-700 line-height-3 text-uppercase">
-                                        Das
-                                        Ker
-                                    </h6>
-                                </div>
-                                <div class="col-6 col-lg-2">
-                                    <div class="client-hover-img-container">
-                                        <img class="testimonial-one-icon"
-                                            src="{{ asset('archite/img/testimonialIconFive.jpg') }}"
-                                            alt="testimonial item logo">
-                                    </div>
-                                    <h6
-                                        class="testimonial-one-icon-heading dark-text fw-700 line-height-3 text-uppercase">
-                                        KIDA
-                                        Jadu
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!-- end clients -->
         <!-- start work together -->
-        <section class="work-together ">
+        <section class="work-together">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div
                             class="d-flex align-items-center justify-content-center flex-column work-together-content-wrapper">
                             <p class="p text-white fw-500 line-height-3 mb-10">
-                                Let’s Work Together
+                                Hãy cùng hợp tác
                             </p>
-                            <h2 class="h2 fw-700 line-height-3 text-white text-center">Let's Create Your Dream Space
-                                Together!</h2>
+                            <h2 class="h2 fw-700 line-height-3 text-white text-center">Cùng nhau tạo nên không gian mơ
+                                ước của bạn!</h2>
                             <a href="contact" class="btn brand-btn text-uppercase mt-50 border-0"><span
-                                    class="z-1 position-relative">let's build</span></a>
+                                    class="z-1 position-relative">Xây dựng ngay</span></a>
                         </div>
                     </div>
                 </div>
@@ -783,78 +534,54 @@
         </section>
         <!-- end work together -->
         <!-- start footer -->
-        <footer class="footer-one">
+        <footer class="footer-one" style="background-color: #1a1a1a; padding: 60px 0;">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-12 col-sm-5">
-                                <div class="logo mb-1">
-                                    <img src="{{ asset('archite/img/Logo.png') }}" style="height: 30%; width: 30%;"
-                                        alt="logo">
-                                </div>
-                                <p class="p text-white fw-500 line-height-5 mt-15">
-                                    Công ty TNHH TM & DV TOÀN CẦU GT là một trong những công ty có thế mạnh và tiềm năng
-                                    trong lĩnh vực thiết kế, thi công, sản xuất,… nội – ngoại thất với hơn 10 năm hoạt
-                                    động trong lĩnh vực và triển khai các dự án khối công trình văn phòng, showroom, nhà
-                                    hàng, biệt thự, chung cư…tới xây dựng hình ảnh cho các doanh nghiệp, tập đoàn đa
-                                    quốc gia.
-
-                                    Chúng tôi với phương châm mỗi khách hàng đều là những người thân, người bạn tri kỉ.
-                                    Lấy sự hài lòng của khách hàng làm tôn chỉ, để từ đó cung cấp cho khách hàng những
-                                    sản phẩm tối ưu nhất cả về chất lượng sản phẩm và dịch vụ.
-
-                                    Với đội ngủ trẻ và nhiệt huyết, chuyên môn cao cùng với sự đầu tư, học hỏi không
-                                    ngừng nghỉ về công nghệ, dây chuyền sản xuất, cơ sở hạ tầng cho cán bộ công nhân
-                                    viên. Chúng tôi sẽ mang đến cho khách hàng những sản phẩm và dịch vụ tiệm cận gần
-                                    nhất với nhu cầu và yêu cầu của khách hàng.
-                                </p>
-                                <h2 class="fw-700 text-white mt-30 footer-email">dongtrieuarc@gmail.com</h2>
+                <div class="footer-one-wrapper">
+                    <div class="row">
+                        <!-- Cột thông tin công ty -->
+                        <div class="col-12 col-md-6 col-lg-5 mb-5 mb-md-0">
+                            <div class="logo mb-4">
+                                <img src="{{ asset('archite/img/Logo.png') }}" style="height: 50px; width: auto;"
+                                    alt="logo">
                             </div>
-                            <div class="col-12 col-sm-3">
-                                <div class="mt-5 mt-sm-0">
-                                    <ul class="d-flex flex-column gap-4">
-                                        <li><a class="fw-500 text-uppercase" href="index">Trang chủ</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="about">Giới thiệu</a></li>
-
-                                        <li><a class="fw-500 text-uppercase" href="portfolio">Dự án</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="blog">Tin tức</a></li>
-                                        <li><a class="fw-500 text-uppercase" href="contact">Liên hệ</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4">
-                                <div class="d-flex align-items-start mb-30 mt-5 mt-sm-0">
-                                    <i class="fa-solid fa-location-dot brand-text d-inline-block mr-10 mt-2"></i>
-                                    <h6 class="h6 fw-400 line-height-4 footer-address">
-                                        159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
-                                    </h6>
-                                </div>
-                                <div class="d-flex align-items-start mb-30">
-                                    <i class="fa-solid fa-phone-volume brand-text d-inline-block mr-10 mt-2"></i>
-                                    <h6 class="h6 fw-400 line-height-4 footer-address">
-                                        0907 859 668
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-100 d-flex justify-content-between align-items-center flex-column flex-xl-row">
-                            <div class="footer-one-social-container">
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://facebook.com/"><span
-                                        class="z-1 position-relative">Facebook</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://linkedin.com/"><span
-                                        class="z-1 position-relative">LinkedIn</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://instagram.com/"><span
-                                        class="z-1 position-relative">Instagram</span></a>
-                                <a class="btn dark-btn mr-30 mb-4 mb-lg-0" href="https://twitter.com/"><span
-                                        class="z-1 position-relative">Twitter</span></a>
-                                <a class="btn dark-btn mb-4 mb-lg-0" href="https://dribble.com/"><span
-                                        class="z-1 position-relative">Dribble</span></a>
-                            </div>
-                            <p class="p fw-500 line-height-3 footer-copyright-text pt-4 pt-xl-0">
-                                Copyright 2025, All Right reserved
+                            <p class="text-white fw-400 line-height-4" style="font-size: 15px; opacity: 0.9;">
+                                Công ty TNHH TM & DV TOÀN CẦU GT – Đơn vị hàng đầu với hơn 10 năm kinh nghiệm trong
+                                thiết kế, thi công và sản xuất nội – ngoại thất. Chúng tôi chuyên thực hiện các dự án
+                                văn phòng, showroom, nhà hàng, biệt thự, chung cư và xây dựng hình ảnh cho các doanh
+                                nghiệp, tập đoàn đa quốc gia. Với phương châm "Khách hàng là người thân", chúng tôi cam
+                                kết mang đến sản phẩm và dịch vụ chất lượng cao, đáp ứng tối ưu nhu cầu của bạn.
                             </p>
+                            <h5 class="text-white fw-600 mt-4" style="font-size: 18px;">
+                                Email: <span style="color: #f5a623;">dongtrieuarc@gmail.com</span>
+                            </h5>
                         </div>
+                        <!-- Cột thông tin liên hệ -->
+                        <div class="col-12 col-md-6 col-lg-4 offset-lg-3">
+                            <h5 class="text-white fw-600 mb-4"
+                                style="font-size: 18px; border-bottom: 2px solid #f5a623; padding-bottom: 10px;">
+                                Thông tin liên hệ
+                            </h5>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fa-solid fa-location-dot text-white d-inline-block mr-6 mt-2"
+                                    style="font-size: 20px; color: #f5a623; padding-right: 10px"></i>
+                                <p class="text-white fw-400 line-height-4 mb-0" style="font-size: 15px;">
+                                    159 Đường CN11, Sơn Kỳ, Tân Phú, Hồ Chí Minh, Việt Nam
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fa-solid fa-phone-volume text-white d-inline-block mr-6 mt-2"
+                                    style="font-size: 20px; color: #f5a623; padding-right: 10px"></i>
+                                <p class="text-white fw-500 line-height-4 mb-0" style="font-size: 15px;">
+                                    0907 859 668
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dòng bản quyền -->
+                    <div class="mt-5 pt-4 text-center" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p class="text-white fw-400 line-height-3 mb-0" style="font-size: 14px; opacity: 0.7;">
+                            Copyright © 2025 Công ty TNHH TM & DV TOÀN CẦU GT. All Rights Reserved.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -888,8 +615,5 @@
     <!-- Main JS script -->
     <script src="{{ asset('archite/js/main.js') }}"></script>
 </body>
-
-
-<!-- Mirrored from thememarch.com/demo/html/archite/about by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:28:56 GMT -->
 
 </html>

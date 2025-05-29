@@ -55,7 +55,7 @@
                             n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e,
                                 "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
                                 "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
-                                );
+                            );
                     case "emoji":
                         return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b")
                 }
@@ -3404,7 +3404,8 @@
                                                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223">
                                                                                     <a href="#cnt"><span
                                                                                             class="menu-text">Contact
-                                                                                            Us</span></a></li>
+                                                                                            Us</span></a>
+                                                                                </li>
                                                                             </ul>
                                                                         </nav>
                                                                     </div>
@@ -3434,17 +3435,23 @@
 
                                 <ul id="primary" class="nav zolo-navbar-nav">
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153">
-                                        <a href="#Home">Home</a></li>
+                                        <a href="#Home">Home</a>
+                                    </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-154">
-                                        <a href="#Html">Html</a></li>
+                                        <a href="#Html">Html</a>
+                                    </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-155">
-                                        <a href="#Psd">Psd</a></li>
+                                        <a href="#Psd">Psd</a>
+                                    </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156">
-                                        <a href="#Joomla">Joomla</a></li>
+                                        <a href="#Joomla">Joomla</a>
+                                    </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-221">
-                                        <a href="#news">News</a></li>
+                                        <a href="#news">News</a>
+                                    </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223">
-                                        <a href="#cnt">Contact Us</a></li>
+                                        <a href="#cnt">Contact Us</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
