@@ -289,8 +289,7 @@
                                     <span class="item-content"><a href="tel:0907859668" class="tel">0907 859
                                             668</a></span>
                                 </div>
-                                <div class="ct-item col-auto "> <span class="item-content"><a
-                                            href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
+                                <div class="ct-item col-auto "> <span class="item-content"><a href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -329,8 +328,7 @@
         <main>
             <!-- hero start -->
             <section class="hero hero-style-two pos-rel pb-55">
-                <div class="hero-bg wow fadeInUp" data-wow-delay="500ms" data-wow-duration=".5s"
-                    data-background="assets/img/bg/hero_bg.png"></div>
+                <div class="hero-bg wow fadeInUp" data-wow-delay="500ms" data-wow-duration=".5s" data-background="assets/img/bg/hero_bg.png"></div>
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-10">
@@ -364,15 +362,13 @@
                 </div>
                 <div class="crm-hero__shape">
                     <div class="shape shape--1" data-parallax='{"y" : 80}'>
-                        <img class="wow fadeInLeft" src="{{ asset('technology/img/shape/h_shape6.png') }}"
-                            alt="">
+                        <img class="wow fadeInLeft" src="{{ asset('technology/img/shape/h_shape6.png') }}" alt="">
                     </div>
                     <div class="shape shape--2">
                         <img src="{{ asset('technology/img/shape/h_shape7.png') }}" alt="">
                     </div>
                     <div class="shape shape--3" data-parallax='{"y" : 70}'>
-                        <img class=" wow fadeInRight" src="{{ asset('technology/img/shape/h_shape8.png') }}"
-                            alt="">
+                        <img class=" wow fadeInRight" src="{{ asset('technology/img/shape/h_shape8.png') }}" alt="">
                     </div>
                     <div class="shape shape--4">
                         <img src="{{ asset('technology/img/shape/h_shape9.png') }}" alt="">
@@ -871,12 +867,9 @@
                 <div class="row">
                     <div class="crm-community text-center">
                         <ul class="crm-community__social ul_li_center mb-35">
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/discord.png') }}"
-                                        alt=""></a></li>
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/whatsapp.png') }}"
-                                        alt=""></a></li>
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/telegram.png') }}"
-                                        alt=""></a></li>
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/discord.png') }}" alt=""></a></li>
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/whatsapp.png') }}" alt=""></a></li>
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/telegram.png') }}" alt=""></a></li>
                         </ul>
                         <div class="crm-title text-center mb-40">
                             <h2 class="crm-title__heading">Liên hệ với chúng tôi</h2>
@@ -899,8 +892,7 @@
                         <div class="footer__cta pl-45">
                             <span class="title">QUICK CONTACT</span>
                             <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24 giờ của chúng tôi</h4>
-                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}"
-                                        alt=""></span>0907 859 668</span>
+                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}" alt=""></span>0907 859 668</span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-30">
