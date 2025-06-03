@@ -44,7 +44,7 @@
             border-radius: 5px;
             /* Bo góc nhẹ */
             width: 100%;
-            font-family: 'Arial', sans-serif;
+            /* font-family: 'Arial', sans-serif; */
             font-size: 14px;
             transition: border-color 0.3s, box-shadow 0.3s;
         }
@@ -93,7 +93,6 @@
                 padding: 10px 12px;
             }
         }
-
     </style>
 </head>
 
@@ -121,7 +120,8 @@
                 <div class="container">
                     <div class="header__main ul_li_between">
                         <div class="header__logo">
-                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}" style="width: auto; height: 40px;" alt=""></a>
+                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}"
+                                    style="width: auto; height: 40px;" alt=""></a>
                         </div>
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
@@ -181,7 +181,8 @@
                                             668</a></span>
                                 </div>
                                 <div class="ct-item col-auto">
-                                    <span class="item-content"><a href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
+                                    <span class="item-content"><a
+                                            href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +232,7 @@
             <!-- breadcrumb end -->
 
             <!-- contact start -->
-            <section class="contact pos-rel pt-125">
+            <section class="contact pos-rel pt-125" style="padding-top:0px">
                 <div class="container">
                     <div class="contact-info">
                         <div class="row justify-content-md-center mt-none-30">
@@ -267,7 +268,7 @@
                         </div>
                     </div>
                     <div class="contact-form mt-100">
-                        <h2 class="title" style="color: white;">Liên hệ:</h2>
+                        <h2 class="title" style="color: white;">Liên hệ</h2>
                         <div class="row">
                             <div class="col-lg-6">
                                 <input type="text" id="name" placeholder="Tên">
@@ -328,28 +329,203 @@
             <!-- contact end -->
         </main>
 
-        <footer class="site-footer footer-style-two pos-rel pt-85">
+        <footer class="site-footer footer-style-two pos-rel pt-85" data-background="assets/img/shape/fot_shape2.png">
             <div class="container">
+                {{-- <div class="row">
+                    <div class="crm-community text-center">
+                        <ul class="crm-community__social ul_li_center mb-35">
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/discord.png') }}"
+                                        alt=""></a></li>
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/whatsapp.png') }}"
+                                        alt=""></a></li>
+                            <li><a href="#!"><img src="{{ asset('technology/img/icon/telegram.png') }}"
+                                        alt=""></a></li>
+                        </ul>
+                        <div class="crm-title text-center mb-40">
+                            <h2 class="crm-title__heading">Liên hệ với chúng tôi</h2>
+                        </div>
+                        <a class="thm-btn thm-btn--gradient style-2" href="contact">Liên hệ ngay!</a>
+                    </div>
+                </div> --}}
                 <div class="row mt-none-30 pb-90">
                     <div class="col-lg-4 col-md-6 mt-30">
-                        <div class="footer__cta pl-45">
-                            <span class="title">QUICK CONTACT</span>
-                            <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24 giờ của chúng tôi</h4>
-                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}" alt=""></span>0907 859 668</span>
+                        <div class="footer__cta">
+                            <span class="title">VỀ CHÚNG TÔI</span>
+                            <h4>GT GLOBAL cung cấp giải pháp công nghệ tiên tiến cho mọi doanh nghiệp, từ khởi
+                                nghiệp đến quy mô lớn.</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-30">
-                        <div class="footer__cta text-lg-end">
-                            <span class="title">FOLLOW US</span>
-                            <ul class="footer__cta-social ul_li_right mb-60">
-                                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                        <div class="footer__cta">
+                            <span class="title">LIÊN HỆ NHANH</span>
+                            <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24/7 của chúng tôi</h4>
+                            <div class="contact-btn text-center mt-20">
+                                <a class="thm-btn thm-btn--gradient style-2" href="contact">Liên hệ ngay!</a>
+                            </div>
+                            {{-- <span class="cta-number"><span><img
+                    src="{{ asset('technology/img/icon/email_icon.svg') }}"
+                    alt=""></span><a
+                href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span> --}}
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-30">
+                        <div class="footer__cta">
+                            <span class="title">TẢI ỨNG DỤNG</span>
+                            <h4>Tải ứng dụng GT GLOBAL trên iOS và Google Play để quản lý dễ dàng!</h4>
+                            <div class="app-download mt-20">
+                                <div class="app-buttons">
+                                    <a href="https://apps.apple.com/vn/app/ts-screen/id6745683551?l=vi"
+                                        target="_blank" class="app-btn">
+                                        <img src="{{ asset('technology/img/icon/app-store.png') }}" alt="App Store"
+                                            style="width: 50px; height: auto;">
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=user.gtglobal.ts_screen&pcampaignid=web_share"
+                                        target="_blank" class="app-btn">
+                                        <img src="{{ asset('technology/img/icon/chplay.png') }}" alt="Google Play"
+                                            style="width: 50px; height: auto;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .row.mt-none-30 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: stretch;
+                        /* Đảm bảo các cột có chiều cao bằng nhau */
+                    }
+
+                    .col-lg-4.col-md-6.mt-30 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        /* Căn nội dung từ trên xuống */
+                        flex: 1;
+                        /* Các cột chiếm không gian đều nhau */
+                        min-width: 300px;
+                        /* Đảm bảo cột không quá hẹp trên màn hình nhỏ */
+                    }
+
+                    .footer__cta {
+                        background: rgba(255, 255, 255, 0.05);
+                        padding: 30px;
+                        border-radius: 10px;
+                        box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+                        height: 100%;
+                        /* Đảm bảo chiều cao cột bằng nhau */
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        /* Căn nội dung đều trong cột */
+                        text-align: center;
+                        /* Căn giữa nội dung */
+                    }
+
+                    .footer__cta .title {
+                        font-size: 1.2rem;
+                        color: #00ffff;
+                        text-transform: uppercase;
+                        margin-bottom: 15px;
+                        display: block;
+                    }
+
+                    .footer__cta h4 {
+                        font-size: 1.3rem;
+                        color: #b0c4de;
+                        margin-bottom: 20px;
+                        line-height: 1.5;
+                        flex-grow: 1;
+                        /* Đảm bảo h4 chiếm không gian đồng đều */
+                    }
+
+                    .contact-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 20px;
+                    }
+
+                    .thm-btn--gradient {
+                        background: linear-gradient(90deg, #00ffff, #007bff);
+                        color: #fff;
+                        padding: 10px 25px;
+                        border-radius: 25px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        transition: transform 0.2s, box-shadow 0.3s;
+                    }
+
+                    .thm-btn--gradient:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+                    }
+
+                    .app-download {
+                        /* padding: 20px;
+        background: rgba(255, 255, 255, 0.05); */
+                        border-radius: 10px;
+                        transition: all 0.3s ease;
+                        text-align: center;
+                    }
+
+                    .app-buttons {
+                        display: flex;
+                        justify-content: space-around;
+                        /* Giãn đều các nút */
+                        align-items: center;
+                        gap: 20px;
+                        /* Tăng khoảng cách giữa các nút */
+                        /* padding: 10px 0; */
+                        /* Thêm padding để bố cục thoáng hơn */
+                    }
+
+                    .app-btn {
+                        transition: transform 0.3s ease;
+                    }
+
+                    .app-btn:hover {
+                        transform: scale(1.05);
+                    }
+
+                    .crm-community {
+                        padding: 40px 0;
+                        /* background: linear-gradient(135deg, #1a1a1a, #2a2a3a);
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); */
+                    }
+
+                    .crm-community__social {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        margin-bottom: 30px;
+                    }
+
+                    .crm-community__social li a img {
+                        width: 40px;
+                        height: auto;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .crm-community__social li a:hover img {
+                        transform: scale(1.1);
+                    }
+                </style>
+                <div class="footer__copyright">
+                    <div class="container">
+                        <div class="ul_li_between mt-none-10">
+                            <div class="footer__copyright-text mt-10">
+                                © 2025 GT GLOBAL - Công nghệ tiên phong. Mọi quyền được bảo lưu.
+                            </div>
+                            <ul class="footer__social ul_li mt-10">
+                                <li><a href="#!"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                            <ul class="footer__cta-link ul_li_right">
-                                <li><a href="#!">PayPal</a></li>
-                                <li><a href="#!">VISA</a></li>
-                                <li><a href="#!">Master Card</a></li>
+                                <li><a href="#!"><i class="fab fa-pinterest"></i></a></li>
                             </ul>
                         </div>
                     </div>
