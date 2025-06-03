@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Liên hệ</title>
 
     <link rel="shortcut icon" href="{{ asset('technology/img/favicon.png') }}" type="images/x-icon" />
@@ -93,6 +93,7 @@
                 padding: 10px 12px;
             }
         }
+
     </style>
 </head>
 
@@ -120,8 +121,7 @@
                 <div class="container">
                     <div class="header__main ul_li_between">
                         <div class="header__logo">
-                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}"
-                                    style="width: auto; height: 40px;" alt=""></a>
+                            <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}" style="width: auto; height: 40px;" alt=""></a>
                         </div>
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
@@ -181,8 +181,7 @@
                                             668</a></span>
                                 </div>
                                 <div class="ct-item col-auto">
-                                    <span class="item-content"><a
-                                            href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
+                                    <span class="item-content"><a href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +215,7 @@
 
         <main>
             <!-- breadcrumb start -->
-            <section class="breadcrumb pos-rel bg_img" data-background="assets/img/bg/breadcrumb_bg.jpg">
+            <section class="breadcrumb pos-rel bg_img">
                 <div class="container">
                     <h2 class="breadcrumb__title">Liên hệ</h2>
                 </div>
@@ -271,22 +270,23 @@
                         <h2 class="title" style="color: white;">Liên hệ:</h2>
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Tên">
+                                <input type="text" id="name" placeholder="Tên">
                             </div>
                             <div class="col-lg-6">
-                                <input type="email" placeholder="Email">
+                                <input type="email" id="email" placeholder="Email">
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Số điện thoại">
+                                <input type="text" id="phone" placeholder="Số điện thoại">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Nội dung"></textarea>
+                                <textarea name="message" id="content" cols="30" rows="10" placeholder="Nội dung"></textarea>
                             </div>
                             <div class="contact-form__btn text-center">
-                                <button type="submit" class="thm-btn thm-btn--gradient">Gửi</button>
+                                <button id="button_send" type="button" class="thm-btn thm-btn--gradient">Gửi</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="contact__shape">
                     <div class="shape shape--1" data-parallax='{"y" : 50}'>
@@ -300,15 +300,14 @@
             <!-- contact end -->
         </main>
 
-        <footer class="site-footer footer-style-two pos-rel pt-85" data-background="assets/img/shape/fot_shape2.png">
+        <footer class="site-footer footer-style-two pos-rel pt-85">
             <div class="container">
                 <div class="row mt-none-30 pb-90">
                     <div class="col-lg-4 col-md-6 mt-30">
                         <div class="footer__cta pl-45">
                             <span class="title">QUICK CONTACT</span>
                             <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24 giờ của chúng tôi</h4>
-                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}"
-                                        alt=""></span>0907 859 668</span>
+                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}" alt=""></span>0907 859 668</span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-30">

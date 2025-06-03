@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\GoogleSheetsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,8 @@
 Route::get('/', function () {
     return redirect('/admin');
 });
+
+
 
 
 /* Auto-generated admin routes */

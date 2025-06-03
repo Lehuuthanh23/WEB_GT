@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\GoogleSheetsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::get('test', function () {
 
     return response()->json($articles);
 });
+Route::post('/append-row', [GoogleSheetsController::class, 'appendRow']);
 // Route::get('test', function () {
 
 //     $results = DB::table('tags')

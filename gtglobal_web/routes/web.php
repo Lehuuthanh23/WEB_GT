@@ -12,9 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/gioi-thieu', function () {
+    return redirect('/');
+});
+
 Route::get('/about', function () {
     return view('archite/about');
 });
@@ -86,35 +92,8 @@ Route::get('/contact', function () {
 });
 
 Route::get('/index', function () {
-     $danhmuc = DB::table('tags')->leftJoin('articles_with_relationship_tag', 'tags.id', '=', 'articles_with_relationship_tag.tag_id')->leftJoin('articles_with_relationships', 'articles_with_relationships.id', '=', 'articles_with_relationship_tag.articles_with_relationship_id')->select('tags.id as tag_id', 'tags.name as tag_name', 'articles_with_relationships.id as article_id', 'articles_with_relationships.title as article_title', 'articles_with_relationships.perex as article_content', 'articles_with_relationships.published_at as article_published_at', 'articles_with_relationships.enabled as article_enable')->get();
-
-    $formattedResults = $danhmuc
-        ->groupBy('tag_id')
-        ->map(function ($articles, $tagId) {
-            return [
-                'id' => $tagId,
-                'name' => $articles->first()->tag_name,
-                'articles' => $articles
-                    // Chỉ lấy bài viết có enable = 1
-                    ->filter(fn($article) => $article->article_enable == 1)
-                    ->map(function ($article) {
-                        $imageUrl = null;
-                        if (preg_match('/<img[^>]+src="([^"]+)"/', $article->article_content, $matches)) {
-                            $imageUrl = $matches[1];
-                        }
-                        return [
-                            'id' => $article->article_id,
-                            'title' => $article->article_title,
-                            'image' => $imageUrl,
-                            'create_at' => $article->article_published_at,
-                            'enabled' => $article->article_enable,
-                        ];
-                    })
-                    ->values(),
-            ];
-        })
-        ->values();
-    return view('archite/index',compact('formattedResults'));
+    
+    return view('archite/index');
 });
 
 Route::get('/index-2', function () {
