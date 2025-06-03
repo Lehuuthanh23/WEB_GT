@@ -722,7 +722,7 @@
                                     </div>
                                     <div class="image mt-30">
                                         <img style="width: 30rem; border-radius: 20px"
-                                            src="{{ asset('technology/img/process/film.png') }}"
+                                            src="{{ asset('technology/img/process/film.jpg') }}"
                                             alt="Tấm phim trình chiếu Nano">
                                     </div>
                                 </div>
@@ -750,100 +750,401 @@
                     </div>
                     <!-- New Film Popup -->
                     <div class="popup-overlay" id="filmPopup">
-                        <div class="popup-content"
-                            style="max-width: 360px; width: 90%; padding: 20px; background: linear-gradient(135deg, #1a1a1a, #2a2a3a); border: 2px solid #00ffff; box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);">
+                        <div class="popup-content">
+
+
+
+                            <!-- Close Button -->
                             <span class="popup-close" onclick="hideFilmPopup()"
-                                style="font-size: 20px; color: #00ffff; transition: color 0.3s;">×</span>
-                            <h3
-                                style="font-size: 18px; color: #00ffff; text-transform: uppercase; text-align: center; margin-bottom: 15px;">
-                                Tấm Phim Nano Công Nghệ</h3>
-                            <div class="tech-specs"
-                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px; color: #b0c4de; margin-bottom: 15px;">
-                                <div><strong>Truyền sáng:</strong> 92-98%</div>
-                                <div><strong>Góc nhìn:</strong> 150°</div>
-                                <div><strong>Công nghệ:</strong> PET Nano</div>
-                                <div><strong>Bảo hành:</strong> 1 năm</div>
-                                <div><strong>Kích thước:</strong> 1524x30000mm</div>
-                            </div>
-                            <div class="film-tabs">
-                                <div class="tab-buttons"
-                                    style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <button class="tab-btn active" onclick="showTab(1)"
-                                        style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT01</button>
-                                    <button class="tab-btn" onclick="showTab(2)"
-                                        style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT02</button>
-                                    <button class="tab-btn" onclick="showTab(3)"
-                                        style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT03</button>
-                                    <button class="tab-btn" onclick="showTab(4)"
-                                        style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT04</button>
+                                style="font-size: 22px; color: #00ffff; background: rgba(255, 0, 0, 0.2); padding: 5px 10px; border-radius: 50%; transition: all 0.3s ease; position: absolute; cursor: pointer; top: 15px; right: 15px;">
+                                ×
+                            </span>
+                            <!-- Content Wrapper -->
+                            <div class="content-wrapper" style="display: flex; gap: 20px; width: 100%;">
+                                <!-- Text Content -->
+                                <div class="text-content" style="flex: 1; padding: 15px;">
+                                    <h3
+                                        style="font-size: 'Roboto', sans-serif; font-family: 20px; color: #00ffff; text-transform: uppercase; text-align: center; margin-bottom: 25px; text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);">
+                                        Tấm Phim Nano Công Nghệ
+                                    </h3>
+                                    <div class="tech-specs"
+                                        style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 14px; color: #b0c4de; margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px;">
+                                        <div><strong>Truyền sáng:</strong> 92-98%</div>
+                                        <div><strong>Góc nhìn:</strong> 150°</div>
+                                        <div><strong>Công nghệ:</strong> PET Nano</div>
+                                        <div><strong>Bảo hành:</strong> 1 năm</div>
+                                        <div><strong>Kích thước:</strong> 1524x30000mm</div>
+                                    </div>
+                                    <div class="film-tabs">
+                                        <div class="tab-buttons"
+                                            style="display: flex; justify-content: space-between; margin-bottom: 20px; gap: 10px;">
+                                            <button class="tab-btn active" onclick="showTab(1)"
+                                                style="flex: 1; padding: 12px; background: linear-gradient(45deg, #2a2a3a, #3a3a4a); color: #00ffff; border: 1px solid #00ffff; border-radius: 10px; font-size: 14px; cursor: pointer; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);">
+                                                FT01
+                                            </button>
+                                            <button class="tab-btn" onclick="showTab(2)"
+                                                style="flex: 1; padding: 12px; background: linear-gradient(45deg, #2a2a3a, #3a3a4a); color: #00ffff; border: 1px solid #00ffff; border-radius: 10px; font-size: 14px; cursor: pointer; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);">
+                                                FT02
+                                            </button>
+                                            <button class="tab-btn" onclick="showTab(3)"
+                                                style="flex: 1; padding: 12px; background: linear-gradient(45deg, #2a2a3a, #3a3a4a); color: #00ffff; border: 1px solid #00ffff; border-radius: 10px; font-size: 14px; cursor: pointer; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);">
+                                                FT03
+                                            </button>
+                                            <button class="tab-btn" onclick="showTab(4)"
+                                                style="flex: 1; padding: 12px; background: linear-gradient(45deg, #2a2a3a, #3a3a4a); color: #00ffff; border: 1px solid #00ffff; border-radius: 10px; font-size: 14px; cursor: pointer; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);">
+                                                FT04
+                                            </button>
+                                        </div>
+                                        <div class="tab-content" id="tab1"
+                                            style="font-size: 14px; color: #b0c4de;">
+                                            <h4
+                                                style="color: #ff3333; font-size: 16px; margin: 10px 0; text-shadow: 0 0 5px rgba(255, 51, 51, 0.5);">
+                                                TS – FT01 – Trong suốt</h4>
+                                            <ul style="list-style: none; padding: 0;">
+                                                <li>95% xuyên sáng, hiệu ứng 3D</li>
+                                                <li>Chiếu trước/sau, trong/ngoài trời</li>
+                                                <li>Hình ảnh nổi, nhìn xuyên rõ</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content" id="tab2"
+                                            style="display: none; font-size: 14px; color: #b0c4de;">
+                                            <h4
+                                                style="color: #ff3333; font-size: 16px; margin: 10px 0; text-shadow: 0 0 5px rgba(255, 51, 51, 0.5);">
+                                                TS – FT02 – Trắng mờ</h4>
+                                            <ul style="list-style: none; padding: 0;">
+                                                <li>Giữ sáng tối ưu, cản sáng hoàn toàn</li>
+                                                <li>Chiếu trước/sau, trong/ngoài trời</li>
+                                                <li>Hình ảnh sáng rõ</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content" id="tab3"
+                                            style="display: none; font-size: 14px; color: #b0c4de;">
+                                            <h4
+                                                style="color: #ff3333; font-size: 16px; margin: 10px 0; text-shadow: 0 0 5px rgba(255, 51, 51, 0.5);">
+                                                TS – FT03 – Xám</h4>
+                                            <ul style="list-style: none; padding: 0;">
+                                                <li>Hiển thị tốt mọi ánh sáng</li>
+                                                <li>Chiếu sau, trong/ngoài trời</li>
+                                                <li>Linh hoạt sáng mạnh/yếu</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content" id="tab4"
+                                            style="display: none; font-size: 14px; color: #b0c4de;">
+                                            <h4
+                                                style="color: #ff3333; font-size: 16px; margin: 10px 0; text-shadow: 0 0 5px rgba(255, 51, 51, 0.5);">
+                                                TS – FT04 – Đen</h4>
+                                            <ul style="list-style: none; padding: 0;">
+                                                <li>Tăng tương phản, cản sáng</li>
+                                                <li>Chiếu sau, trong/ngoài trời</li>
+                                                <li>Tối ưu ánh sáng mạnh</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tab-content" id="tab1" style="font-size: 13px; color: #b0c4de;">
-                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT01 – Trong suốt
-                                    </h4>
-                                    <ul style="list-style: none; padding: 0;">
-                                        <li>95% xuyên sáng, hiệu ứng 3D</li>
-                                        <li>Chiếu trước/sau, trong/ngoài trời</li>
-                                        <li>Hình ảnh nổi, nhìn xuyên rõ</li>
-                                    </ul>
-                                </div>
-                                <div class="tab-content" id="tab2"
-                                    style="display: none; font-size: 13px; color: #b0c4de;">
-                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT02 – Trắng mờ
-                                    </h4>
-                                    <ul style="list-style: none; padding: 0;">
-                                        <li>Giữ sáng tối ưu, cản sáng hoàn toàn</li>
-                                        <li>Chiếu trước/sau, trong/ngoài trời</li>
-                                        <li>Hình ảnh sáng rõ</li>
-                                    </ul>
-                                </div>
-                                <div class="tab-content" id="tab3"
-                                    style="display: none; font-size: 13px; color: #b0c4de;">
-                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT03 – Xám</h4>
-                                    <ul style="list-style: none; padding: 0;">
-                                        <li>Hiển thị tốt mọi ánh sáng</li>
-                                        <li>Chiếu sau, trong/ngoài trời</li>
-                                        <li>Linh hoạt sáng mạnh/yếu</li>
-                                    </ul>
-                                </div>
-                                <div class="tab-content" id="tab4"
-                                    style="display: none; font-size: 13px; color: #b0c4de;">
-                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT04 – Đen</h4>
-                                    <ul style="list-style: none; padding: 0;">
-                                        <li>Tăng tương phản, cản sáng</li>
-                                        <li>Chiếu sau, trong/ngoài trời</li>
-                                        <li>Tối ưu ánh sáng mạnh</li>
-                                    </ul>
+                                <!-- Image Content -->
+                                <div class="image-content"
+                                    style="flex: 1; text-align: center; position: relative; padding: 15px; background: rgba(0, 0, 0, 0.3); border-radius: 15px; box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);">
+                                    <div class="image-frame"
+                                        style="position: relative; padding: 10px; border: 2px solid #00ffff; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); transition: transform 0.3s ease;">
+                                        <img id="filmImage" src="{{ asset('technology/img/process/film1.jpg') }}"
+                                            alt="Tấm phim Nano FT01"
+                                            style="max-width: 100%; height: auto; border-radius: 8px; transition: opacity 0.4s ease, transform 0.4s ease;">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- JavaScript cho Popup và Tabs -->
-                <script>
-                    function showPopup() {
-                        document.getElementById('featurePopup').style.display = 'flex';
-                    }
+                    <!-- JavaScript cho Popup và Tabs -->
+                    <script>
+                        // Show Film Popup
+                        function showFilmPopup() {
+                            document.getElementById('filmPopup').style.display = 'flex';
+                            showTab(1); // Default to FT01 tab
+                        }
 
-                    function hidePopup() {
-                        document.getElementById('featurePopup').style.display = 'none';
-                    }
+                        // Hide Film Popup
+                        function hideFilmPopup() {
+                            document.getElementById('filmPopup').style.display = 'none';
+                        }
 
-                    function showFilmPopup() {
-                        document.getElementById('filmPopup').style.display = 'flex';
-                    }
+                        // Show Projector Popup
+                        function showPopup() {
+                            document.getElementById('featurePopup').style.display = 'flex';
+                        }
 
-                    function hideFilmPopup() {
-                        document.getElementById('filmPopup').style.display = 'none';
-                    }
+                        // Hide Projector Popup
+                        function hidePopup() {
+                            document.getElementById('featurePopup').style.display = 'none';
+                        }
 
-                    function showTab(tabNumber) {
-                        document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
-                        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-                        document.getElementById('tab' + tabNumber).style.display = 'block';
-                        document.querySelector(`.tab-btn[onclick="showTab(${tabNumber})"]`).classList.add('active');
-                    }
-                </script>
+                        // Tab Switching
+                        function showTab(tabNumber) {
+                            document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+                            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                            document.getElementById('tab' + tabNumber).style.display = 'block';
+                            document.querySelector(`.tab-btn[onclick="showTab(${tabNumber})"]`).classList.add('active');
+                            const imageElement = document.getElementById('filmImage');
+                            const imageFrame = imageElement.parentElement;
+                            imageElement.style.opacity = '0';
+                            imageElement.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                imageElement.src = `{{ asset('technology/img/process/film${tabNumber}.jpg') }}`;
+                                imageElement.alt = `Tấm phim Nano FT0${tabNumber}`;
+                                imageElement.style.opacity = '1';
+                                imageElement.style.transform = 'scale(1)';
+                                imageFrame.style.transform = 'scale(1.02)';
+                                setTimeout(() => {
+                                    imageFrame.style.transform = 'scale(1)';
+                                }, 200);
+                            }, 400);
+                        }
+
+                        // Close popup when clicking outside
+                        document.addEventListener('click', function(event) {
+                            const filmPopup = document.getElementById('filmPopup');
+                            const featurePopup = document.getElementById('featurePopup');
+
+                            if (filmPopup.style.display === 'flex' && !event.target.closest('.popup-content') && !event.target
+                                .closest('.thm-btn--gradient')) {
+                                hideFilmPopup();
+                            }
+                            if (featurePopup.style.display === 'flex' && !event.target.closest('.popup-content') && !event.target
+                                .closest('.thm-btn--gradient')) {
+                                hidePopup();
+                            }
+                        });
+                    </script>
             </section>
+            <style>
+                /* Popup Overlay */
+                .popup-overlay {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.7);
+                    z-index: 1000;
+                    justify-content: center;
+                    align-items: center;
+                    overflow-y: auto;
+                    /* Allow scrolling on mobile if content overflows */
+                }
+
+                /* Popup Content */
+                .popup-content {
+                    max-width: 900px;
+                    width: 90%;
+                    padding: 20px;
+                    background: linear-gradient(135deg, #1a1a1a, #2a2a3a);
+                    border: 2px solid #00ffff;
+                    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6), inset 0 0 10px rgba(0, 255, 255, 0.3);
+                    border-radius: 20px;
+                    position: relative;
+                    animation: popupFadeIn 0.4s ease;
+                    font-family: 'Arial', sans-serif;
+                }
+
+                /* Close Button */
+                .popup-close {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    font-size: 24px;
+                    color: #00ffff;
+                    background: rgba(255, 0, 0, 0.2);
+                    padding: 5px 10px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    z-index: 1002;
+                    /* Increased z-index to ensure it’s above the image */
+                    transition: color 0.3s, background 0.3s, transform 0.3s;
+                }
+
+                .popup-close:hover {
+                    color: #ff3333;
+                    background: rgba(255, 0, 0, 0.4);
+                    transform: scale(1.1);
+                }
+
+                /* Content Wrapper */
+                .content-wrapper {
+                    display: flex;
+                    gap: 20px;
+                    width: 100%;
+                }
+
+                /* Text Content */
+                .text-content {
+                    flex: 1;
+                    padding: 15px;
+                }
+
+                /* Image Content */
+                .image-content {
+                    flex: 1;
+                    text-align: center;
+                    padding: 15px;
+                    background: rgba(0, 0, 0, 0.3);
+                    border-radius: 15px;
+                    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+                    z-index: 1000;
+                    /* Ensure image content is below close button */
+                }
+
+                /* Image Frame */
+                .image-frame {
+                    padding: 10px;
+                    border: 2px solid #00ffff;
+                    border-radius: 12px;
+                    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+                    transition: transform 0.3s ease;
+                }
+
+                .image-frame:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+                }
+
+                .image-content img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    transition: opacity 0.4s ease, transform 0.4s ease;
+                }
+
+                /* Tab Buttons */
+                .tab-btn {
+                    flex: 1;
+                    padding: 12px;
+                    background: linear-gradient(45deg, #2a2a3a, #3a3a4a);
+                    color: #00ffff;
+                    border: 1px solid #00ffff;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    font-weight: bold;
+                    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+                }
+
+                .tab-btn.active {
+                    background: linear-gradient(90deg, #00ffff, #007bff);
+                    color: #fff;
+                    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+                    transform: scale(1.05);
+                }
+
+                .tab-btn:hover {
+                    background: linear-gradient(90deg, #00ffff, #007bff);
+                    color: #fff;
+                    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+                    transform: scale(1.05);
+                }
+
+                /* Technical Specs Grid */
+                .tech-specs {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 15px;
+                    font-size: 14px;
+                    color: #b0c4de;
+                    margin-bottom: 20px;
+                    background: rgba(255, 255, 255, 0.05);
+                    padding: 15px;
+                    border-radius: 10px;
+                }
+
+                /* Tab Content */
+                .tab-content {
+                    font-size: 14px;
+                    color: #b0c4de;
+                }
+
+                .tab-content h4 {
+                    color: #ff3333;
+                    font-size: 16px;
+                    margin: 10px 0;
+                    text-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
+                }
+
+                /* Responsive Adjustments */
+                @media (max-width: 768px) {
+                    .popup-overlay {
+                        align-items: flex-start;
+                        /* Align to top for better mobile experience */
+                        padding: 20px;
+                    }
+
+                    .popup-content {
+                        max-width: 95%;
+                        padding: 15px;
+                        flex-direction: column;
+                    }
+
+                    .content-wrapper {
+                        flex-direction: column;
+                    }
+
+                    .text-content,
+                    .image-content {
+                        width: 100%;
+                    }
+
+                    .image-frame {
+                        padding: 8px;
+                    }
+
+                    .tab-buttons {
+                        flex-wrap: wrap;
+                        gap: 8px;
+                    }
+
+                    .tab-btn {
+                        flex: 1 1 45%;
+                        padding: 10px;
+                        font-size: 13px;
+                    }
+
+                    .popup-close {
+                        top: 10px;
+                        right: 10px;
+                        font-size: 18px;
+                        /* Smaller size for mobile */
+                        padding: 3px 6px;
+                        /* Reduced padding */
+                        z-index: 1002;
+                        /* Ensure it’s above image */
+                    }
+
+                    .tech-specs {
+                        grid-template-columns: 1fr;
+                        /* Single column on mobile */
+                        font-size: 13px;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .tab-btn {
+                        flex: 1 1 100%;
+                        /* Full-width buttons on very small screens */
+                        font-size: 12px;
+                    }
+
+                    .popup-content {
+                        padding: 10px;
+                    }
+
+                    .popup-close {
+                        font-size: 16px;
+                        /* Even smaller for very small screens */
+                        padding: 2px 5px;
+                        z-index: 1002;
+                        /* Maintain high z-index */
+                    }
+                }
+            </style>
             <!-- process end -->
 
             <!-- testimonial start -->
@@ -920,7 +1221,98 @@
                 </div>
             </section>
             <!-- testimonial end -->
+            <script>
+                function calculatePrice() {
+                    var diagonal = parseFloat(document.getElementById('diagonalInput').value);
+                    var ratio = document.getElementById('ratioPrice').value;
 
+                    if (isNaN(diagonal) || diagonal <= 0) {
+                        document.getElementById('priceResult').innerHTML = 'Vui lòng nhập kích thước hợp lệ.';
+                        return;
+                    }
+
+                    // Convert diagonal from inches to centimeters
+                    var diagonalCm = diagonal * 2.54;
+                    var widthRatio = ratio === '16:9' ? 16 : 4;
+                    var heightRatio = ratio === '16:9' ? 9 : 3;
+                    var ratioFactor = Math.sqrt(widthRatio * widthRatio + heightRatio * heightRatio);
+
+                    // Calculate width and height in centimeters
+                    var widthCm = (diagonalCm * widthRatio) / ratioFactor;
+                    var heightCm = (diagonalCm * heightRatio) / ratioFactor;
+
+                    // Calculate area in square meters
+                    var area = (widthCm * heightCm) / 10000; // Convert cm² to m²
+
+                    // Calculate price: 1,900,000 VND/m²
+                    var pricePerSquareMeter = 1900000;
+                    var totalPrice = area * pricePerSquareMeter;
+
+                    // Calculate viewing distance
+                    var distanceMin = (widthCm * 1.34) / 100; // Convert to meters
+                    var distanceMax = (widthCm * 2.22) / 100; // Convert to meters
+
+                    // Display result
+                    document.getElementById('priceResult').innerHTML = `
+            Kích thước đường chéo: ${diagonalCm.toFixed(2)} cm<br>
+            Chiều ngang: ${widthCm.toFixed(2)} cm<br>
+            Chiều cao: ${heightCm.toFixed(2)} cm<br>
+            Diện tích: ${area.toFixed(2)} m²<br>
+            Đơn giá: 1.900.000 VNĐ/m²<br>
+            Thành tiền: ${totalPrice.toLocaleString('vi-VN')} VNĐ
+        `;
+                }
+
+                document.getElementById('inputType').addEventListener('change', function() {
+                    var inputType = this.value;
+                    var label = document.getElementById('inputValue').previousElementSibling;
+                    label.textContent = inputType === 'Width' ? 'Nhập chiều ngang (cm):' : 'Nhập chiều cao (cm):';
+                    document.getElementById('result').innerHTML = '';
+                });
+
+                function calculateSize() {
+                    var inputType = document.getElementById('inputType').value;
+                    var ratio = document.getElementById('ratio').value;
+                    var inputValue = parseFloat(document.getElementById('inputValue').value);
+
+                    if (isNaN(inputValue) || inputValue <= 0) {
+                        document.getElementById('result').innerHTML = 'Vui lòng nhập giá trị hợp lệ.';
+                        return;
+                    }
+
+                    var widthRatio = ratio === '16:9' ? 16 : 4;
+                    var heightRatio = ratio === '16:9' ? 9 : 3;
+
+                    var width, height, diagonal;
+
+                    if (inputType === 'Width') {
+                        width = inputValue;
+                        height = (width / widthRatio) * heightRatio;
+                    } else {
+                        height = inputValue;
+                        width = (height / heightRatio) * widthRatio;
+                    }
+
+                    diagonal = Math.sqrt(Math.pow(width / 2.54, 2) + Math.pow(height / 2.54, 2));
+                    var distanceMin = (width * 1.34) / 100; // Convert to meters
+                    var distanceMax = (width * 2.22) / 100; // Convert to meters
+
+                    // Calculate area and price
+                    var area = (width * height) / 10000; // Convert cm² to m²
+                    var pricePerSquareMeter = 1900000;
+                    var totalPrice = area * pricePerSquareMeter;
+
+                    document.getElementById('result').innerHTML = `
+            Chiều ngang: ${width.toFixed(2)} cm<br>
+            Chiều cao: ${height.toFixed(2)} cm<br>
+            Kích thước màn hình: ${diagonal.toFixed(2)} inch<br>
+            Khoảng cách xem: ${distanceMin.toFixed(2)} - ${distanceMax.toFixed(2)} m<br>
+            Diện tích: ${area.toFixed(2)} m²<br>
+            Đơn giá: 1.900.000 VNĐ/m²<br>
+            Thành tiền: ${totalPrice.toLocaleString('vi-VN')} VNĐ
+        `;
+                }
+            </script>
             <!-- footer start -->
             <footer class="site-footer footer-style-two pos-rel pt-85"
                 data-background="assets/img/shape/fot_shape2.png">
@@ -965,7 +1357,7 @@
                         <div class="col-lg-4 col-md-6 mt-30">
                             <div class="footer__cta">
                                 <span class="title">TẢI ỨNG DỤNG</span>
-                                <h4>Tải ứng dụng GT GLOBAL trên iOS và Google Play để quản lý dễ dàng!</h4>
+                                <h4>Tải ứng dụng TS Screen trên iOS và Google Play để quản lý dễ dàng!</h4>
                                 <div class="app-download mt-20">
                                     <div class="app-buttons">
                                         <a href="https://apps.apple.com/vn/app/ts-screen/id6745683551?l=vi"

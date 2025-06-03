@@ -299,15 +299,20 @@
                                     .spinner svg {
                                         display: inline-block;
                                     }
-
                                 </style>
 
                                 <button id="button_send" type="button" class="thm-btn thm-btn--gradient">
                                     <span class="button-text">Gửi</span>
                                     <span class="spinner" style="display: none;">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 4V2M12 22V20M20 12H22M2 12H4M18.364 5.636L19.778 4.222M4.222 19.778L5.636 18.364M18.364 18.364L19.778 19.778M4.222 4.222L5.636 5.636" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite" />
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 4V2M12 22V20M20 12H22M2 12H4M18.364 5.636L19.778 4.222M4.222 19.778L5.636 18.364M18.364 18.364L19.778 19.778M4.222 4.222L5.636 5.636"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <animateTransform attributeName="transform" type="rotate"
+                                                    from="0 12 12" to="360 12 12" dur="1s"
+                                                    repeatCount="indefinite" />
                                             </path>
                                         </svg>
                                     </span>
@@ -371,7 +376,7 @@
                     <div class="col-lg-4 col-md-6 mt-30">
                         <div class="footer__cta">
                             <span class="title">TẢI ỨNG DỤNG</span>
-                            <h4>Tải ứng dụng GT GLOBAL trên iOS và Google Play để quản lý dễ dàng!</h4>
+                            <h4>Tải ứng dụng TS Screen trên iOS và Google Play để quản lý dễ dàng!</h4>
                             <div class="app-download mt-20">
                                 <div class="app-buttons">
                                     <a href="https://apps.apple.com/vn/app/ts-screen/id6745683551?l=vi"

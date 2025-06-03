@@ -342,7 +342,7 @@
                     <div class="col-lg-4 col-md-6 mt-30">
                         <div class="footer__cta">
                             <span class="title">TẢI ỨNG DỤNG</span>
-                            <h4>Tải ứng dụng GT GLOBAL trên iOS và Google Play để quản lý dễ dàng!</h4>
+                            <h4>Tải ứng dụng TS Screen trên iOS và Google Play để quản lý dễ dàng!</h4>
                             <div class="app-download mt-20">
                                 <div class="app-buttons">
                                     <a href="https://apps.apple.com/vn/app/ts-screen/id6745683551?l=vi"
