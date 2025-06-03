@@ -92,9 +92,10 @@ Route::get('/contact', function () {
 });
 
 Route::get('/index', function () {
-    
+
     return view('archite/index');
 });
+
 
 Route::get('/index-2', function () {
     return view('archite/index-2');

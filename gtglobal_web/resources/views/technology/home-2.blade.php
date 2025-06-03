@@ -1,11 +1,7 @@
 <!doctype html>
-<html lang="zxx">
-
-
-<!-- Mirrored from html.xpressbuddy.com/helax/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:21:40 GMT -->
+<html lang="vi">
 
 <head>
-
     <!--========= Required meta tags =========-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -14,7 +10,7 @@
 
     <title>GT GLOBAL - CÔNG NGHỆ</title>
 
-    <link rel="shortcut icon" href="{{ asset('technology/img/favicon.png') }}" type="images/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('technology/img/favicon.png') }}" type="image/x-icon" />
 
     <!-- css include -->
     <link rel="stylesheet" href="{{ asset('technology/css/bootstrap.min.css') }}">
@@ -25,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('technology/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('technology/css/main.css') }}">
 </head>
+
 <style>
     /* CSS cho Popup */
     .popup-overlay {
@@ -117,11 +114,12 @@
         border-radius: 25px;
         text-decoration: none;
         font-weight: bold;
-        transition: transform 0.2s;
+        transition: transform 0.2s, box-shadow 0.3s;
     }
 
     .thm-btn--gradient:hover {
         transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     }
 
     .crm-testimonial {
@@ -143,10 +141,15 @@
     .crm-title__heading {
         font-size: 2.5rem;
         font-weight: bold;
+        color: #ffffff;
     }
 
     .contact-form {
         margin-top: 100px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
     }
 
     .row {
@@ -167,6 +170,16 @@
         border: 1px solid #ccc;
         padding: 10px;
         width: 100%;
+        border-radius: 5px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        color: white;
+    }
+
+    .row input:focus,
+    .row select:focus {
+        border-color: #00ffff;
+        box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        outline: none;
     }
 
     .contact-form__btn {
@@ -179,20 +192,146 @@
         color: white;
         border: none;
         cursor: pointer;
+        border-radius: 25px;
     }
 
     .result {
         margin-top: 20px;
         text-align: center;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
-    select {
+    select option {
+        background: #1a1a1a;
         color: white;
+    }
+
+    /* CSS cho Tabs */
+    .tab-btn.active {
+        background: linear-gradient(90deg, #00ffff, #007bff) !important;
+        color: #fff !important;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    .tab-btn:hover {
+        background: linear-gradient(90deg, #00ffff, #007bff);
+        color: #fff;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    /* CSS cho Footer */
+    .site-footer {
+        /* background: #1a1a1a; */
+        padding-top: 85px;
+        position: relative;
+    }
+
+    .footer__cta {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .footer__cta .title {
+        font-size: 1.2rem;
+        color: #00ffff;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .footer__cta h4 {
+        font-size: 1.3rem;
+        color: #b0c4de;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .footer__cta .cta-number {
+        font-size: 1.5rem;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer__cta-social,
+    .footer__cta-link {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+    }
+
+    .footer__cta-social li a,
+    .footer__cta-link li a {
+        color: #b0c4de;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .footer__cta-social li a:hover,
+    .footer__cta-link li a:hover {
+        color: #00ffff;
+    }
+
+    .app-download {
+        /* padding: 20px;
+        background: rgba(255, 255, 255, 0.05); */
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .app-buttons {
+        display: flex;
+        justify-content: space-around;
+        /* Giãn đều các nút */
+        align-items: center;
+        gap: 20px;
+        /* Tăng khoảng cách giữa các nút */
+        /* padding: 10px 0; */
+        /* Thêm padding để bố cục thoáng hơn */
+    }
+
+    .app-btn {
+        transition: transform 0.3s ease;
+    }
+
+    .app-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .crm-community {
+        padding: 40px 0;
+        /* background: linear-gradient(135deg, #1a1a1a, #2a2a3a);
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); */
+    }
+
+    .crm-community__social {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .crm-community__social li a img {
+        width: 40px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .crm-community__social li a:hover img {
+        transform: scale(1.1);
     }
 </style>
 
 <body class="home-dark">
-
     <div id="xb-loadding" class="xb-loader style-2">
         <div class="xb-dual-ring"></div>
     </div>
@@ -210,7 +349,6 @@
     </div>
 
     <div class="body_wrap">
-
         <!-- header start -->
         <header class="site-header header-style-two">
             <div class="header__main-wrap stricky">
@@ -223,13 +361,6 @@
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
                                 <ul>
-                                    {{-- <li class="menu-item-has-children active"><a href="index-2">Home</a>
-                                        <ul class="submenu">
-                                            <li><a href="index-2">Home Chatbot</a></li>
-                                            <li class="active"><a href="home-2">Home CRM</a></li>
-                                            <li><a href="home-3">Home Copy Writing</a></li>
-                                        </ul>
-                                    </li> --}}
                                     <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
                                     <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
                                     <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
@@ -247,9 +378,6 @@
                                 </div>
                             </a>
                         </div>
-                        {{-- <div class="header__button d-none d-lg-block">
-                            <a class="thm-btn thm-btn--gradient style-2" href="#!">Login\Signup</a>
-                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -261,8 +389,6 @@
             <div class="close-mobile-menu">
                 <a class="tx-close" href="javascript:void(0);"></a>
             </div>
-
-            <!-- sidebar-info start -->
             <div class="sidebar-info">
                 <div class="sidebar-logo mb-30">
                     <a href="index-2">
@@ -285,25 +411,25 @@
                         <div class="ct-title col-auto">Call us:</div>
                         <div class="ct-content-wrap col">
                             <div class="ct-item-wrap row">
-                                <div class="ct-item col-auto ">
+                                <div class="ct-item col-auto">
                                     <span class="item-content"><a href="tel:0907859668" class="tel">0907 859
                                             668</a></span>
                                 </div>
-                                <div class="ct-item col-auto "> <span class="item-content"><a href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
+                                <div class="ct-item col-auto">
+                                    <span class="item-content"><a
+                                            href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="sidebar-socials-wrap mt-30"> <a class="social-item" href="https://facebook.com/"
-                        target="_blank">Facebook</a><a class="social-item" href="https://www.behance.net/"
-                        target="_blank">Behance</a><a class="social-item" href="#" target="_blank">Telegram</a><a
-                        class="social-item" href="https://dribbble.com/" target="_blank">Dribbble</a></div>
+                <div class="sidebar-socials-wrap mt-30">
+                    <a class="social-item" href="https://facebook.com/" target="_blank">Facebook</a>
+                    <a class="social-item" href="https://www.behance.net/" target="_blank">Behance</a>
+                    <a class="social-item" href="#" target="_blank">Telegram</a>
+                    <a class="social-item" href="https://dribbble.com/" target="_blank">Dribbble</a>
+                </div>
             </div>
-            <!-- sidebar-info end -->
-
-            <!-- side-mobile-menu start -->
             <nav class="side-mobile-menu">
                 <div class="header-mobile-search">
                     <form role="search" method="get" action="#">
@@ -318,9 +444,7 @@
                     <li><a href="blog">Tin tức</a></li>
                     <li><a href="contact">Liên hệ</a></li>
                 </ul>
-
             </nav>
-            <!-- side-mobile-menu end -->
         </aside>
         <div class="body-overlay"></div>
         <!-- slide bar end -->
@@ -328,7 +452,8 @@
         <main>
             <!-- hero start -->
             <section class="hero hero-style-two pos-rel pb-55">
-                <div class="hero-bg wow fadeInUp" data-wow-delay="500ms" data-wow-duration=".5s" data-background="assets/img/bg/hero_bg.png"></div>
+                <div class="hero-bg wow fadeInUp" data-wow-delay="500ms" data-wow-duration=".5s"
+                    data-background="assets/img/bg/hero_bg.png"></div>
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-10">
@@ -349,12 +474,14 @@
                                 <div class="btns wow fadeInUp" data-wow-delay="300ms" data-wow-duration=".5s">
                                     <a class="thm-btn thm-btn--gradient style-2" href="#!">Xem chi tiết sản
                                         phẩm</a>
-
                                 </div>
                                 <div class="hero-image mt-90 wow fadeInUp" data-wow-delay="400ms"
                                     data-wow-duration=".5s">
-                                    <img style="border-radius: 20px"
-                                        src="{{ asset('technology/img/shape/acccc.png') }}" alt="">
+                                    <video style="border-radius: 20px; width: 100%; height: auto;" autoplay loop muted
+                                        playsinline>
+                                        <source src="{{ asset('technology/video/video.mp4') }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>
                         </div>
@@ -362,20 +489,22 @@
                 </div>
                 <div class="crm-hero__shape">
                     <div class="shape shape--1" data-parallax='{"y" : 80}'>
-                        <img class="wow fadeInLeft" src="{{ asset('technology/img/shape/h_shape6.png') }}" alt="">
+                        <img class="wow fadeInLeft" src="{{ asset('technology/img/shape/h_shape6.png') }}"
+                            alt="">
                     </div>
                     <div class="shape shape--2">
                         <img src="{{ asset('technology/img/shape/h_shape7.png') }}" alt="">
                     </div>
                     <div class="shape shape--3" data-parallax='{"y" : 70}'>
-                        <img class=" wow fadeInRight" src="{{ asset('technology/img/shape/h_shape8.png') }}" alt="">
+                        <img class="wow fadeInRight" src="{{ asset('technology/img/shape/h_shape8.png') }}"
+                            alt="">
                     </div>
                     <div class="shape shape--4">
                         <img src="{{ asset('technology/img/shape/h_shape9.png') }}" alt="">
                     </div>
                 </div>
             </section>
-            <!-- hero start -->
+            <!-- hero end -->
 
             <!-- feature start -->
             <section id="feature" class="crm-feature pos-rel pt-70 pb-140">
@@ -400,8 +529,7 @@
                                     <img src="{{ asset('technology/img/icon/ft_02.svg') }}" alt="">
                                 </div>
                                 <h3>Nhận lệnh thông minh</h3>
-                                <p>Điều khiển ở app mobile để vận hành máy chiếu nhanh chóng, chính xác.
-                                </p>
+                                <p>Điều khiển ở app mobile để vận hành máy chiếu nhanh chóng, chính xác.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mt-20">
@@ -418,7 +546,7 @@
                                 <div class="icon mb-40">
                                     <img src="{{ asset('technology/img/icon/ft_04.svg') }}" alt="">
                                 </div>
-                                <h3>Tối ưu chi phí điện</h3>
+                                <h3>Tối ưu chi phí</h3>
                                 <p>Công nghệ tiết kiệm năng lượng, giảm tiêu thụ điện mà vẫn giữ độ sáng vượt trội.</p>
                             </div>
                         </div>
@@ -447,10 +575,8 @@
                                     <img src="{{ asset('technology/img/icon/ft_07.svg') }}" alt="">
                                 </div>
                                 <h3>Quản lý nội dung thông minh</h3>
-                                <p>Lên lịch trình quảng cáo tự động, theo dõi hiệu suất
-                                    và tối ưu chiến dịch dễ dàng.
+                                <p>Lên lịch trình quảng cáo tự động, theo dõi hiệu suất và tối ưu chiến dịch dễ dàng.
                                 </p>
-
                             </div>
                         </div>
                     </div>
@@ -521,7 +647,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Projector Section -->
                     <div class="row pt-150 pt-xs-90">
                         <div class="col-12">
@@ -552,7 +677,7 @@
                                                     sắc nét và màu sắc chân thực, thu hút mọi ánh nhìn.</p>
                                             </div>
                                             <div class="text-center">
-                                                <img src="{{ asset('technology/img/process/project1.png') }}"
+                                                <img src="{{ asset('technology/img/process/projector.jpg') }}"
                                                     alt="Video quảng cáo trên máy chiếu">
                                             </div>
                                         </div>
@@ -574,7 +699,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- New Film Section -->
                     <div class="row pt-150 pt-xs-90">
                         <div class="col-12">
@@ -605,7 +729,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Projector Popup -->
                     <div class="popup-overlay" id="featurePopup">
                         <div class="popup-content">
@@ -625,7 +748,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <!-- New Film Popup -->
                     <div class="popup-overlay" id="filmPopup">
                         <div class="popup-content"
@@ -635,20 +757,14 @@
                             <h3
                                 style="font-size: 18px; color: #00ffff; text-transform: uppercase; text-align: center; margin-bottom: 15px;">
                                 Tấm Phim Nano Công Nghệ</h3>
-
-                            <!-- Thông số kỹ thuật chính -->
                             <div class="tech-specs"
                                 style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px; color: #b0c4de; margin-bottom: 15px;">
                                 <div><strong>Truyền sáng:</strong> 92-98%</div>
                                 <div><strong>Góc nhìn:</strong> 150°</div>
                                 <div><strong>Công nghệ:</strong> PET Nano</div>
-
-
                                 <div><strong>Bảo hành:</strong> 1 năm</div>
                                 <div><strong>Kích thước:</strong> 1524x30000mm</div>
                             </div>
-
-                            <!-- Tabs cho 4 dòng phim -->
                             <div class="film-tabs">
                                 <div class="tab-buttons"
                                     style="display: flex; justify-content: space-between; margin-bottom: 10px;">
@@ -662,8 +778,8 @@
                                         style="flex: 1; padding: 8px; background: #2a2a3a; color: #00ffff; border: none; border-radius: 5px; margin: 0 5px; font-size: 12px; cursor: pointer; transition: all 0.3s;">FT04</button>
                                 </div>
                                 <div class="tab-content" id="tab1" style="font-size: 13px; color: #b0c4de;">
-                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT01 – Trong
-                                        suốt</h4>
+                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT01 – Trong suốt
+                                    </h4>
                                     <ul style="list-style: none; padding: 0;">
                                         <li>95% xuyên sáng, hiệu ứng 3D</li>
                                         <li>Chiếu trước/sau, trong/ngoài trời</li>
@@ -672,8 +788,8 @@
                                 </div>
                                 <div class="tab-content" id="tab2"
                                     style="display: none; font-size: 13px; color: #b0c4de;">
-                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT02 – Trắng
-                                        mờ</h4>
+                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT02 – Trắng mờ
+                                    </h4>
                                     <ul style="list-style: none; padding: 0;">
                                         <li>Giữ sáng tối ưu, cản sáng hoàn toàn</li>
                                         <li>Chiếu trước/sau, trong/ngoài trời</li>
@@ -682,8 +798,7 @@
                                 </div>
                                 <div class="tab-content" id="tab3"
                                     style="display: none; font-size: 13px; color: #b0c4de;">
-                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT03 – Xám
-                                    </h4>
+                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT03 – Xám</h4>
                                     <ul style="list-style: none; padding: 0;">
                                         <li>Hiển thị tốt mọi ánh sáng</li>
                                         <li>Chiếu sau, trong/ngoài trời</li>
@@ -692,8 +807,7 @@
                                 </div>
                                 <div class="tab-content" id="tab4"
                                     style="display: none; font-size: 13px; color: #b0c4de;">
-                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT04 – Đen
-                                    </h4>
+                                    <h4 style="color: #ff3333; font-size: 14px; margin: 5px 0;">TS – FT04 – Đen</h4>
                                     <ul style="list-style: none; padding: 0;">
                                         <li>Tăng tương phản, cản sáng</li>
                                         <li>Chiếu sau, trong/ngoài trời</li>
@@ -704,7 +818,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- JavaScript cho Popup và Tabs -->
                 <script>
                     function showPopup() {
@@ -730,213 +843,247 @@
                         document.querySelector(`.tab-btn[onclick="showTab(${tabNumber})"]`).classList.add('active');
                     }
                 </script>
-
-                <!-- CSS bổ sung cho Tabs -->
-                <style>
-                    .tab-btn.active {
-                        background: linear-gradient(90deg, #00ffff, #007bff) !important;
-                        color: #fff !important;
-                        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-                    }
-
-                    .tab-btn:hover {
-                        background: linear-gradient(90deg, #00ffff, #007bff);
-                        color: #fff;
-                        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-                    }
-
-                    .popup-content {
-                        animation: popupFadeIn 0.3s ease;
-                    }
-
-                    .popup-close:hover {
-                        color: #ff3333;
-                    }
-                </style>
             </section>
             <!-- process end -->
-            <!-- process end -->
 
+            <!-- testimonial start -->
             <section class="crm-testimonial pos-rel pb-80">
                 <div class="container">
                     <div class="crm-title text-center mb-60">
+                        <h2 class="crm-title__heading">Ước tính giá tiền màn hình</h2>
+                    </div>
+                    <div class="contact-form mt-60 mx-5">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="diagonalInput" class="block text-sm font-medium text-gray-700 mb-2">Nhập
+                                    kích thước đường chéo (inch):</label>
+                                <input type="number" id="diagonalInput" placeholder="Nhập giá trị (inch)"
+                                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    style="color: white; background-color: transparent;">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="ratioPrice" class="block text-sm font-medium text-gray-700 mb-2">Chọn tỷ
+                                    lệ:</label>
+                                <select id="ratioPrice"
+                                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    style="color: white; background-color: transparent;">
+                                    <option value="16:9" style="color: black;">16:9</option>
+                                    <option value="4:3" style="color: black;">4:3</option>
+                                </select>
+                            </div>
+                            <div class="col-12 contact-form__btn text-center mt-3">
+                                <button type="button" class="thm-btn thm-btn--gradient"
+                                    onclick="calculatePrice()">Tính giá tiền</button>
+                            </div>
+                        </div>
+                        <div class="result mt-6" id="priceResult"></div>
+                    </div>
+                    <div class="crm-title text-center mb-60">
                         <h2 class="crm-title__heading">Tính toán tỉ lệ màn hình</h2>
                     </div>
-                </div>
-
-                <div class="contact-form mt-100 mx-5">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <label for="inputType">Chọn loại đầu vào:</label>
-                            <select id="inputType">
-                                <option value="Width" style="color: black;">Nhập chiều ngang</option>
-                                <option value="Height" style="color: black;">Nhập chiều cao</option>
-                            </select>
+                    <div class="contact-form mt-60 mx-5">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="inputType" class="block text-sm font-medium text-gray-700 mb-2">Chọn loại
+                                    đầu vào:</label>
+                                <select id="inputType"
+                                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    style="color: white; background-color: transparent;">
+                                    <option value="Width" style="color: black;">Chiều ngang (cm)</option>
+                                    <option value="Height" style="color: black;">Chiều cao (cm)</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="inputValue" class="block text-sm font-medium text-gray-700 mb-2">Nhập giá
+                                    trị (cm):</label>
+                                <input type="number" id="inputValue" placeholder="Nhập giá trị"
+                                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    style="color: white; background-color: transparent;">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="ratio" class="block text-sm font-medium text-gray-700 mb-2">Chọn tỷ
+                                    lệ:</label>
+                                <select id="ratio"
+                                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    style="color: white; background-color: transparent;">
+                                    <option value="16:9" style="color: black;">16:9</option>
+                                    <option value="4:3" style="color: black;">4:3</option>
+                                </select>
+                            </div>
+                            <div class="col-12 contact-form__btn text-center mt-3">
+                                <button type="button" class="thm-btn thm-btn--gradient"
+                                    onclick="calculateSize()">Tính toán</button>
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <label for="unit">Chọn đơn vị:</label>
-                            <select id="unit">
-                                <option value="inch" style="color: black;">inch</option>
-                                <option value="mm" style="color: black;">mm</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-6">
-                            <label for="ratio">Chọn tỷ lệ:</label>
-                            <select id="ratio">
-                                <option value="16:9" style="color: black;">16:9</option>
-                                <option value="4:3" style="color: black;">4:3</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-6">
-                            <label id="inputLabel">Nhập chiều ngang:</label>
-                            <input type="number" id="inputValue" placeholder="Nhập giá trị" style="color: white;">
-                        </div>
-                        <div class="col-12 contact-form__btn">
-                            <button type="button" class="thm-btn thm-btn--gradient" onclick="calculateSize()">Tính
-                                toán</button>
-                        </div>
+                        <div class="result mt-6" id="result"></div>
                     </div>
-                    <div class="result" id="result"></div>
                 </div>
             </section>
-            <script>
-                document.getElementById('inputType').addEventListener('change', function() {
-                    var inputType = this.value;
-                    var label = document.getElementById('inputLabel');
-                    if (inputType === 'Width') {
-                        label.textContent = 'Nhập chiều ngang:';
-                    } else {
-                        label.textContent = 'Nhập chiều cao:';
-                    }
-                    document.getElementById('result').innerHTML = '';
-                });
+            <!-- testimonial end -->
 
-                function calculateSize() {
-                    var inputType = document.getElementById('inputType').value;
-                    var unit = document.getElementById('unit').value;
-                    var ratio = document.getElementById('ratio').value;
-                    var inputValue = parseFloat(document.getElementById('inputValue').value);
-
-                    if (isNaN(inputValue) || inputValue <= 0) {
-                        document.getElementById('result').innerHTML = 'Vui lòng nhập giá trị hợp lệ.';
-                        return;
-                    }
-
-                    var isMm = unit === 'mm';
-                    if (isMm) {
-                        inputValue = inputValue / 25.4; // Chuyển từ mm sang inch
-                    }
-
-                    var widthRatio = ratio === '16:9' ? 16 : 4;
-                    var heightRatio = ratio === '16:9' ? 9 : 3;
-
-                    var width, height, diagonal;
-
-                    if (inputType === 'Width') {
-                        width = inputValue;
-                        height = (width / widthRatio) * heightRatio;
-                    } else {
-                        height = inputValue;
-                        width = (height / heightRatio) * widthRatio;
-                    }
-
-                    diagonal = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
-
-                    if (isMm) {
-                        width = width * 25.4;
-                        height = height * 25.4;
-                    }
-
-                    var distanceMin = (width * 1.34) / 1000;
-                    var distanceMax = (width * 2.22) / 1000;
-
-                    document.getElementById('result').innerHTML = `
-                Chiều ngang: ${width.toFixed(2)} ${unit}<br>
-                Chiều cao: ${height.toFixed(2)} ${unit}<br>
-                Kích thước màn hình: ${diagonal.toFixed(2)} inch<br>
-                Khoảng cách xem: ${distanceMin.toFixed(2)} - ${distanceMax.toFixed(2)} m
-            `;
-                }
-            </script>
-
-
-        </main>
-
-        <footer class="site-footer footer-style-two pos-rel pt-85" data-background="assets/img/shape/fot_shape2.png">
-            <div class="container">
-                <div class="row">
-                    <div class="crm-community text-center">
-                        <ul class="crm-community__social ul_li_center mb-35">
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/discord.png') }}" alt=""></a></li>
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/whatsapp.png') }}" alt=""></a></li>
-                            <li><a href="#!"><img src="{{ asset('technology/img/icon/telegram.png') }}" alt=""></a></li>
-                        </ul>
-                        <div class="crm-title text-center mb-40">
-                            <h2 class="crm-title__heading">Liên hệ với chúng tôi</h2>
-                        </div>
-                        <a class="thm-btn thm-btn--gradient style-2" href="contact">Liên hệ ngay!</a>
-                    </div>
-                </div>
-                <div class="row mt-none-30 pb-90">
-                    {{-- <div class="col-lg-4 col-md-6 mt-30">
-                        <div class="footer__cta">
-                            <span class="title">NEWSLETTER</span>
-                            <h4>Get now free 20% discount for all <br> products on your first order!</h4>
-                            <form class="footer__newsletter" action="#">
-                                <input type="text" placeholder="Email address">
-                                <button class="thm-btn thm-btn--gradient style-2 br-5">SIGN UP</button>
-                            </form>
-                        </div>
-                    </div> --}}
-                    <div class="col-lg-4 col-md-6 mt-30">
-                        <div class="footer__cta pl-45">
-                            <span class="title">QUICK CONTACT</span>
-                            <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24 giờ của chúng tôi</h4>
-                            <span class="cta-number"><span><img src="{{ asset('technology/img/icon/np_icon2.svg') }}" alt=""></span>0907 859 668</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mt-30">
-                        <div class="footer__cta text-lg-end">
-                            <span class="title">FOLLOW US</span>
-                            <ul class="footer__cta-social ul_li_right mb-60">
-                                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                            <ul class="footer__cta-link ul_li_right">
-                                <li><a href="#!">PayPal</a></li>
-                                <li><a href="#!">VISA</a></li>
-                                <li><a href="#!">Master Card</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- <div class="footer__copyright">
+            <!-- footer start -->
+            <footer class="site-footer footer-style-two pos-rel pt-85"
+                data-background="assets/img/shape/fot_shape2.png">
                 <div class="container">
-                    <div class="ul_li_between mt-none-10">
-                        <div class="footer__copyright-text mt-10">
-                            © 2023 Helax - Tech startup . All Rights Reserved.
+                    <div class="row">
+                        <div class="crm-community text-center">
+                            <ul class="crm-community__social ul_li_center mb-35">
+                                <li><a href="#!"><img src="{{ asset('technology/img/icon/discord.png') }}"
+                                            alt=""></a></li>
+                                <li><a href="#!"><img src="{{ asset('technology/img/icon/whatsapp.png') }}"
+                                            alt=""></a></li>
+                                <li><a href="#!"><img src="{{ asset('technology/img/icon/telegram.png') }}"
+                                            alt=""></a></li>
+                            </ul>
+                            <div class="crm-title text-center mb-40">
+                                <h2 class="crm-title__heading">Liên hệ với chúng tôi</h2>
+                            </div>
+                            <a class="thm-btn thm-btn--gradient style-2" href="contact">Liên hệ ngay!</a>
                         </div>
-                        <ul class="footer__social ul_li mt-10">
-                            <li><a href="#!"><i class="fab fa-facebook"></i></a></li>
-                            <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#!"><i class="fab fa-pinterest"></i></a></li>
-                        </ul>
+                    </div>
+                    <div class="row mt-none-30 pb-90">
+                        <div class="col-lg-4 col-md-6 mt-30">
+                            <div class="footer__cta">
+                                <span class="title">VỀ CHÚNG TÔI</span>
+                                <h4>GT GLOBAL cung cấp giải pháp công nghệ tiên tiến cho mọi doanh nghiệp, từ khởi
+                                    nghiệp đến quy mô lớn.</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-30">
+                            <div class="footer__cta">
+                                <span class="title">LIÊN HỆ NHANH</span>
+                                <h4>Nếu bạn có thắc mắc, vui lòng sử dụng đường dây hỗ trợ 24/7 của chúng tôi</h4>
+                                <div class="contact-btn text-center mt-20">
+                                    <a class="thm-btn thm-btn--gradient style-2" href="contact">Liên hệ ngay!</a>
+                                </div>
+                                {{-- <span class="cta-number"><span><img
+                    src="{{ asset('technology/img/icon/email_icon.svg') }}"
+                    alt=""></span><a
+                href="mailto:dongtrieuarc@gmail.com">dongtrieuarc@gmail.com</a></span> --}}
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-30">
+                            <div class="footer__cta">
+                                <span class="title">TẢI ỨNG DỤNG</span>
+                                <h4>Tải ứng dụng GT GLOBAL trên iOS và Google Play để quản lý dễ dàng!</h4>
+                                <div class="app-download mt-20">
+                                    <div class="app-buttons">
+                                        <a href="https://apps.apple.com/vn/app/ts-screen/id6745683551?l=vi"
+                                            target="_blank" class="app-btn">
+                                            <img src="{{ asset('technology/img/icon/app-store.png') }}"
+                                                alt="App Store" style="width: 50px; height: auto;">
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=user.gtglobal.ts_screen&pcampaignid=web_share"
+                                            target="_blank" class="app-btn">
+                                            <img src="{{ asset('technology/img/icon/chplay.png') }}"
+                                                alt="Google Play" style="width: 50px; height: auto;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        .row.mt-none-30 {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            align-items: stretch;
+                            /* Đảm bảo các cột có chiều cao bằng nhau */
+                        }
+
+                        .col-lg-4.col-md-6.mt-30 {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            /* Căn nội dung từ trên xuống */
+                            flex: 1;
+                            /* Các cột chiếm không gian đều nhau */
+                            min-width: 300px;
+                            /* Đảm bảo cột không quá hẹp trên màn hình nhỏ */
+                        }
+
+                        .footer__cta {
+                            background: rgba(255, 255, 255, 0.05);
+                            padding: 30px;
+                            border-radius: 10px;
+                            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+                            height: 100%;
+                            /* Đảm bảo chiều cao cột bằng nhau */
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            /* Căn nội dung đều trong cột */
+                            text-align: center;
+                            /* Căn giữa nội dung */
+                        }
+
+                        .footer__cta .title {
+                            font-size: 1.2rem;
+                            color: #00ffff;
+                            text-transform: uppercase;
+                            margin-bottom: 15px;
+                            display: block;
+                        }
+
+                        .footer__cta h4 {
+                            font-size: 1.3rem;
+                            color: #b0c4de;
+                            margin-bottom: 20px;
+                            line-height: 1.5;
+                            flex-grow: 1;
+                            /* Đảm bảo h4 chiếm không gian đồng đều */
+                        }
+
+                        .contact-btn {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 20px;
+                        }
+
+                        .thm-btn--gradient {
+                            background: linear-gradient(90deg, #00ffff, #007bff);
+                            color: #fff;
+                            padding: 10px 25px;
+                            border-radius: 25px;
+                            text-decoration: none;
+                            font-weight: bold;
+                            transition: transform 0.2s, box-shadow 0.3s;
+                        }
+
+                        .thm-btn--gradient:hover {
+                            transform: scale(1.05);
+                            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+                        }
+                    </style>
+                    <div class="footer__copyright">
+                        <div class="container">
+                            <div class="ul_li_between mt-none-10">
+                                <div class="footer__copyright-text mt-10">
+                                    © 2025 GT GLOBAL - Công nghệ tiên phong. Mọi quyền được bảo lưu.
+                                </div>
+                                <ul class="footer__social ul_li mt-10">
+                                    <li><a href="#!"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#!"><i class="fab fa-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> --}}
-            <div class="crm-footer__shape">
-                <div class="shape shape--1" data-parallax='{"y" : 70}'>
-                    <img src="{{ asset('technology/img/shape/fot_shape1.png') }}" alt="">
+                <div class="crm-footer__shape">
+                    <div class="shape shape--1" data-parallax='{"y" : 70}'>
+                        <img src="{{ asset('technology/img/shape/fot_shape1.png') }}" alt="">
+                    </div>
+                    <div class="shape shape--2" data-parallax='{"y" : 80}'>
+                        <img src="{{ asset('technology/img/shape/fot_shape3.png') }}" alt="">
+                    </div>
                 </div>
-                <div class="shape shape--2" data-parallax='{"y" : 80}'>
-                    <img src="{{ asset('technology/img/shape/fot_shape3.png') }}" alt="">
-                </div>
-            </div>
-        </footer>
-
+            </footer>
+            <!-- footer end -->
     </div>
 
     <!-- jquery include -->
@@ -954,10 +1101,6 @@
     <script src="{{ asset('technology/js/easing.min.js') }}"></script>
     <script src="{{ asset('technology/js/scrollspy.js') }}"></script>
     <script src="{{ asset('technology/js/main.js') }}"></script>
-
 </body>
-
-
-<!-- Mirrored from html.xpressbuddy.com/helax/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 07:21:49 GMT -->
 
 </html>

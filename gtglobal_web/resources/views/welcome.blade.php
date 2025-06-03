@@ -47,7 +47,6 @@
             background-size: cover;
             background-position: center;
             background-color: rgba(0, 0, 0, 0.4);
-            /* Lớp phủ tối ban đầu */
             background-blend-mode: darken;
         }
 
@@ -111,12 +110,12 @@
 
         #technology h1 {
             color: #00ffff;
-            /* Màu cyan cho Công Nghệ */
         }
 
         #furniture h1 {
-            color: #FFD700;
-            /* Màu vàng cho Nội Thất */
+            color: #FF4500;
+            font-weight: bold;
+            /* Changed to vibrant orange-red */
         }
 
         p {
@@ -171,13 +170,14 @@
 
         .logo-gt {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
+            font-size: 4.5rem;
+            /* Increased font size */
             font-weight: 900;
-            color: #FF00FF;
-            /* Màu magenta neon nổi bật */
+            color: #DC143C;
+            /* Changed to crimson red for masculine vibe */
             text-transform: uppercase;
             letter-spacing: 4px;
-            text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 30px #00FFFF;
+            text-shadow: 0 0 10px #DC143C, 0 0 20px #DC143C, 0 0 30px #00FFFF;
             transition: transform 0.3s ease;
         }
 
@@ -236,7 +236,8 @@
             }
 
             .logo-gt {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
+                /* Increased font size for mobile */
             }
         }
     </style>
@@ -245,7 +246,6 @@
 <body>
     <div class="container-custom">
         <div class="panel left-panel" id="technology">
-
             <div class="panel-content">
                 <div class="content-overlay">
                     <h1>Công Nghệ</h1>
@@ -261,7 +261,6 @@
         </div>
 
         <div class="panel right-panel" id="furniture">
-
             <div class="panel-content">
                 <div class="content-overlay">
                     <h1>Nội Thất</h1>
@@ -274,7 +273,6 @@
 
     <!-- JavaScript for scroll-based effect on mobile -->
     <script>
-        // Chỉ chạy trên mobile (màn hình nhỏ hơn 768px)
         if (window.innerWidth <= 768) {
             const panels = document.querySelectorAll('.panel');
 
