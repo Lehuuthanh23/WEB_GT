@@ -17,7 +17,7 @@ class GoogleSheetsService
             $this->client = new Google_Client();
             $this->client->setApplicationName('Laravel Google Sheets');
             $this->client->setScopes(Google_Service_Sheets::SPREADSHEETS);
-            $this->client->setAuthConfig(storage_path('remote-projector-fc831-eef1f4a41efc.json'));
+            $this->client->setAuthConfig(storage_path('remote-projector-fc831-00fb9b9543a8.json'));
             $this->client->setAccessType('offline');
             $this->client->setPrompt('select_account consent');
             $this->service = new Google_Service_Sheets($this->client);

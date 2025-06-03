@@ -41,15 +41,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function sendRequest() {
     console.log("Button clicked!");
+
+    // Lấy nút và các phần tử spinner, text
+    const button = document.getElementById("button_send");
+    const buttonText = button.querySelector(".button-text");
+    const spinner = button.querySelector(".spinner");
+
+    // Hiển thị spinner, ẩn text, vô hiệu hóa nút
+    button.disabled = true;
+    buttonText.style.display = "none";
+    spinner.style.display = "inline-block";
+
     // Lấy dữ liệu từ form
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const content = document.getElementById("content").value;
 
-    // Kiểm tra dữ liệu (tùy chọn)
+    // Kiểm tra dữ liệu
     if (!name || !email || !phone || !content) {
         alert("Vui lòng điền đầy đủ thông tin!");
+        // Khôi phục trạng thái nút
+        button.disabled = false;
+        buttonText.style.display = "inline";
+        spinner.style.display = "none";
         return;
     }
 
@@ -81,7 +96,12 @@ async function sendRequest() {
     } catch (error) {
         console.error("Error:", error.message);
         alert("Có lỗi xảy ra: " + error.message);
+    } finally {
+        // Khôi phục trạng thái nút sau khi hoàn tất hoặc lỗi
+        button.disabled = false;
+        buttonText.style.display = "inline";
+        spinner.style.display = "none";
     }
 }
 
- document.getElementById("button_send").addEventListener("click", sendRequest);
+document.getElementById("button_send").addEventListener("click", sendRequest);
