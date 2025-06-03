@@ -121,7 +121,7 @@
                     <div class="header__main ul_li_between">
                         <div class="header__logo">
                             <a href="home-2"><img src="{{ asset('technology/img/logo/logo-2.png') }}"
-                                    style="width: auto; height: 40px;" alt=""></a>
+                                    style="width: auto; height: 70px;" alt=""></a>
                         </div>
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
