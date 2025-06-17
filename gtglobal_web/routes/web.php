@@ -203,11 +203,15 @@ Route::get('/technology/e', function () {
 Route::get('/technology/home-2', function () {
     return view('technology/home-2');
 });
-
+// Route::get('/technology/home-2', function () {
+//     return view('technology/home-2');
+// });
 Route::get('/technology/home-3', function () {
     return view('technology/home-3');
 });
-
+Route::get('/technology/video-demo', function () {
+    return view('technology/video-demo');
+});
 Route::get('/technology/index-2', function () {
     return view('technology/index-2');
 });

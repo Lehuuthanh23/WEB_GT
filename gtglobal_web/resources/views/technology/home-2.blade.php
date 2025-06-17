@@ -366,6 +366,8 @@
                                     <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
                                     <li><a class="scrollspy-btn" href="blog">Tin tức</a></li>
                                     <li><a href="contact">Liên hệ</a></li>
+                                    <li><a href="video-demo">Video Demo</a></li>
+
                                 </ul>
                             </nav>
                         </div>
@@ -431,18 +433,19 @@
                 </div>
             </div>
             <nav class="side-mobile-menu">
-                <div class="header-mobile-search">
+                <!-- <div class="header-mobile-search">
                     <form role="search" method="get" action="#">
                         <input type="text" placeholder="Search Keywords">
                         <button type="submit"><i class="ti-search"></i></button>
                     </form>
-                </div>
+                </div> -->
                 <ul id="mobile-menu-active">
                     <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
                     <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
                     <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
                     <li><a href="blog">Tin tức</a></li>
                     <li><a href="contact">Liên hệ</a></li>
+                    <li><a href="video-demo">Video Demo</a></li>
                 </ul>
             </nav>
         </aside>
@@ -472,14 +475,15 @@
                                 <p class="mb-30 wow fadeInUp" data-wow-delay="200ms" data-wow-duration=".5s">
                                     Chiếu sáng thương hiệu, khuấy động mọi ánh nhìn!</p>
                                 <div class="btns wow fadeInUp" data-wow-delay="300ms" data-wow-duration=".5s">
-                                    <a class="thm-btn thm-btn--gradient style-2" href="#!">Xem chi tiết sản
+                                    <a class="thm-btn thm-btn--gradient style-2 scrollspy-btn" href="#process">Xem chi
+                                        tiết sản
                                         phẩm</a>
                                 </div>
                                 <div class="hero-image mt-90 wow fadeInUp" data-wow-delay="400ms"
                                     data-wow-duration=".5s">
-                                    <video style="border-radius: 20px; width: 100%; height: auto;" autoplay loop muted
-                                        playsinline>
-                                        <source src="{{ asset('technology/video/video.mp4') }}" type="video/mp4">
+                                    <video id="heroVideo" style="border-radius: 20px; width: 100%; height: auto;"
+                                        autoplay loop muted playsinline preload="auto" webkit-playsinline="true">
+                                        <source src="{{ asset('technology/video/videoo.mp4') }}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>

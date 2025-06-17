@@ -127,10 +127,11 @@
                             <nav class="main-menu collapse navbar-collapse">
                                 <ul>
                                     <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
-                                    <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
-                                    <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
+                                    <li><a class="scrollspy-btn" href="home-2#feature">Dự án</a></li>
+                                    <li><a class="scrollspy-btn" href="home-2#process">Cách hoạt động</a></li>
                                     <li><a class="scrollspy-btn" href="blog">Tin tức</a></li>
                                     <li><a href="contact">Liên hệ</a></li>
+                                    <li><a href="video-demo">Video Demo</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -196,18 +197,19 @@
                 </div>
             </div>
             <nav class="side-mobile-menu">
-                <div class="header-mobile-search">
+                <!-- <div class="header-mobile-search">
                     <form role="search" method="get" action="#">
                         <input type="text" placeholder="Search Keywords">
                         <button type="submit"><i class="ti-search"></i></button>
                     </form>
-                </div>
+                </div> -->
                 <ul id="mobile-menu-active">
                     <li><a class="scrollspy-btn" href="home-2">Trang chủ</a></li>
-                    <li><a class="scrollspy-btn" href="#feature">Dự án</a></li>
-                    <li><a class="scrollspy-btn" href="#process">Cách hoạt động</a></li>
-                    <li><a href="blog">Tin tức</a></li>
+                    <li><a class="scrollspy-btn" href="home-2#feature">Dự án</a></li>
+                    <li><a class="scrollspy-btn" href="home-2#process">Cách hoạt động</a></li>
+                    <li><a class="scrollspy-btn" href="blog">Tin tức</a></li>
                     <li><a href="contact">Liên hệ</a></li>
+                    <li><a href="video-demo">Video Demo</a></li>
                 </ul>
             </nav>
         </aside>
